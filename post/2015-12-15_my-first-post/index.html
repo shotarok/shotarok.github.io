@@ -72,8 +72,85 @@
       </div>
     </div>
     <article>
-      <p><a href="http://tanksuzuki.com/post/hugo-github-pages-1/">http://tanksuzuki.com/post/hugo-github-pages-1/</a> を参考にHugo + Github Pages でプログ開始．<br />
-テーマも使わせて頂きました．ありがとうございます！</p>
+      
+
+<p>以前は はてなブログ を使っていたのですが、今年の４月に就職してデジタルマーケティングの会社に入ったので、
+3rd party javascript やタグマネージャーの勉強することもままあり、
+CAMPHOR- Advent Calendar に参加する前に、タグを好きに追加できるブログをはじめてみようとなりました。</p>
+
+<p>Markdown で書ける静的ジェネレーターなら、正直なんでも良かったのですが、
+使っている人がそこそこいる(静的ジェネレーターの GitHub の star 数ランキングで割と上位だった)、
+気に入ったテーマがあった、かつ 普段触らない言語 go を触る良い機会になるかもと思ったこと
+等を理由に <strong>Hugo</strong> を使うことにしました。</p>
+
+<h1 id="簡単な使い方:8fdad275f77835e8ce5f225ce05b2c38">簡単な使い方</h1>
+
+<p>Hugo を使うと <code>hugo new site &lt;name&gt;</code> というコマンドでサイトの雛形を作る事ができます。
+Hugo自体は <code>go get -u -v github.com/spf13/hugo</code> や <code>brew install hugo</code> でインストールできます。</p>
+
+<pre><code>$ hugo new site test-blog
+$ tree test-blog
+test-blog
+├── archetypes
+├── config.toml
+├── content
+├── data
+├── layouts
+└── static
+
+5 directories, 1 file
+</code></pre>
+
+<p>テーマは <a href="https://github.com/spf13/hugoThemes/"><code>hugoThemes</code></a> というレポジトリにたくさんまとめてあります。
+これらを利用するにはまず theme ディレクトリを作成しクローンしてきます。
+そのあと気に入ったテーマを <code>-t</code> で指定し <code>hugo</code> を実行すると <code>public</code> フォルダに静的コンテンツが作成されます。</p>
+
+<pre><code>$ cd test-blog
+$ git clone --depth 1 --recursive https://github.com/spf13/hugoThemes.git themes
+$ hugo -t angels-ladder
+</code></pre>
+
+<p>新しい投稿を作成する場合は <code>hugo new post/&lt;file name&gt;.md</code> でマークダウン引用の雛形を作成することができます。
+また <code>hugo server -t angels-ladder -w</code> でローカルにサーバを建てることによって、エディターで編集したファイルをブラウザで確認しながら作業する事ができます。</p>
+
+<pre><code>$ hugo new post/hello-world.md
+$ hugo server -t angels-ladder -w
+# Edit post/hello-world.md by some editors
+</code></pre>
+
+<h1 id="個人的なレポジトリ構成:8fdad275f77835e8ce5f225ce05b2c38">個人的なレポジトリ構成</h1>
+
+<p>Hugo によって作成された静的コンテンツは GitHub Pages を利用して管理し、
+雛形の方は theme も含めて BitBucket のプライベートレポジトリで管理しています。
+これで Github Pages のレポジトリには静的なマークアップのコードだけになり、
+マークダウンのファイルや自分用に少し変更したテーマなどはBidBucketで管理することができます。</p>
+
+<h2 id="github-での静的コンテンツのレポジトリ管理:8fdad275f77835e8ce5f225ce05b2c38">Github での静的コンテンツのレポジトリ管理</h2>
+
+<pre><code>$ cdd test-blog/public
+$ git init
+$ git remote add origin git@github.com:&lt;username&gt;/&lt;username&gt;.github.io.git
+$ git add --all &amp; git commit -m &quot;Initial commit&quot;
+$ git push --all
+</code></pre>
+
+<h2 id="bidbucket-での-マークダウン-hugoテーマ-のレポジトリ管理:8fdad275f77835e8ce5f225ce05b2c38">BidBucket での マークダウン&amp;Hugoテーマ のレポジトリ管理</h2>
+
+<pre><code>$ cd test-blog
+$ git init
+$ echo public &gt;&gt; .gitignore
+$ git remote add origin git@bidbucket.org:&lt;username&gt;/hugo-blog.git
+$ git add --all &amp; git commit -m &quot;Initial commit&quot;
+$ git push origin --all
+</code></pre>
+
+<h1 id="special-thanks:8fdad275f77835e8ce5f225ce05b2c38">Special Thanks</h1>
+
+<p>今回参考にさせていただいたサイト<br />
+・<a href="https://github.com/spf13/Hugo">https://github.com/spf13/Hugo</a><br />
+　本家レポジトリ。ドキュメントもしっかりしていて、わかりやすい！<br />
+・ <a href="http://tanksuzuki.com/post/hugo-github-pages-1/">http://tanksuzuki.com/post/hugo-github-pages-1/</a><br />
+　とても丁寧に解説されていたので大変重宝しました。テーマも使わせて頂きました！ありがとうございます！</p>
 
 
       
