@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>shotarok&#39;s Tech Blog</title>
+    <link>http://localhost:1313/tags/</link>
+    <description>Recent content on shotarok&#39;s Tech Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Tue, 15 Dec 2015 08:40:24 +0900</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>2015 12 15_my first post</title>
+      <link>http://localhost:1313/post/2015-12-15_my-first-post/</link>
+      <pubDate>Tue, 15 Dec 2015 08:40:24 +0900</pubDate>
+      
+      <guid>http://localhost:1313/post/2015-12-15_my-first-post/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>2015 12 15_my first post</title>
+      <link>http://localhost:1313/post/2015-12-15_my-first-post/</link>
+      <pubDate>Tue, 15 Dec 2015 08:40:24 +0900</pubDate>
+      
+      <guid>http://localhost:1313/post/2015-12-15_my-first-post/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
