@@ -1,0 +1,301 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+
+  
+  <meta charset="UTF-8">
+  <title>
+    超絶技巧プログラミングやってみた | shotarok&#39;s Tech Blog
+  </title>
+
+
+  
+  <meta name="viewport" content="width=device-width,user-scalable=no,maximum-scale=1,initial-scale=1">
+
+  
+  <link rel="canonical" href="http://blog.shotarok.com/post/2015-12-17_hello-quine-world/"/>
+
+  
+  <link rel="stylesheet" href="/css/sanitize.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+  <link rel="stylesheet" href="/css/highlight_monokai.css">
+  <link rel="stylesheet" href="/css/theme.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  
+  
+  <link href="http://blog.shotarok.com/index.xml" rel="alternate" type="application/rss+xml" title="shotarok&#39;s Tech Blog" />
+  <link href="http://blog.shotarok.com/index.xml" rel="feed" type="application/rss+xml" title="shotarok&#39;s Tech Blog" />
+
+  
+  <script type="text/javascript">var switchTo5x=true;</script>
+  <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+  <script type="text/javascript">stLight.options({publisher: "1017c155-f88f-4f55-80a8-bab2a7ca3fb9", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+
+</head>
+
+
+
+<body>
+<div class="container">
+
+  
+  <header role="banner">
+    <div class="row gutters">
+      <div id="site-title" class="col span_6">
+        <h1><a href="http://blog.shotarok.com/">shotarok&#39;s Tech Blog</a></h1>
+        <h2>東山n条からn目黒へ</h2>
+      </div>
+      <div id="social" class="col span_6">
+        <ul>
+          <li><a href="https://twitter.com/shotarok28" target="_blank">Twitter</a></li>
+          
+          <li><a href="https://github.com/shotarok" target="_blank">GitHub</a></li>
+          
+        </ul>
+      </div>
+    </div>
+  </header>
+
+
+  
+  <main id="single" role="main">
+    <div class="article-header">
+      <h1>超絶技巧プログラミングやってみた</h1>
+      <div class="meta">
+        Dec 17, 2015 &nbsp;
+        
+          #<a href="/tags/ruby">ruby</a>&nbsp;
+        
+          #<a href="/tags/trick">TRICK</a>&nbsp;
+        
+      </div>
+    </div>
+    <article>
+      
+
+<p>この記事は <a href="http://advent.camph.net/">CAMPHOR-
+Advent Calendar 2015</a> の 17 日目の記事です。</p>
+
+<p>こんにちは。<a href="https://github.com/shotarok">@shotarok</a> (Twitter: <a href="https://twitter.com/shotarok28">@shotarok28</a>) です。３月までは京都で学生をしていて、今年の４月から東京の <a href="https://www.fout.co.jp/">FreakOut</a> という広告の会社でソフトウェアエンジニアをしている CAMPHOR- OBです。</p>
+
+<h1 id="quine-って何:c0d6977ca17c38caef79e8f3a8636f21">Quine って何？</h1>
+
+<p>みなさん「<strong>Quine</strong>」という言葉を聞いたことがありますか？ Quine とは、こんなプログラムのことです。 ※1</p>
+
+<blockquote>
+<p>クワイン（英: Quine）は、コンピュータプログラムの一種で、自身のソースコードと完全に同じ文字列を出力するプログラムである。<br />
+<a href="https://ja.wikipedia.org/wiki/%E3%82%AF%E3%83%AF%E3%82%A4%E3%83%B3_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">出典: wikipedia クワイン_(プログラミング)</a></p>
+</blockquote>
+
+<p>定義を読むだけでは、ぱっとはわからないので、実際にプログラムが動いているところを見てみましょう。</p>
+
+<p><a href="https://gyazo.com/71c58b0409c2868d29ea40b15a7df6c2"><img src="https://i.gyazo.com/71c58b0409c2868d29ea40b15a7df6c2.gif" alt="https://gyazo.com/71c58b0409c2868d29ea40b15a7df6c2" /></a></p>
+
+<p>この gif をみると ruby プログラム <a href="https://gist.github.com/shotarok/4d9fc754e4c00036cbdf"><code>quine.rb</code></a> は CAMPHOR- のロゴの形をしていること、ruby で実行すると CAMPHOR- のロゴが出力されることが確認出来ると思います。実は <a href="https://gist.github.com/shotarok/4d9fc754e4c00036cbdf"><code>quine.rb</code></a> は自分自身を出力していて、その出力を実行してもまた同じロゴの形をしたソースコードが出力されます。wiki に書いてあった
+<i>自身のソースコードと完全に同じ文字列を出力するプログラム.</i> こんなプログラムが Quine です。ソースコードはこちら(<a href="https://gist.github.com/shotarok/4d9fc754e4c00036cbdf">gist</a>)。</p>
+
+<p>僕が初めて Quine に出会ったのは、いつかの <a href="http://icpc.iisf.or.jp/2015-tsukuba/?lang=ja">ICPC</a> の地区大会のエクスカーションで Google を訪問して、そこで shinh さんのお話を聞いたときでした。その当時は、自分で書いてみたいと思って、調べてみたものの、結局書くことが出来ず、そのまま放置になっていました。</p>
+
+<p>それから数年経った2015年夏、この本と出会いました。</p>
+
+<p><a href="http://www.amazon.co.jp/dp/B015R0GNXK/">「<strong>あなたの知らない超絶技巧プログラミングの世界</strong>」</a></p>
+
+<p>この本は Quine をはじめとする「超絶技巧プログラミング」と呼ばれる、実用性はないけれど、不思議で楽しいプログラミング技法を紹介しています。そして、この本のおかげで念願叶い Quine を書くことができました。詳細な解説は本を読んで頂くことにして、この記事では、僕が書いた <code>quine.rb</code> の簡単な説明と、作成した手順を紹介できればと思います。</p>
+
+<h1 id="はじめての-quine:c0d6977ca17c38caef79e8f3a8636f21">はじめての Quine</h1>
+
+<p>今回、下のような流れで僕は <code>quine.rb</code> を作成しました。</p>
+
+<ol>
+<li>CAMPHOR- のロゴ画像からコードの整形に使うビットマップの作成。</li>
+<li>ビットマップから <code>quine.rb</code> を出力する <code>build_quine.rb</code> を作成。</li>
+<li><code>quine.rb</code> が文法的に正しくなっているかを実行して確認。<br />
+失敗したら、 2. に戻ってビットマップを調整。<br />
+成功したら、Quine 完成！</li>
+</ol>
+
+<h2 id="1-ロゴ画像からビットマップの作成:c0d6977ca17c38caef79e8f3a8636f21">1. ロゴ画像からビットマップの作成</h2>
+
+<p>まずは <code>quine.rb</code> をロゴの形にするための雛形を画像から作成します。これは jpeg 画像から ASCII アートを生成してくれる <code>jp2a</code> と png から jpeg に変換する <code>convert</code> を使うと作業が楽になります。(OSX をお使いの方は両方とも Homebrew でインストールできます) これらを使うと、例えば、こんな感じでビットマップを作成できます。</p>
+
+<pre><code>$ wget https://camph.net/static/images/navbar_logo.png
+$ convert navbar_logo.png jpg:- | jp2a - --chars=012 | tr '2' ' '
+1111111                                                        111111                                                                                                                            
+  1111111111                                              1111111111                                                                                                                             
+   1111111111111                                      111111111111                                                                                                                               
+     1111111111111                                 11111111111111                                                                                                                                
+       11111111111111                            1111111111111                                                                                                                                   
+          1111111111111                       11111111111111                                                                                                                                     
+             1111111111111                  111111111111                                                                                                                                         
+                 1111111111               11111111111                                                                                                                                            
+                      111111             111111                                                                                                                                                  
+                             111111111111                                                                                                                                                        
+                               111111111                                                                                                                                                         
+                               1111111                                                                                                                                                           
+                                11111                                                                                                                                                            
+                                 1111                                                                                                                                                            
+                                 111                                                                                                                                                             
+                                  11                                                                                                                                                             
+                                  11                                                                                                                                                             
+
+
+</code></pre>
+
+<h2 id="2-ビットマップから-quine-を作る:c0d6977ca17c38caef79e8f3a8636f21">2. ビットマップから Quine を作る</h2>
+
+<p>作成したビットマップを使って ロゴの形をした Quine を出力する <a href="https://gist.github.com/shotarok/8ca2098340a381be0135"><code>build_quine.rb</code></a> を作ります。天下り的ですが、まずは <a href="https://gist.github.com/shotarok/8ca2098340a381be0135"><code>build_quine.rb</code></a> を御覧ください。</p>
+
+<script src="https://gist.github.com/shotarok/8ca2098340a381be0135.js"></script>
+
+<p>これを実行すると <a href="https://gist.github.com/shotarok/4d9fc754e4c00036cbdf"><code>quine.rb</code></a>  が出てきます。このコードが何をやっているかを上から順に説明していきます！</p>
+
+<h3 id="line1-2:c0d6977ca17c38caef79e8f3a8636f21">Line1-2</h3>
+
+<p>ここが Quine の本体と言っても過言ではありません。実はロゴの形にする気がなければ Quine はこんなワンライナーで実現できます。</p>
+
+<pre><code>$ ruby -e 'eval$s=%w(puts(s=%(eval$s=%w(#{$s})*&quot;&quot;));)*&quot;&quot;'
+&gt; eval$s=%w(puts(s=%(eval$s=%w(#{$s})*&quot;&quot;));)*&quot;&quot;
+</code></pre>
+
+<p>ざくっと説明すると、変数 <code>$s</code> にソースコードを文字列として代入しています。
+その代入された文字列内の <code>#{$s}</code> 部分で、変数 <code>$s</code> が展開されて、これが自分自身を出力する秘訣になっています。</p>
+
+<p>また <code>%w(...)*&quot;&quot;</code> は <code>%w</code> で作った文字列型が入った配列を空文字列で join しており，このおかげでソースコードをロゴの形に加工できるようになっています。</p>
+
+<pre><code>$ ruby -e 'eval$s=%w(put
+s(s=%(ev
+al$s=%w(#{$
+s})*&quot;&quot;)
+);)*&quot;&quot;
+'
+&gt; eval$s=%w(puts(s=%(eval$s=%w(#{$s})*&quot;&quot;));)*&quot;&quot;
+</code></pre>
+
+<p>本ではもっと順を追って丁寧に解説されていますので、気になる方は是非ご一読下さい。</p>
+
+<h3 id="line4:c0d6977ca17c38caef79e8f3a8636f21">Line4</h3>
+
+<p>変数 <code>bidmap</code> には、ロゴから作成されたビットマップを36変数に変換したものを入れています。
+ruby は 多倍長整数と <code>to_s</code> で36進数の変換をサポートしているので、下のようにビットマップから36進数に変換できます。</p>
+
+<pre><code>$ ruby -e 'LOGO=&lt;&lt;END
+11111                                     11111
+ 11111111                             11111111
+    1111111111                     1111111111
+     111111111                 111111111
+         11111111             11111111
+            1111111         111111
+                    1111111
+                     11111
+                      111
+                      111
+                       1
+END
+puts(LOGO.gsub(/\n/, &quot;&quot;).gsub(/[^1]/, &quot;0&quot;).reverse.to_i(2).to_s(36));'
+&gt; 3mf7nxp6d7yn1up5cf7lkyiexikdcs9mo4xw8j2dv93putn0tbabu2ep3qmdxdel52h7zfwbq7lzz9j8q9amz55h91pwj127
+</code></pre>
+
+<h3 id="line6-12:c0d6977ca17c38caef79e8f3a8636f21">Line6-12</h3>
+
+<p>ここの部分は変数 <code>bidmap</code> を使って、ロゴの形でコードを出力しています。<code>bidmap</code> を多倍長整数にして 1bitずつ走査して <code>1</code> の場合はコードを1文字出力し、<code>0</code> の場合は空白 <code>32.chr</code> を出力します。※2.</p>
+
+<h2 id="3-quine-rb-の動作確認:c0d6977ca17c38caef79e8f3a8636f21">3. <code>quine.rb</code> の動作確認</h2>
+
+<p>ここまで来たら、後は微調整です。とは言ってもここが地味に大変だったりするのですが…。</p>
+
+<p><code>%w()</code> で囲まれた部分は好きに改行できるのですが、<code>eval$s=%w(...)*&quot;&quot;</code> の部分は ruby の文法的に正しくないといけません。
+正しい文法になるように、ビットマップを調整しましょう。</p>
+
+<p>またビットマップが大きくてソースコードが埋め込めるところが少ないと <code>bitmap</code> が大きくなってコードがはみ出てしまいます。
+ビットマップを反転させたり、ロゴに含まれるフォントを大きくしたり、コードがはみ出ないようにビットマップを調整しましょう。</p>
+
+<p>逆にビットマップが十分大きくて、ソースコードが足りない場合もあります。そんな時はコメント <code>;</code> が利用できます。
+<code>;</code> は適切な位置にあれば、どれだけ追加しても文法的に正しいコードとなります。※3.</p>
+
+<pre><code>$ ruby -e 'puts(&quot;hello&quot;)'
+&gt; hello
+$ ruby -e ';;;;;;;;;puts(&quot;hello&quot;);;;;;;;'
+&gt; hello
+</code></pre>
+
+<p>今回はロゴを一つだけ埋め込みましたが、本に紹介されている手法を使えば、下の gif のように複数のロゴを埋め込こんで Quine を作ることもできます。ただ数を増やせば増やすほど、この最後の調整が大変になりました。</p>
+
+<p><a href="https://gyazo.com/a52c7be7a37931636e18ee3aa23fd146"><img src="https://i.gyazo.com/a52c7be7a37931636e18ee3aa23fd146.gif" alt="https://gyazo.com/a52c7be7a37931636e18ee3aa23fd146" /></a></p>
+
+<h1 id="最後に:c0d6977ca17c38caef79e8f3a8636f21">最後に</h1>
+
+<p>いかがだったでしょうか。自分しか読めないようなメンテナンス不能なコードを「あぁこの bitmap だと実行できない」と１文字消したり足したりするのは、業務にはない楽しさがありました。※4.</p>
+
+<p>超絶技巧プログラミング本には Quine 以外にもいろんな言語で実行できるプログラム、使える文字制限したプログラムなど楽しい超絶技巧が紹介されています。
+また、つい先日行われた Ruby Kaigi で開催された <a href="https://github.com/tric/trick2015/blob/master/README.ja.md">TRICK 2015</a> や、先ほどの本の著者である @mametter さんの<a href="http://www.slideshare.net/mametter/ftd2015">スライド</a> 、また shinh さんの <a href="http://shinh.skr.jp/obf/">作品ページ</a> なども覗いてみると楽しいと思います！</p>
+
+<p>明日は <a href="http://yu-i9.github.io/">@yui-9</a> による 「<strong>型クラスを含んだ型推論を概観する 〜Typing Haskell in Haskell より〜</strong>」 のお話です。お楽しみに！</p>
+
+<hr />
+
+<p>※1. もともとは、クワインさんという哲学者の名前です。<br />
+※2. 空白は <code>%w(...)*&quot;&quot;</code> で潰れてしまうので <code>32.chr</code> を使用します。<br />
+※3. <code>;</code> だと見栄えが悪いので、ランダムな文字列で埋めちゃっても良いと思います。<br />
+※4. commit もせずにコードを書いたり消したり推敲する。 <a href="http://www.amazon.co.jp/%E3%83%8F%E3%83%83%E3%82%AB%E3%83%BC%E3%81%A8%E7%94%BB%E5%AE%B6-%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E6%99%82%E4%BB%A3%E3%81%AE%E5%89%B5%E9%80%A0%E8%80%85%E3%81%9F%E3%81%A1-%E3%83%9D%E3%83%BC%E3%83%AB-%E3%82%B0%E3%83%AC%E3%82%A2%E3%83%A0/dp/4274065979">ハッカーと画家 は似ているという話</a> を思い出しました。</p>
+
+
+      
+      <div id="share-this" class="col span_10">
+        <span class='st_facebook_large' displayText='Facebook'></span>
+        <span class='st_twitter_large' displayText='Tweet'></span>
+        <span class='st_googleplus_large' displayText='Google +'></span>
+        <span class='st_hatena_large' displayText='Hatena'></span>
+        <span class='st_pocket_large' displayText='Hatena'></span>
+      </div>
+    </article>
+
+<aside><div id="disqus_thread"></div></aside>
+
+<script type="text/javascript">
+    var disqus_shortname = 'shotarok';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+  </main>
+
+  <nav class="pagination">
+    
+      <span class="previous">&larr; <a href="http://blog.shotarok.com/post/2015-12-15_my-first-post/" rel="prev">Hugo &#43; Github Pages でブログ開始</a></span>
+    
+    
+  </nav>
+
+
+  
+  <footer role="contentinfo">
+    <div style="text-align:center;">
+      <img src="/images/profile.png" width="64" height="64"><br>
+      Written by Shotaro Kohama
+    </div>
+  </footer>
+
+
+</div>
+
+<script src="/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-37905480-2', 'auto');
+  ga('send', 'pageview');
+</script>
+
+</body>
+</html>
+
