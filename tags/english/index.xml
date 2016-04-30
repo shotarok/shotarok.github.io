@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>English on shotarok&#39;s Tech Blog</title>
+    <link>http://blog.shotarok.com/tags/english/</link>
+    <description>Recent content in English on shotarok&#39;s Tech Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Sat, 30 Apr 2016 21:19:00 +0900</lastBuildDate>
+    <atom:link href="http://blog.shotarok.com/tags/english/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>お気に入りのPodcast</title>
+      <link>http://blog.shotarok.com/post/2016-04-30-my-favorite-podcasts/</link>
+      <pubDate>Sat, 30 Apr 2016 21:19:00 +0900</pubDate>
+      
+      <guid>http://blog.shotarok.com/post/2016-04-30-my-favorite-podcasts/</guid>
+      <description>
+
+&lt;p&gt;京都で過ごしていた頃はもっぱら移動は自転車だったが、東京に来てそれが電車に変わった。
+毎日電車に乗るのは高校生以来で、当時は乗車時間が40分程で電車も空いていたので座って単語帳を開いてよく寝ていた。
+今は10分程度なので寝るわけにもいかず、まぁ音楽より技術や英語の勉強になるかと思い Podcast を聴くようになった。
+そんな感じで1年程過ごし番組も選抜されてきたので、この辺でお気に入りの番組とエピソードをまとめようと思う。&lt;/p&gt;
+
+&lt;h1 id=&#34;rebuild-https-rebuild-fm:a473db95b2776decf60435b06ebe0fd4&#34;&gt;&lt;a href=&#34;https://rebuild.fm/&#34;&gt;Rebuild&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;日本語Tech系 Postcast といえば Rebuild と言っても過言ではないくらい界隈で有名。ホストの&lt;a href=&#34;https://twitter.com/miyagawa&#34;&gt;@miyagawa&lt;/a&gt; さんとゲストの方が話す AlphaGo の戦略・実装とか CPU/GPU アーキテクチャなどDeepな技術ネタからマネジメントとかプロダクティビティなどソフトなネタまで、ソフトウェア開発に関わる様々な話題が聞ける番組。&lt;/p&gt;
+
+&lt;p&gt;お気に入りのエピソードは &lt;a href=&#34;https://rebuild.fm/127/&#34;&gt;&amp;ldquo;127: Post-mature Optimization (omo)&amp;rdquo;&lt;/a&gt; 。業務で触るようになって中身に興味が出てきたデータベースについて、その大家が書いた&lt;a href=&#34;http://www.redbook.io/&#34;&gt;&amp;ldquo;赤い本&amp;rdquo;&lt;/a&gt;が知れたこと。 Borg と YARN というスケジューラーの違いが MapReduce や Spark などの1つ上層の進化にどう影響を与えたかという話が個人的に大ヒットだった。&lt;/p&gt;
+
+&lt;h1 id=&#34;talk-python-to-me-https-talkpython-fm:a473db95b2776decf60435b06ebe0fd4&#34;&gt;&lt;a href=&#34;https://talkpython.fm/&#34;&gt;Talk Python To Me&lt;/a&gt;&lt;/h1&gt;
+
+&lt;iframe width=&#34;100%&#34; height=&#34;166&#34; scrolling=&#34;no&#34; frameborder=&#34;no&#34; src=&#34;https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/14032377&amp;amp;color=ff5500&amp;amp;auto_play=false&amp;amp;hide_related=false&amp;amp;show_comments=true&amp;amp;show_user=true&amp;amp;show_reposts=false&#34;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;およそTech系の Podcast が始まるとは思わない、こんなジングルで始まる番組。SQLAlchemy, Flask といった有名モジュールにまつわる話から どうやったらPythonを使う仕事を見つけられるか、フォントや映画制作でどう使っているかなど Python にまつわる話なら何でも聴ける番組。多くのエピソードで transcription も用意してある。&lt;/p&gt;
+
+&lt;p&gt;お気に入りのエピソードは &lt;a href=&#34;https://talkpython.fm/episodes/show/22/cpython-internals-and-learning-python-with-pythontutor.com&#34;&gt;&amp;ldquo;Episode #22: CPython Internals and Learning Python with pythontutor.com&amp;rdquo;&lt;/a&gt;。&lt;a href=&#34;http://pythontutor.com/&#34;&gt;pythontutor&lt;/a&gt; を含む CPython の実装についての様々な資料を知れたのが good。&lt;/p&gt;
+
+&lt;h1 id=&#34;バイリンガルニュース-https-twitter-com-bilingual-news:a473db95b2776decf60435b06ebe0fd4&#34;&gt;&lt;a href=&#34;https://twitter.com/Bilingual_News&#34;&gt;バイリンガルニュース&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;日本語と英語でニュースを紹介した後に Michael が英語で Mami が日本語でバイリンガル会話形式でコメントしていく番組。(番組冒頭より抜粋) 個人的には最初に Podcast を聴き始めたきっかけになった番組。2013年の夏にインターンシップで3ヶ月程東京に来ていた頃に同じく通勤時間によく聴いていた。この番組で 「&amp;rdquo;Do you know what I mean?&amp;rdquo; って便利なフレーズやな、覚えとこ」ってなった :-D&lt;/p&gt;
+
+&lt;p&gt;お気に入りのエピソードは &lt;a href=&#34;http://bilingualnews.libsyn.com/176-takahashi-082715&#34;&gt;&amp;ldquo;08.27.15: バイリンガル会話 feat. Yuki Takahashi&amp;rdquo;&lt;/a&gt;。南極で宇宙の研究やイーロン・マスクがや創業者で民間でロケット作ってる SpaceX で働いていらしゃった Takahashi さんのお話がとてもおもしろかった。特別編は研究者とか友達がゲストとして来ていつもとは雰囲気違うけど、いろんな話聞けて好き。&lt;/p&gt;
+
+&lt;h1 id=&#34;donguri-fm-http-blog-donguri-fm:a473db95b2776decf60435b06ebe0fd4&#34;&gt;&lt;a href=&#34;http://blog.donguri.fm/&#34;&gt;donguri.fm&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;Web界隈で有名なブロガー narumi さんとなつめぐさんの Podcast。なつめぐさんは&lt;a href=&#34;http://natsumeg.blog.jp/archives/34550612.html&#34;&gt;セブ島の記事&lt;/a&gt;で知って、今は&lt;a href=&#34;http://natsumeg.blog.jp/archives/47066799.html&#34;&gt;アフリカいらしゃっいます&lt;/a&gt;が前職の人事をなさっているときに京都でお話する機会があったり、京都からの友人と&lt;a href=&#34;http://f1rst-step.com/&#34;&gt;サービス&lt;/a&gt;を一緒に作ったりしているのを見て勝手に親近感を覚えいて Podcast を聴きはじめました。他に比べて1エピソードが短いからさらっと聴けるのも好きな理由です。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://livedoor.blogimg.jp/narumiii/imgs/a/f/afa8ec65.jpg&#34; width=&#34;420px&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;お気に入りのエピソードは &lt;a href=&#34;https://soundcloud.com/dongurifm/0331-01a&#34;&gt;&amp;ldquo;033としまえんフィッシングエリアは超楽しい！ 出張ポッドキャスト&amp;rdquo;&lt;/a&gt;。きたきたきた。って言ってるけど、釣れなすぎてびっくりする。夏はプール、オフシーズンは釣り堀になってるとしまえんで釣りしながら収録。釣りに集中し過ぎて一瞬しゃべんなくなったり、烏の声とか聞こえたりしてこんな番組聴いたことなくておもろかった。&lt;/p&gt;
+
+&lt;h1 id=&#34;software-engineering-radio-http-www-se-radio-net:a473db95b2776decf60435b06ebe0fd4&#34;&gt;&lt;a href=&#34;http://www.se-radio.net/&#34;&gt;Software Engineering Radio&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;同僚のエンジニアの方から教えてもらった Podcast。Borg の話とか Real Time Analysis の話とか &lt;a href=&#34;http://www.amazon.co.jp/Soft-Skills-Software-Developers-Manual/dp/1617292397&#34;&gt;&lt;em&gt;Soft Skills&lt;/em&gt;&lt;/a&gt; の話だったり、毎回違うゲストが自分の専門の話をしてる。初回が2006年で過去に遡ると &lt;a href=&#34;http://www.martinfowler.com/&#34;&gt;Martin Fowler&lt;/a&gt; 先生とかも話しているし、すごい老舗 Podcast ぽい。聞き流しで理解できないので、気になったエピソードだけ聴いている。&lt;/p&gt;
+
+&lt;p&gt;お気に入りのエピソードは &lt;a href=&#34;http://www.se-radio.net/2016/02/se-radio-episode-249-vaughn-vernon-on-reactive-programming-with-the-actor-model/&#34;&gt;&amp;ldquo;SE Radio Episode 249: Vaughn Vernon on Reactive Programming with the Actor Model&amp;rdquo;&lt;/a&gt;。ちょうど YAPC Asia 2015 で頂いた冊子に載っていた LINE のアーキテクチャの話を読んでたので Actor の話がとても印象に残った。&lt;/p&gt;
+
+&lt;h1 id=&#34;ニュース-英語:a473db95b2776decf60435b06ebe0fd4&#34;&gt;ニュース(英語)&lt;/h1&gt;
+
+&lt;p&gt;英語の勉強がてら &lt;a href=&#34;http://edition.cnn.com/studentnews&#34;&gt;CNN Student News&lt;/a&gt; と &lt;a href=&#34;http://www.nhk.or.jp/podcasts/program/nhkworld.html&#34;&gt;English News - NHK WORLD RADIO JAPAN&lt;/a&gt; を聴いている。CNN の方は学生向けとあって平易な言葉でニュースを説明してあり transcription も用意してある。NHK WORLD は Podcast だけじゃなくWebやアプリで動画も無料で見れる。&lt;/p&gt;
+
+&lt;h1 id=&#34;その他-tech系:a473db95b2776decf60435b06ebe0fd4&#34;&gt;その他 (Tech系)&lt;/h1&gt;
+
+&lt;p&gt;その他のTech系 Podcast はオープンソースの話をしている &lt;a href=&#34;https://changelog.com/&#34;&gt;The Changelog&lt;/a&gt; とフロントサイド系の話をしている &lt;a href=&#34;http://mozaic.fm/&#34;&gt;mozaic.fm&lt;/a&gt; (最新の&lt;a href=&#34;http://mozaic.fm/post/133930208998/20-browser&#34;&gt;ブラウザの話&lt;/a&gt;が最高だった) をたまに聴いている。他にも機械学習とかデータサイエンスの話をする &lt;a href=&#34;http://www.thetalkingmachines.com/&#34;&gt;Talking Machines&lt;/a&gt; とか &lt;a href=&#34;http://www.partiallyderivative.com/&#34;&gt;Partially Derivative&lt;/a&gt; を見つけて購読はしているけれど、個人的にはあまりヒット作はなく気分が向いた時だけ聴いてる。&lt;/p&gt;
+
+&lt;h1 id=&#34;聴く番組の参考にしたサイト:a473db95b2776decf60435b06ebe0fd4&#34;&gt;聴く番組の参考にしたサイト&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://steps.dodgson.org/b/2013/09/21/an-overnight-podcast-listener/&#34;&gt;steps to phantasien | SEP 21ST, 2013 にわか Podcast ファン&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://anemone.dodgson.org/2015/05/20/more-like-a-podcast-listener/&#34;&gt;steps to phantasien | 続・にわか Podcast ファン&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://deeeet.com/writing/2014/08/06/podcast-2014/&#34;&gt;SOTA | AUGUST 06, 2014 好きなPodcast&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
