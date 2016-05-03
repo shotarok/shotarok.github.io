@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+
+  
+  <meta charset="UTF-8">
+  <title>
+    &#39;Kaggle Display Advertising Challenge&#39; working with vw-luigi | shotarok&#39;s Tech Blog
+  </title>
+
+
+  
+  <meta name="viewport" content="width=device-width,user-scalable=no,maximum-scale=1,initial-scale=1">
+
+  
+  <link rel="canonical" href="http://blog.shotarok.com/post/2016-05-03-vwluigi_with_critio_dataset/"/>
+
+  
+  <link rel="stylesheet" href="/css/sanitize.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+  <link rel="stylesheet" href="/css/highlight_monokai.css">
+  <link rel="stylesheet" href="/css/theme.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  
+  
+  <link href="http://blog.shotarok.com/index.xml" rel="alternate" type="application/rss+xml" title="shotarok&#39;s Tech Blog" />
+  <link href="http://blog.shotarok.com/index.xml" rel="feed" type="application/rss+xml" title="shotarok&#39;s Tech Blog" />
+
+  
+  <script type="text/javascript">var switchTo5x=true;</script>
+  <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+  <script type="text/javascript">stLight.options({publisher: "1017c155-f88f-4f55-80a8-bab2a7ca3fb9", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+
+</head>
+
+
+
+<body>
+<div class="container">
+
+  
+  <header role="banner">
+    <div class="row gutters">
+      <div id="site-title" class="col span_6">
+        <h1><a href="http://blog.shotarok.com/">shotarok&#39;s Tech Blog</a></h1>
+        <h2>東山n条からn目黒へ</h2>
+      </div>
+      <div id="social" class="col span_6">
+        <ul>
+          <li><a href="https://twitter.com/shotarok28" target="_blank">Twitter</a></li>
+          
+          <li><a href="https://github.com/shotarok" target="_blank">GitHub</a></li>
+          
+        </ul>
+      </div>
+    </div>
+  </header>
+
+
+  
+  <main id="single" role="main">
+    <div class="article-header">
+      <h1>&#39;Kaggle Display Advertising Challenge&#39; working with vw-luigi</h1>
+      <div class="meta">
+        May 3, 2016 &nbsp;
+        
+          #<a href="/tags/english">English</a>&nbsp;
+        
+          #<a href="/tags/ml">ML</a>&nbsp;
+        
+      </div>
+    </div>
+    <article>
+      
+
+<p>When you tackle some machine learning problems with <a href="https://github.com/JohnLangford/vowpal_wabbit">vowpal wabbit</a>, have you felt annoying to write monotonous evaluation code like cross-validation? <strong>vw-luigi</strong> (<a href="https://github.com/shotarok/vw-luigi">https://github.com/shotarok/vw-luigi</a>) helps you at such time.</p>
+
+<p>The <em>vw-luigi</em> is a set of <strong>luigi</strong> workflows to evaluate models trained by <strong>vowpal wabbit</strong>. All you need to do is prepare for training and test data. If you use <em>vw-luigi</em>, it would train a model, predict with the model and you can get the evaluation result automatically.</p>
+
+<p>In this post, I&rsquo;ll explain an example usage of <em>vw-luigi</em> using <a href="http://criteolabs.wpengine.com/downloads/2014-kaggle-display-advertising-challenge-dataset/">&lsquo;Kaggle Display Advertising Challenge&rsquo;</a> dataset.</p>
+
+<h1 id="vw-luigi-with-kaggle-display-advertising-challenge:8d1515850c053e4a419a7597d0afd932">vw-luigi with &lsquo;Kaggle Display Advertising Challenge&rsquo;</h1>
+
+<h2 id="download-dataset:8d1515850c053e4a419a7597d0afd932">Download Dataset</h2>
+
+<p><a href="https://www.kaggle.com/c/criteo-display-ad-challenge">&lsquo;Display Advertising Challenge&rsquo;</a> is a competition to benchmark the most accurate ML algorithms for estimation of <a href="https://en.wikipedia.org/wiki/Click-through_rate">Click-through rate</a> (CTR). It has been held for 90 days in 2014. Dataset was provided by critio. The data is not available on the page in kaggle.com. Currently you can download the data through the page of critio labs (<a href="http://criteolabs.wpengine.com/downloads/2014-kaggle-display-advertising-challenge-dataset/">here</a>). It is available for non-commercial purposes only.</p>
+
+<p><img src="https://gyazo.com/2bb3972c30f641c8868bc77b9886ef35.png" alt="dac dataset" /></p>
+
+<p>If you download <code>dac.tar.gz</code> from this page and decompress it, then you can get <code>readme</code>, <code>train.txt</code> and <code>test.txt</code>.</p>
+
+<h2 id="prepare-training-and-test-data-for-vw:8d1515850c053e4a419a7597d0afd932">Prepare training and test data for vw</h2>
+
+<p>According to readme, the tsv data consists of 40 columns. The first column is a binary value means whether ad is clicked or not. Following 13 columns are integer values meaning mostly count features. Rest 26 columns are 32 bits hashed value meaning categorical features.</p>
+
+<p>In order to use this data for input of vw, the tsv fomat needs to be converted into <a href="https://github.com/JohnLangford/vowpal_wabbit/wiki/Input-format">vw format</a>.</p>
+
+<script src="https://gist.github.com/shotarok/62f869d277d9755ebdc92708386bb0ad.js"></script>
+
+<p>If you save this gist as <code>tsv_to_vw.py</code>, you can convert training and test data via flowing commands.</p>
+
+<pre><code>$ mkdir -p /tmp/work/space
+$ cat train.txt | python train.txt &gt; /tmp/work/space/train.vw
+$ cat test.txt | python test.txt &gt; /tmp/work/space/test.vw
+</code></pre>
+
+<h2 id="evaluate-model-with-vw-luigi:8d1515850c053e4a419a7597d0afd932">Evaluate model with vw-luigi</h2>
+
+<p>Data preprocessing is done. The last work is to clone vw-luigi and install required python modules.</p>
+
+<pre><code>$ git clone git@github.com:shotarok/vw-luigi.git ~/
+$ cd ~/vw-luigi
+$ virtualenv venv
+$ source venv/bin/activate
+$ pip install -r requirements.txt
+</code></pre>
+
+<p>In case you use <code>/tmp/work/space/train.vw</code> as training data, <code>/tmp/work/space/test.vw</code> as test data and <em>squared loss</em> as loss function, you can get the evaluation result, which includes AUROC, AUPR and LossLoss calculated by <em>scikit-learn</em>, following to below commands.</p>
+
+<pre><code>$ cd ~/vw-luigi
+$ source venv/bin/activate
+$ ls /tmp/work/space
+&gt; train.vw test.vw
+$ python -m luigi --module vwluigi EvalTask --loss-func squared --work-dir /tmp/work/space --local-scheduler
+ ...
+$ ls /tmp/work/space
+&gt; model.vw predict.vw result.txt train.vw
+$ cat /tmp/work/space/result.txt
+</code></pre>
+
+<p>You can get the evaluation result like this gif.</p>
+
+<p><img src="https://gyazo.com/a86de7b93a18d990249176a8f6ba54ed.gif" alt="gif" /></p>
+
+
+      
+      <div id="share-this" class="col span_10">
+        <span class='st_facebook_large' displayText='Facebook'></span>
+        <span class='st_twitter_large' displayText='Tweet'></span>
+        <span class='st_googleplus_large' displayText='Google +'></span>
+        <span class='st_hatena_large' displayText='Hatena'></span>
+        <span class='st_pocket_large' displayText='Hatena'></span>
+      </div>
+    </article>
+
+<aside><div id="disqus_thread"></div></aside>
+
+<script type="text/javascript">
+    var disqus_shortname = 'shotarok';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+  </main>
+
+  <nav class="pagination">
+    
+      <span class="previous">&larr; <a href="http://blog.shotarok.com/post/2016-04-30-my-favorite-podcasts/" rel="prev">お気に入りのPodcast</a></span>
+    
+    
+  </nav>
+
+
+  
+  <footer role="contentinfo">
+    <div style="text-align:center;">
+      <img src="/images/profile.png" width="64" height="64"><br>
+      Written by Shotaro Kohama
+    </div>
+  </footer>
+
+
+</div>
+
+<script src="/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-37905480-2', 'auto');
+  ga('send', 'pageview');
+</script>
+
+</body>
+</html>
+

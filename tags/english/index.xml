@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>English on shotarok&#39;s Tech Blog</title>
+    <link>http://blog.shotarok.com/tags/english/</link>
+    <description>Recent content in English on shotarok&#39;s Tech Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Tue, 03 May 2016 11:37:10 +0900</lastBuildDate>
+    <atom:link href="http://blog.shotarok.com/tags/english/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>&#39;Kaggle Display Advertising Challenge&#39; working with vw-luigi</title>
+      <link>http://blog.shotarok.com/post/2016-05-03-vwluigi_with_critio_dataset/</link>
+      <pubDate>Tue, 03 May 2016 11:37:10 +0900</pubDate>
+      
+      <guid>http://blog.shotarok.com/post/2016-05-03-vwluigi_with_critio_dataset/</guid>
+      <description>
+
+&lt;p&gt;When you tackle some machine learning problems with &lt;a href=&#34;https://github.com/JohnLangford/vowpal_wabbit&#34;&gt;vowpal wabbit&lt;/a&gt;, have you felt annoying to write monotonous evaluation code like cross-validation? &lt;strong&gt;vw-luigi&lt;/strong&gt; (&lt;a href=&#34;https://github.com/shotarok/vw-luigi&#34;&gt;https://github.com/shotarok/vw-luigi&lt;/a&gt;) helps you at such time.&lt;/p&gt;
+
+&lt;p&gt;The &lt;em&gt;vw-luigi&lt;/em&gt; is a set of &lt;strong&gt;luigi&lt;/strong&gt; workflows to evaluate models trained by &lt;strong&gt;vowpal wabbit&lt;/strong&gt;. All you need to do is prepare for training and test data. If you use &lt;em&gt;vw-luigi&lt;/em&gt;, it would train a model, predict with the model and you can get the evaluation result automatically.&lt;/p&gt;
+
+&lt;p&gt;In this post, I&amp;rsquo;ll explain an example usage of &lt;em&gt;vw-luigi&lt;/em&gt; using &lt;a href=&#34;http://criteolabs.wpengine.com/downloads/2014-kaggle-display-advertising-challenge-dataset/&#34;&gt;&amp;lsquo;Kaggle Display Advertising Challenge&amp;rsquo;&lt;/a&gt; dataset.&lt;/p&gt;
+
+&lt;h1 id=&#34;vw-luigi-with-kaggle-display-advertising-challenge:8d1515850c053e4a419a7597d0afd932&#34;&gt;vw-luigi with &amp;lsquo;Kaggle Display Advertising Challenge&amp;rsquo;&lt;/h1&gt;
+
+&lt;h2 id=&#34;download-dataset:8d1515850c053e4a419a7597d0afd932&#34;&gt;Download Dataset&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.kaggle.com/c/criteo-display-ad-challenge&#34;&gt;&amp;lsquo;Display Advertising Challenge&amp;rsquo;&lt;/a&gt; is a competition to benchmark the most accurate ML algorithms for estimation of &lt;a href=&#34;https://en.wikipedia.org/wiki/Click-through_rate&#34;&gt;Click-through rate&lt;/a&gt; (CTR). It has been held for 90 days in 2014. Dataset was provided by critio. The data is not available on the page in kaggle.com. Currently you can download the data through the page of critio labs (&lt;a href=&#34;http://criteolabs.wpengine.com/downloads/2014-kaggle-display-advertising-challenge-dataset/&#34;&gt;here&lt;/a&gt;). It is available for non-commercial purposes only.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gyazo.com/2bb3972c30f641c8868bc77b9886ef35.png&#34; alt=&#34;dac dataset&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;If you download &lt;code&gt;dac.tar.gz&lt;/code&gt; from this page and decompress it, then you can get &lt;code&gt;readme&lt;/code&gt;, &lt;code&gt;train.txt&lt;/code&gt; and &lt;code&gt;test.txt&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;prepare-training-and-test-data-for-vw:8d1515850c053e4a419a7597d0afd932&#34;&gt;Prepare training and test data for vw&lt;/h2&gt;
+
+&lt;p&gt;According to readme, the tsv data consists of 40 columns. The first column is a binary value means whether ad is clicked or not. Following 13 columns are integer values meaning mostly count features. Rest 26 columns are 32 bits hashed value meaning categorical features.&lt;/p&gt;
+
+&lt;p&gt;In order to use this data for input of vw, the tsv fomat needs to be converted into &lt;a href=&#34;https://github.com/JohnLangford/vowpal_wabbit/wiki/Input-format&#34;&gt;vw format&lt;/a&gt;.&lt;/p&gt;
+
+&lt;script src=&#34;https://gist.github.com/shotarok/62f869d277d9755ebdc92708386bb0ad.js&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;If you save this gist as &lt;code&gt;tsv_to_vw.py&lt;/code&gt;, you can convert training and test data via flowing commands.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ mkdir -p /tmp/work/space
+$ cat train.txt | python train.txt &amp;gt; /tmp/work/space/train.vw
+$ cat test.txt | python test.txt &amp;gt; /tmp/work/space/test.vw
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;evaluate-model-with-vw-luigi:8d1515850c053e4a419a7597d0afd932&#34;&gt;Evaluate model with vw-luigi&lt;/h2&gt;
+
+&lt;p&gt;Data preprocessing is done. The last work is to clone vw-luigi and install required python modules.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git clone git@github.com:shotarok/vw-luigi.git ~/
+$ cd ~/vw-luigi
+$ virtualenv venv
+$ source venv/bin/activate
+$ pip install -r requirements.txt
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In case you use &lt;code&gt;/tmp/work/space/train.vw&lt;/code&gt; as training data, &lt;code&gt;/tmp/work/space/test.vw&lt;/code&gt; as test data and &lt;em&gt;squared loss&lt;/em&gt; as loss function, you can get the evaluation result, which includes AUROC, AUPR and LossLoss calculated by &lt;em&gt;scikit-learn&lt;/em&gt;, following to below commands.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ cd ~/vw-luigi
+$ source venv/bin/activate
+$ ls /tmp/work/space
+&amp;gt; train.vw test.vw
+$ python -m luigi --module vwluigi EvalTask --loss-func squared --work-dir /tmp/work/space --local-scheduler
+ ...
+$ ls /tmp/work/space
+&amp;gt; model.vw predict.vw result.txt train.vw
+$ cat /tmp/work/space/result.txt
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You can get the evaluation result like this gif.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://gyazo.com/a86de7b93a18d990249176a8f6ba54ed.gif&#34; alt=&#34;gif&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
