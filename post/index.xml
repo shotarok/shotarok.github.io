@@ -379,7 +379,7 @@ $ hugo server -t angels-ladder -w
 
 &lt;h2 id=&#34;github-での静的コンテンツのレポジトリ管理:8fdad275f77835e8ce5f225ce05b2c38&#34;&gt;Github での静的コンテンツのレポジトリ管理&lt;/h2&gt;
 
-&lt;pre&gt;&lt;code&gt;$ cdd test-blog/public
+&lt;pre&gt;&lt;code&gt;$ cd test-blog/public
 $ git init
 $ git remote add origin git@github.com:&amp;lt;username&amp;gt;/&amp;lt;username&amp;gt;.github.io.git
 $ git add --all &amp;amp; git commit -m &amp;quot;Initial commit&amp;quot;
