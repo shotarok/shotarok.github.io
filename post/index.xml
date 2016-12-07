@@ -6,8 +6,117 @@
     <description>Recent content in Posts on shotarok&#39;s Tech Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Tue, 03 May 2016 11:37:10 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 09 Dec 2016 00:00:00 +0900</lastBuildDate>
     <atom:link href="http://blog.shotarok.com/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>GASでDMM英会話の予約メールから自動的にカレンダーに登録</title>
+      <link>http://blog.shotarok.com/post/2016-12-09-auto_creation_of_eikaiwa_events/</link>
+      <pubDate>Fri, 09 Dec 2016 00:00:00 +0900</pubDate>
+      
+      <guid>http://blog.shotarok.com/post/2016-12-09-auto_creation_of_eikaiwa_events/</guid>
+      <description>
+
+&lt;p&gt;この記事は &lt;a href=&#34;http://advent.camph.net/&#34;&gt;CAMPHOR- Advent Calendar 2016&lt;/a&gt; の &amp;ldquo;9日目&amp;rdquo; の記事です.&lt;/p&gt;
+
+&lt;p&gt;今年の夏にスピーキングの練習をしたいと思って &lt;strong&gt;DMM英会話&lt;/strong&gt; をはじめました.
+他のオンライン英会話サービスもそうでしたが, DMM英会話サービスはレッスンを予約するとメールが送られてきます. &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:42bf90af176f6aa50cedbb7ba76871c6:1&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:42bf90af176f6aa50cedbb7ba76871c6:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; 最初は手でカレンダーに登録してたのですが, 毎日プランを始めてしばらくするとめんどくさくてやらなくなり, 案の定予約を忘れたりしました. 予約を忘れず, かつ lazy&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:42bf90af176f6aa50cedbb7ba76871c6:2&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:42bf90af176f6aa50cedbb7ba76871c6:2&#34;&gt;2&lt;/a&gt;&lt;/sup&gt; に過ごすために &lt;strong&gt;Google Apps Script でDMM英会話予約メールからカレンダーに自動登録するスクリプト&lt;/strong&gt; を書いたので, 今回はその共有です.&lt;/p&gt;
+
+&lt;h1 id=&#34;how-to-work:42bf90af176f6aa50cedbb7ba76871c6&#34;&gt;How to work&lt;/h1&gt;
+
+&lt;p&gt;スクリプトの動作概要はこちらです.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;受信ボックスから &lt;strong&gt;未読&lt;/strong&gt; の予約メールを検索&lt;/li&gt;
+&lt;li&gt;未読の予約メールの件名・本文から正規表現で日付を抽出しカレンダーに登録&lt;/li&gt;
+&lt;li&gt;予約メールを &lt;strong&gt;既読&lt;/strong&gt; にする&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;あとは GAS の機能を使って 1.~3. を定期的に実行します.&lt;/p&gt;
+
+&lt;p&gt;既にカレンダーに登録してあるレッスンかどうかを判断するのに &lt;strong&gt;メールの未読・既読だけを使っている&lt;/strong&gt; のが処理を簡単にしているミソですね. &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:42bf90af176f6aa50cedbb7ba76871c6:3&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:42bf90af176f6aa50cedbb7ba76871c6:3&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;p&gt;スクリプトは Google Drive の &lt;a href=&#34;https://drive.google.com/open?id=1NT5ZYd1d-baRRPUG9PByAJ1KnS885M11M8cq_vRML7_aWFgX6CV_7L1b&#34;&gt;CAMPHOR- Advent Calendar 2016 9th day (EnglishSkypeLessons)&lt;/a&gt; に置きました.
+コードを読める方にはスクリプトを読んで頂いて, 記事の残りの部分では GoogleカレンダーとDMM英会話を使っていて僕と同じ悩みを抱えている, そんなあなたに使って頂けるように &lt;strong&gt;使い方&lt;/strong&gt; にフォーカスして説明します.&lt;/p&gt;
+
+&lt;h1 id=&#34;how-to-use:42bf90af176f6aa50cedbb7ba76871c6&#34;&gt;How to use&lt;/h1&gt;
+
+&lt;h2 id=&#34;1-プロジェクトをコピーする:42bf90af176f6aa50cedbb7ba76871c6&#34;&gt;1. プロジェクトをコピーする&lt;/h2&gt;
+
+&lt;p&gt;まず &lt;a href=&#34;https://drive.google.com/open?id=1NT5ZYd1d-baRRPUG9PByAJ1KnS885M11M8cq_vRML7_aWFgX6CV_7L1b&#34;&gt;CAMPHOR- Advent Calendar 2016 9th day (EnglishSkypeLessons)&lt;/a&gt; のリンクを開き, 自分の Google Drive に &lt;strong&gt;コピーを作成&lt;/strong&gt; します.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://blog.shotarok.com/images/20161209/phase1.png&#34; alt=&#34;Phase1&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;私の環境では「コピーを作成」を押したら空ページが新しいタブで開かれて成功したかどうか一瞬わかりませんでしたが, 自分の Google Drive を開き直すとちゃんと作成できていました.&lt;/p&gt;
+
+&lt;p&gt;また「ファイルを開けません」と表示された方もあとでアプリを指定して開くと表示できると思うので, メニューから自分の Google Drive に「コピーを作成」してください.&lt;/p&gt;
+
+&lt;h2 id=&#34;2-スクリプトを実行して権限を付与:42bf90af176f6aa50cedbb7ba76871c6&#34;&gt;2. スクリプトを実行して権限を付与&lt;/h2&gt;
+
+&lt;p&gt;つぎに &lt;strong&gt;1度手動でスクリプトを実行して Gmail と Google Calendar にアクセスする権限を与えます.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;コピーしたプロジェクトを 「Google Apps Script Editor」というアプリを指定して開きます. そして DMMEnglish.gs というファイルを選択して, ナビバーの実行のところから  &lt;code&gt;DMMEnglish&lt;/code&gt; をクリックして下さい.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://blog.shotarok.com/images/20161209/phase2-1.png&#34; alt=&#34;Phase2-1&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;しばらくとすると「承認が必要です」という画面が出てきます.どのような権限が必要なのかを確認するために「許可を確認」をクリックして下さい.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://blog.shotarok.com/images/20161209/phase2-2.png&#34; alt=&#34;Phase2-2&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;「許可を確認」を押すとカレンダーとメールにアクセスする権限を求める画面が表示されます. 権限に納得できたら「許可」をクリックして下さい.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://blog.shotarok.com/images/20161209/phase2-3.png&#34; alt=&#34;Phase2-3&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;「許可」をクリックするとスクリプトが１回実行されます. 未読の予約メールが受信ボックスにある場合はカレンダーに登録されているはずです！&lt;/p&gt;
+
+&lt;h2 id=&#34;3-スクリプトを定期的に実行する:42bf90af176f6aa50cedbb7ba76871c6&#34;&gt;3. スクリプトを定期的に実行する&lt;/h2&gt;
+
+&lt;p&gt;あとはこの &lt;strong&gt;スクリプトを定期的に実行する&lt;/strong&gt; ようにするだけです.&lt;/p&gt;
+
+&lt;p&gt;ナビバーのリソースのところから「現在のプロジェクトのトリガー」をクリックして下さい.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://blog.shotarok.com/images/20161209/phase3-1.png&#34; alt=&#34;Phase3-1&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;まだこのプロジェクトにはトリガーが設定されていないので、下のような画面が出てきます. トリガーの追加をクリックして下さい.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://blog.shotarok.com/images/20161209/phase3-2.png&#34; alt=&#34;Phase3-2&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;トリガーの設定画面で &lt;code&gt;DMMEnglish&lt;/code&gt; を &lt;code&gt;時間主導型&lt;/code&gt;, &lt;code&gt;分タイマー&lt;/code&gt;, &lt;code&gt;15分ごと&lt;/code&gt; と選択してから保存をクリックしてください.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://blog.shotarok.com/images/20161209/phase3-3.png&#34; alt=&#34;Phase3-3&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;これで 15分ごとにスクリプトが実行されるようになります. あとは未読の予約メールを受信ボックスに入れておけば，勝手に既読にして Google カレンダーに登録されるようになります.&lt;/p&gt;
+
+&lt;h1 id=&#34;さいごに:42bf90af176f6aa50cedbb7ba76871c6&#34;&gt;さいごに&lt;/h1&gt;
+
+&lt;p&gt;日頃の手間を省くスクリプトを書くのは個人的に好きで，今年は他にもこんなのを書きました.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Redmine のチケットページから情報をマークダウン形式でクリップボードにコピーするブックマークレット&lt;/li&gt;
+&lt;li&gt;Slack のユーザリストから電話番号を取り出して Twilio で障害電話をかけるための bot&lt;/li&gt;
+&lt;li&gt;Trello でやってる TODO, DOING, DONE のタスク管理リストから API を叩いて週報生成するスクリプト&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;また機会があれば紹介したいと思います :-D&lt;/p&gt;
+
+&lt;p&gt;明日は &lt;a href=&#34;https://twitter.com/kasajei&#34;&gt;@kasajei&lt;/a&gt; さんによる 「買って大満足！これがマインドフルネス三種の神器だ！」 です. お楽しみに！&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+
+&lt;hr /&gt;
+
+&lt;ol&gt;
+&lt;li id=&#34;fn:42bf90af176f6aa50cedbb7ba76871c6:1&#34;&gt;そのときに QQEnglish, レアジョブ, BestTeacher などなどの無料プランを一気に試したので同様にスクリプトを書きました.&lt;br /&gt;
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:42bf90af176f6aa50cedbb7ba76871c6:1&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:42bf90af176f6aa50cedbb7ba76871c6:2&#34;&gt;&lt;a href=&#34;https://ja.wikipedia.org/wiki/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9E#.E3.83.97.E3.83.AD.E3.82.B0.E3.83.A9.E3.83.9E.E3.81.AE.E4.B8.89.E5.A4.A7.E7.BE.8E.E5.BE.B3&#34;&gt;プログラマ三大美徳&lt;/a&gt; 怠惰, 短気, 傲慢.&lt;br /&gt;
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:42bf90af176f6aa50cedbb7ba76871c6:2&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:42bf90af176f6aa50cedbb7ba76871c6:3&#34;&gt;この状態管理 は僕が思いついたものではなく、監視メールから slack に通知する社内スクリプトからアイディアを頂きました :pray:
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:42bf90af176f6aa50cedbb7ba76871c6:3&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>&#39;Kaggle Display Advertising Challenge&#39; working with vw-luigi</title>
