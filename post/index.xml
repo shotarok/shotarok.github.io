@@ -129,7 +129,7 @@
 
 &lt;p&gt;When you tackle some machine learning problems with &lt;a href=&#34;https://github.com/JohnLangford/vowpal_wabbit&#34;&gt;vowpal wabbit&lt;/a&gt;, have you felt annoying to write monotonous evaluation code like cross-validation? &lt;strong&gt;vw-luigi&lt;/strong&gt; (&lt;a href=&#34;https://github.com/shotarok/vw-luigi&#34;&gt;https://github.com/shotarok/vw-luigi&lt;/a&gt;) helps you at such time.&lt;/p&gt;
 
-&lt;p&gt;The &lt;em&gt;vw-luigi&lt;/em&gt; is a set of &lt;strong&gt;luigi&lt;/strong&gt; workflows to evaluate models trained by &lt;strong&gt;vowpal wabbit&lt;/strong&gt;. All you need to do is prepare for training and test data. If you use &lt;em&gt;vw-luigi&lt;/em&gt;, it would train a model, predict with the model and you can get the evaluation result automatically.&lt;/p&gt;
+&lt;p&gt;The &lt;em&gt;vw-luigi&lt;/em&gt; includes &lt;strong&gt;luigi&lt;/strong&gt; workflows to evaluate models trained by &lt;strong&gt;vowpal wabbit&lt;/strong&gt;. All you need to do is prepare for training and test data. If you use &lt;em&gt;vw-luigi&lt;/em&gt;, it would train a model, predict with the model and you can get the evaluation result automatically.&lt;/p&gt;
 
 &lt;p&gt;In this post, I&amp;rsquo;ll explain an example usage of &lt;em&gt;vw-luigi&lt;/em&gt; using &lt;a href=&#34;http://criteolabs.wpengine.com/downloads/2014-kaggle-display-advertising-challenge-dataset/&#34;&gt;&amp;lsquo;Kaggle Display Advertising Challenge&amp;rsquo;&lt;/a&gt; dataset.&lt;/p&gt;
 
@@ -145,9 +145,9 @@
 
 &lt;h2 id=&#34;prepare-training-and-test-data-for-vw&#34;&gt;Prepare training and test data for vw&lt;/h2&gt;
 
-&lt;p&gt;According to readme, the tsv data consists of 40 columns. The first column is a binary value means whether ad is clicked or not. Following 13 columns are integer values meaning mostly count features. Rest 26 columns are 32 bits hashed value meaning categorical features.&lt;/p&gt;
+&lt;p&gt;According to readme, the tsv data consists of 40 columns. The first column is a binary value that means whether ad is clicked or not. Following 13 columns are integer values meaning mostly count features. Rest 26 columns are 32 bits hashed value meaning categorical features.&lt;/p&gt;
 
-&lt;p&gt;In order to use this data for input of vw, the tsv fomat needs to be converted into &lt;a href=&#34;https://github.com/JohnLangford/vowpal_wabbit/wiki/Input-format&#34;&gt;vw format&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;In order to use this data for input of vw, we need to convert tsv into &lt;a href=&#34;https://github.com/JohnLangford/vowpal_wabbit/wiki/Input-format&#34;&gt;vw format&lt;/a&gt;.&lt;/p&gt;
 
 &lt;script src=&#34;https://gist.github.com/shotarok/62f869d277d9755ebdc92708386bb0ad.js&#34;&gt;&lt;/script&gt;
 
@@ -160,7 +160,7 @@ $ cat test.txt | python test.txt &amp;gt; /tmp/work/space/test.vw
 
 &lt;h2 id=&#34;evaluate-model-with-vw-luigi&#34;&gt;Evaluate model with vw-luigi&lt;/h2&gt;
 
-&lt;p&gt;Data preprocessing is done. The last work is to clone vw-luigi and install required python modules.&lt;/p&gt;
+&lt;p&gt;Finally, let&amp;rsquo;s clone vw-luigi and run it.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;$ git clone git@github.com:shotarok/vw-luigi.git ~/
 $ cd ~/vw-luigi
@@ -169,7 +169,7 @@ $ source venv/bin/activate
 $ pip install -r requirements.txt
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;In case you use &lt;code&gt;/tmp/work/space/train.vw&lt;/code&gt; as training data, &lt;code&gt;/tmp/work/space/test.vw&lt;/code&gt; as test data and &lt;em&gt;squared loss&lt;/em&gt; as loss function, you can get the evaluation result, which includes AUROC, AUPR and LossLoss calculated by &lt;em&gt;scikit-learn&lt;/em&gt;, following to below commands.&lt;/p&gt;
+&lt;p&gt;In case you use &lt;code&gt;/tmp/work/space/train.vw&lt;/code&gt; as training data, &lt;code&gt;/tmp/work/space/test.vw&lt;/code&gt; as test data and &lt;em&gt;squared loss&lt;/em&gt; as loss function, you can get an evaluation result, which includes AUROC, AUPR and LossLoss calculated by &lt;em&gt;scikit-learn&lt;/em&gt;, following to below commands.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;$ cd ~/vw-luigi
 $ source venv/bin/activate

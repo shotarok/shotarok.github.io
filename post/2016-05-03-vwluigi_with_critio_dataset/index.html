@@ -76,7 +76,7 @@
 
 <p>When you tackle some machine learning problems with <a href="https://github.com/JohnLangford/vowpal_wabbit">vowpal wabbit</a>, have you felt annoying to write monotonous evaluation code like cross-validation? <strong>vw-luigi</strong> (<a href="https://github.com/shotarok/vw-luigi">https://github.com/shotarok/vw-luigi</a>) helps you at such time.</p>
 
-<p>The <em>vw-luigi</em> is a set of <strong>luigi</strong> workflows to evaluate models trained by <strong>vowpal wabbit</strong>. All you need to do is prepare for training and test data. If you use <em>vw-luigi</em>, it would train a model, predict with the model and you can get the evaluation result automatically.</p>
+<p>The <em>vw-luigi</em> includes <strong>luigi</strong> workflows to evaluate models trained by <strong>vowpal wabbit</strong>. All you need to do is prepare for training and test data. If you use <em>vw-luigi</em>, it would train a model, predict with the model and you can get the evaluation result automatically.</p>
 
 <p>In this post, I&rsquo;ll explain an example usage of <em>vw-luigi</em> using <a href="http://criteolabs.wpengine.com/downloads/2014-kaggle-display-advertising-challenge-dataset/">&lsquo;Kaggle Display Advertising Challenge&rsquo;</a> dataset.</p>
 
@@ -92,9 +92,9 @@
 
 <h2 id="prepare-training-and-test-data-for-vw">Prepare training and test data for vw</h2>
 
-<p>According to readme, the tsv data consists of 40 columns. The first column is a binary value means whether ad is clicked or not. Following 13 columns are integer values meaning mostly count features. Rest 26 columns are 32 bits hashed value meaning categorical features.</p>
+<p>According to readme, the tsv data consists of 40 columns. The first column is a binary value that means whether ad is clicked or not. Following 13 columns are integer values meaning mostly count features. Rest 26 columns are 32 bits hashed value meaning categorical features.</p>
 
-<p>In order to use this data for input of vw, the tsv fomat needs to be converted into <a href="https://github.com/JohnLangford/vowpal_wabbit/wiki/Input-format">vw format</a>.</p>
+<p>In order to use this data for input of vw, we need to convert tsv into <a href="https://github.com/JohnLangford/vowpal_wabbit/wiki/Input-format">vw format</a>.</p>
 
 <script src="https://gist.github.com/shotarok/62f869d277d9755ebdc92708386bb0ad.js"></script>
 
@@ -107,7 +107,7 @@ $ cat test.txt | python test.txt &gt; /tmp/work/space/test.vw
 
 <h2 id="evaluate-model-with-vw-luigi">Evaluate model with vw-luigi</h2>
 
-<p>Data preprocessing is done. The last work is to clone vw-luigi and install required python modules.</p>
+<p>Finally, let&rsquo;s clone vw-luigi and run it.</p>
 
 <pre><code>$ git clone git@github.com:shotarok/vw-luigi.git ~/
 $ cd ~/vw-luigi
@@ -116,7 +116,7 @@ $ source venv/bin/activate
 $ pip install -r requirements.txt
 </code></pre>
 
-<p>In case you use <code>/tmp/work/space/train.vw</code> as training data, <code>/tmp/work/space/test.vw</code> as test data and <em>squared loss</em> as loss function, you can get the evaluation result, which includes AUROC, AUPR and LossLoss calculated by <em>scikit-learn</em>, following to below commands.</p>
+<p>In case you use <code>/tmp/work/space/train.vw</code> as training data, <code>/tmp/work/space/test.vw</code> as test data and <em>squared loss</em> as loss function, you can get an evaluation result, which includes AUROC, AUPR and LossLoss calculated by <em>scikit-learn</em>, following to below commands.</p>
 
 <pre><code>$ cd ~/vw-luigi
 $ source venv/bin/activate
