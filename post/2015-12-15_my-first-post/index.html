@@ -83,7 +83,7 @@ CAMPHOR- Advent Calendar に参加する前に、タグを好きに追加でき�
 気に入ったテーマがあった、かつ 普段触らない言語 go を触る良い機会になるかもと思ったこと
 等を理由に <strong>Hugo</strong> を使うことにしました。</p>
 
-<h1 id="簡単な使い方:8fdad275f77835e8ce5f225ce05b2c38">簡単な使い方</h1>
+<h1 id="簡単な使い方">簡単な使い方</h1>
 
 <p>Hugo を使うと <code>hugo new site &lt;name&gt;</code> というコマンドでサイトの雛形を作る事ができます。
 Hugo自体は <code>go get -u -v github.com/spf13/hugo</code> や <code>brew install hugo</code> でインストールできます。</p>
@@ -118,14 +118,14 @@ $ hugo server -t angels-ladder -w
 # Edit post/hello-world.md by some editors
 </code></pre>
 
-<h1 id="個人的なレポジトリ構成:8fdad275f77835e8ce5f225ce05b2c38">個人的なレポジトリ構成</h1>
+<h1 id="個人的なレポジトリ構成">個人的なレポジトリ構成</h1>
 
 <p>Hugo によって作成された静的コンテンツは GitHub Pages を利用して管理し、
 雛形の方は theme も含めて BitBucket のプライベートレポジトリで管理しています。
 これで Github Pages のレポジトリには静的なマークアップのコードだけになり、
 マークダウンのファイルや自分用に少し変更したテーマなどはBidBucketで管理することができます。</p>
 
-<h2 id="github-での静的コンテンツのレポジトリ管理:8fdad275f77835e8ce5f225ce05b2c38">Github での静的コンテンツのレポジトリ管理</h2>
+<h2 id="github-での静的コンテンツのレポジトリ管理">Github での静的コンテンツのレポジトリ管理</h2>
 
 <pre><code>$ cd test-blog/public
 $ git init
@@ -134,7 +134,7 @@ $ git add --all &amp; git commit -m &quot;Initial commit&quot;
 $ git push --all
 </code></pre>
 
-<h2 id="bidbucket-での-マークダウン-hugoテーマ-のレポジトリ管理:8fdad275f77835e8ce5f225ce05b2c38">BidBucket での マークダウン&amp;Hugoテーマ のレポジトリ管理</h2>
+<h2 id="bidbucket-での-マークダウン-hugoテーマ-のレポジトリ管理">BidBucket での マークダウン&amp;Hugoテーマ のレポジトリ管理</h2>
 
 <pre><code>$ cd test-blog
 $ git init
@@ -144,7 +144,7 @@ $ git add --all &amp; git commit -m &quot;Initial commit&quot;
 $ git push origin --all
 </code></pre>
 
-<h1 id="special-thanks:8fdad275f77835e8ce5f225ce05b2c38">Special Thanks</h1>
+<h1 id="special-thanks">Special Thanks</h1>
 
 <p>今回参考にさせていただいたサイト<br />
 ・<a href="https://github.com/spf13/Hugo">https://github.com/spf13/Hugo</a><br />
@@ -179,6 +179,8 @@ $ git push origin --all
   </main>
 
   <nav class="pagination">
+    
+      <span class="previous">&larr; <a href="http://blog.shotarok.com/tags/english/" rel="prev">English</a></span>
     
     
       <span class="next"><a href="http://blog.shotarok.com/post/2015-12-17_hello-quine-world/" rel="next">超絶技巧プログラミングやってみた</a> &rarr;</span>

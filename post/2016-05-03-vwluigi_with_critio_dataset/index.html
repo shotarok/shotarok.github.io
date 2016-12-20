@@ -80,9 +80,9 @@
 
 <p>In this post, I&rsquo;ll explain an example usage of <em>vw-luigi</em> using <a href="http://criteolabs.wpengine.com/downloads/2014-kaggle-display-advertising-challenge-dataset/">&lsquo;Kaggle Display Advertising Challenge&rsquo;</a> dataset.</p>
 
-<h1 id="vw-luigi-with-kaggle-display-advertising-challenge:8d1515850c053e4a419a7597d0afd932">vw-luigi with &lsquo;Kaggle Display Advertising Challenge&rsquo;</h1>
+<h1 id="vw-luigi-with-kaggle-display-advertising-challenge">vw-luigi with &lsquo;Kaggle Display Advertising Challenge&rsquo;</h1>
 
-<h2 id="download-dataset:8d1515850c053e4a419a7597d0afd932">Download Dataset</h2>
+<h2 id="download-dataset">Download Dataset</h2>
 
 <p><a href="https://www.kaggle.com/c/criteo-display-ad-challenge">&lsquo;Display Advertising Challenge&rsquo;</a> is a competition to benchmark the most accurate ML algorithms for estimation of <a href="https://en.wikipedia.org/wiki/Click-through_rate">Click-through rate</a> (CTR). It has been held for 90 days in 2014. Dataset was provided by critio. The data is not available on the page in kaggle.com. Currently you can download the data through the page of critio labs (<a href="http://criteolabs.wpengine.com/downloads/2014-kaggle-display-advertising-challenge-dataset/">here</a>). It is available for non-commercial purposes only.</p>
 
@@ -90,7 +90,7 @@
 
 <p>If you download <code>dac.tar.gz</code> from this page and decompress it, then you can get <code>readme</code>, <code>train.txt</code> and <code>test.txt</code>.</p>
 
-<h2 id="prepare-training-and-test-data-for-vw:8d1515850c053e4a419a7597d0afd932">Prepare training and test data for vw</h2>
+<h2 id="prepare-training-and-test-data-for-vw">Prepare training and test data for vw</h2>
 
 <p>According to readme, the tsv data consists of 40 columns. The first column is a binary value means whether ad is clicked or not. Following 13 columns are integer values meaning mostly count features. Rest 26 columns are 32 bits hashed value meaning categorical features.</p>
 
@@ -105,7 +105,7 @@ $ cat train.txt | python train.txt &gt; /tmp/work/space/train.vw
 $ cat test.txt | python test.txt &gt; /tmp/work/space/test.vw
 </code></pre>
 
-<h2 id="evaluate-model-with-vw-luigi:8d1515850c053e4a419a7597d0afd932">Evaluate model with vw-luigi</h2>
+<h2 id="evaluate-model-with-vw-luigi">Evaluate model with vw-luigi</h2>
 
 <p>Data preprocessing is done. The last work is to clone vw-luigi and install required python modules.</p>
 

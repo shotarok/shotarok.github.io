@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>English on shotarok&#39;s Tech Blog</title>
-    <link>http://blog.shotarok.com/tags/english/</link>
+    <link>http://blog.shotarok.com/tags/english/index.xml</link>
     <description>Recent content in English on shotarok&#39;s Tech Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Tue, 03 May 2016 11:37:10 +0900</lastBuildDate>
+    <copyright>Written by Shotaro Kohama</copyright>
     <atom:link href="http://blog.shotarok.com/tags/english/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
@@ -23,9 +23,9 @@
 
 &lt;p&gt;In this post, I&amp;rsquo;ll explain an example usage of &lt;em&gt;vw-luigi&lt;/em&gt; using &lt;a href=&#34;http://criteolabs.wpengine.com/downloads/2014-kaggle-display-advertising-challenge-dataset/&#34;&gt;&amp;lsquo;Kaggle Display Advertising Challenge&amp;rsquo;&lt;/a&gt; dataset.&lt;/p&gt;
 
-&lt;h1 id=&#34;vw-luigi-with-kaggle-display-advertising-challenge:8d1515850c053e4a419a7597d0afd932&#34;&gt;vw-luigi with &amp;lsquo;Kaggle Display Advertising Challenge&amp;rsquo;&lt;/h1&gt;
+&lt;h1 id=&#34;vw-luigi-with-kaggle-display-advertising-challenge&#34;&gt;vw-luigi with &amp;lsquo;Kaggle Display Advertising Challenge&amp;rsquo;&lt;/h1&gt;
 
-&lt;h2 id=&#34;download-dataset:8d1515850c053e4a419a7597d0afd932&#34;&gt;Download Dataset&lt;/h2&gt;
+&lt;h2 id=&#34;download-dataset&#34;&gt;Download Dataset&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://www.kaggle.com/c/criteo-display-ad-challenge&#34;&gt;&amp;lsquo;Display Advertising Challenge&amp;rsquo;&lt;/a&gt; is a competition to benchmark the most accurate ML algorithms for estimation of &lt;a href=&#34;https://en.wikipedia.org/wiki/Click-through_rate&#34;&gt;Click-through rate&lt;/a&gt; (CTR). It has been held for 90 days in 2014. Dataset was provided by critio. The data is not available on the page in kaggle.com. Currently you can download the data through the page of critio labs (&lt;a href=&#34;http://criteolabs.wpengine.com/downloads/2014-kaggle-display-advertising-challenge-dataset/&#34;&gt;here&lt;/a&gt;). It is available for non-commercial purposes only.&lt;/p&gt;
 
@@ -33,7 +33,7 @@
 
 &lt;p&gt;If you download &lt;code&gt;dac.tar.gz&lt;/code&gt; from this page and decompress it, then you can get &lt;code&gt;readme&lt;/code&gt;, &lt;code&gt;train.txt&lt;/code&gt; and &lt;code&gt;test.txt&lt;/code&gt;.&lt;/p&gt;
 
-&lt;h2 id=&#34;prepare-training-and-test-data-for-vw:8d1515850c053e4a419a7597d0afd932&#34;&gt;Prepare training and test data for vw&lt;/h2&gt;
+&lt;h2 id=&#34;prepare-training-and-test-data-for-vw&#34;&gt;Prepare training and test data for vw&lt;/h2&gt;
 
 &lt;p&gt;According to readme, the tsv data consists of 40 columns. The first column is a binary value means whether ad is clicked or not. Following 13 columns are integer values meaning mostly count features. Rest 26 columns are 32 bits hashed value meaning categorical features.&lt;/p&gt;
 
@@ -48,7 +48,7 @@ $ cat train.txt | python train.txt &amp;gt; /tmp/work/space/train.vw
 $ cat test.txt | python test.txt &amp;gt; /tmp/work/space/test.vw
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;evaluate-model-with-vw-luigi:8d1515850c053e4a419a7597d0afd932&#34;&gt;Evaluate model with vw-luigi&lt;/h2&gt;
+&lt;h2 id=&#34;evaluate-model-with-vw-luigi&#34;&gt;Evaluate model with vw-luigi&lt;/h2&gt;
 
 &lt;p&gt;Data preprocessing is done. The last work is to clone vw-luigi and install required python modules.&lt;/p&gt;
 

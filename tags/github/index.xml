@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Github on shotarok&#39;s Tech Blog</title>
-    <link>http://blog.shotarok.com/tags/github/</link>
+    <link>http://blog.shotarok.com/tags/github/index.xml</link>
     <description>Recent content in Github on shotarok&#39;s Tech Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Tue, 15 Dec 2015 08:16:39 +0900</lastBuildDate>
+    <copyright>Written by Shotaro Kohama</copyright>
     <atom:link href="http://blog.shotarok.com/tags/github/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
@@ -26,7 +26,7 @@ CAMPHOR- Advent Calendar に参加する前に、タグを好きに追加でき�
 気に入ったテーマがあった、かつ 普段触らない言語 go を触る良い機会になるかもと思ったこと
 等を理由に &lt;strong&gt;Hugo&lt;/strong&gt; を使うことにしました。&lt;/p&gt;
 
-&lt;h1 id=&#34;簡単な使い方:8fdad275f77835e8ce5f225ce05b2c38&#34;&gt;簡単な使い方&lt;/h1&gt;
+&lt;h1 id=&#34;簡単な使い方&#34;&gt;簡単な使い方&lt;/h1&gt;
 
 &lt;p&gt;Hugo を使うと &lt;code&gt;hugo new site &amp;lt;name&amp;gt;&lt;/code&gt; というコマンドでサイトの雛形を作る事ができます。
 Hugo自体は &lt;code&gt;go get -u -v github.com/spf13/hugo&lt;/code&gt; や &lt;code&gt;brew install hugo&lt;/code&gt; でインストールできます。&lt;/p&gt;
@@ -61,14 +61,14 @@ $ hugo server -t angels-ladder -w
 # Edit post/hello-world.md by some editors
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h1 id=&#34;個人的なレポジトリ構成:8fdad275f77835e8ce5f225ce05b2c38&#34;&gt;個人的なレポジトリ構成&lt;/h1&gt;
+&lt;h1 id=&#34;個人的なレポジトリ構成&#34;&gt;個人的なレポジトリ構成&lt;/h1&gt;
 
 &lt;p&gt;Hugo によって作成された静的コンテンツは GitHub Pages を利用して管理し、
 雛形の方は theme も含めて BitBucket のプライベートレポジトリで管理しています。
 これで Github Pages のレポジトリには静的なマークアップのコードだけになり、
 マークダウンのファイルや自分用に少し変更したテーマなどはBidBucketで管理することができます。&lt;/p&gt;
 
-&lt;h2 id=&#34;github-での静的コンテンツのレポジトリ管理:8fdad275f77835e8ce5f225ce05b2c38&#34;&gt;Github での静的コンテンツのレポジトリ管理&lt;/h2&gt;
+&lt;h2 id=&#34;github-での静的コンテンツのレポジトリ管理&#34;&gt;Github での静的コンテンツのレポジトリ管理&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;$ cd test-blog/public
 $ git init
@@ -77,7 +77,7 @@ $ git add --all &amp;amp; git commit -m &amp;quot;Initial commit&amp;quot;
 $ git push --all
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;bidbucket-での-マークダウン-hugoテーマ-のレポジトリ管理:8fdad275f77835e8ce5f225ce05b2c38&#34;&gt;BidBucket での マークダウン&amp;amp;Hugoテーマ のレポジトリ管理&lt;/h2&gt;
+&lt;h2 id=&#34;bidbucket-での-マークダウン-hugoテーマ-のレポジトリ管理&#34;&gt;BidBucket での マークダウン&amp;amp;Hugoテーマ のレポジトリ管理&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code&gt;$ cd test-blog
 $ git init
@@ -87,7 +87,7 @@ $ git add --all &amp;amp; git commit -m &amp;quot;Initial commit&amp;quot;
 $ git push origin --all
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h1 id=&#34;special-thanks:8fdad275f77835e8ce5f225ce05b2c38&#34;&gt;Special Thanks&lt;/h1&gt;
+&lt;h1 id=&#34;special-thanks&#34;&gt;Special Thanks&lt;/h1&gt;
 
 &lt;p&gt;今回参考にさせていただいたサイト&lt;br /&gt;
 ・&lt;a href=&#34;https://github.com/spf13/Hugo&#34;&gt;https://github.com/spf13/Hugo&lt;/a&gt;&lt;br /&gt;

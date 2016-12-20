@@ -79,13 +79,13 @@ Advent Calendar 2015</a> の 17 日目の記事です。</p>
 
 <p>こんにちは。<a href="https://github.com/shotarok">@shotarok</a> (Twitter: <a href="https://twitter.com/shotarok28">@shotarok28</a>) です。３月までは京都で学生をしていて、今年の４月から東京の <a href="https://www.fout.co.jp/">FreakOut</a> という広告の会社でソフトウェアエンジニアをしている CAMPHOR- OBです。</p>
 
-<h1 id="quine-って何:c0d6977ca17c38caef79e8f3a8636f21">Quine って何？</h1>
+<h1 id="quine-って何">Quine って何？</h1>
 
 <p>みなさん「<strong>Quine</strong>」という言葉を聞いたことがありますか？ Quine とは、こんなプログラムのことです。 ※1</p>
 
 <blockquote>
 <p>クワイン（英: Quine）は、コンピュータプログラムの一種で、自身のソースコードと完全に同じ文字列を出力するプログラムである。<br />
-<a href="https://ja.wikipedia.org/wiki/%E3%82%AF%E3%83%AF%E3%82%A4%E3%83%B3_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">出典: wikipedia クワイン_(プログラミング)</a></p>
+[出典: wikipedia クワイン<em>(プログラミング)](<a href="https://ja.wikipedia.org/wiki/%E3%82%AF%E3%83%AF%E3%82%A4%E3%83%B3">https://ja.wikipedia.org/wiki/%E3%82%AF%E3%83%AF%E3%82%A4%E3%83%B3</a></em>(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0)</p>
 </blockquote>
 
 <p>定義を読むだけでは、ぱっとはわからないので、実際にプログラムが動いているところを見てみましょう。</p>
@@ -103,7 +103,7 @@ Advent Calendar 2015</a> の 17 日目の記事です。</p>
 
 <p>この本は Quine をはじめとする「超絶技巧プログラミング」と呼ばれる、実用性はないけれど、不思議で楽しいプログラミング技法を紹介しています。そして、この本のおかげで念願叶い Quine を書くことができました。詳細な解説は本を読んで頂くことにして、この記事では、僕が書いた <code>quine.rb</code> の簡単な説明と、作成した手順を紹介できればと思います。</p>
 
-<h1 id="はじめての-quine:c0d6977ca17c38caef79e8f3a8636f21">はじめての Quine</h1>
+<h1 id="はじめての-quine">はじめての Quine</h1>
 
 <p>今回、下のような流れで僕は <code>quine.rb</code> を作成しました。</p>
 
@@ -115,7 +115,7 @@ Advent Calendar 2015</a> の 17 日目の記事です。</p>
 成功したら、Quine 完成！</li>
 </ol>
 
-<h2 id="1-ロゴ画像からビットマップの作成:c0d6977ca17c38caef79e8f3a8636f21">1. ロゴ画像からビットマップの作成</h2>
+<h2 id="1-ロゴ画像からビットマップの作成">1. ロゴ画像からビットマップの作成</h2>
 
 <p>まずは <code>quine.rb</code> をロゴの形にするための雛形を画像から作成します。これは jpeg 画像から ASCII アートを生成してくれる <code>jp2a</code> と png から jpeg に変換する <code>convert</code> を使うと作業が楽になります。(OSX をお使いの方は両方とも Homebrew でインストールできます) これらを使うと、例えば、こんな感じでビットマップを作成できます。</p>
 
@@ -142,7 +142,7 @@ $ convert navbar_logo.png jpg:- | jp2a - --chars=012 | tr '2' ' '
 
 </code></pre>
 
-<h2 id="2-ビットマップから-quine-を作る:c0d6977ca17c38caef79e8f3a8636f21">2. ビットマップから Quine を作る</h2>
+<h2 id="2-ビットマップから-quine-を作る">2. ビットマップから Quine を作る</h2>
 
 <p>作成したビットマップを使って ロゴの形をした Quine を出力する <a href="https://gist.github.com/shotarok/8ca2098340a381be0135"><code>build_quine.rb</code></a> を作ります。天下り的ですが、まずは <a href="https://gist.github.com/shotarok/8ca2098340a381be0135"><code>build_quine.rb</code></a> を御覧ください。</p>
 
@@ -150,7 +150,7 @@ $ convert navbar_logo.png jpg:- | jp2a - --chars=012 | tr '2' ' '
 
 <p>これを実行すると <a href="https://gist.github.com/shotarok/4d9fc754e4c00036cbdf"><code>quine.rb</code></a>  が出てきます。このコードが何をやっているかを上から順に説明していきます！</p>
 
-<h3 id="line1-2:c0d6977ca17c38caef79e8f3a8636f21">Line1-2</h3>
+<h3 id="line1-2">Line1-2</h3>
 
 <p>ここが Quine の本体と言っても過言ではありません。実はロゴの形にする気がなければ Quine はこんなワンライナーで実現できます。</p>
 
@@ -174,7 +174,7 @@ s})*&quot;&quot;)
 
 <p>本ではもっと順を追って丁寧に解説されていますので、気になる方は是非ご一読下さい。</p>
 
-<h3 id="line4:c0d6977ca17c38caef79e8f3a8636f21">Line4</h3>
+<h3 id="line4">Line4</h3>
 
 <p>変数 <code>bidmap</code> には、ロゴから作成されたビットマップを36変数に変換したものを入れています。
 ruby は 多倍長整数と <code>to_s</code> で36進数の変換をサポートしているので、下のようにビットマップから36進数に変換できます。</p>
@@ -196,11 +196,11 @@ puts(LOGO.gsub(/\n/, &quot;&quot;).gsub(/[^1]/, &quot;0&quot;).reverse.to_i(2).t
 &gt; 3mf7nxp6d7yn1up5cf7lkyiexikdcs9mo4xw8j2dv93putn0tbabu2ep3qmdxdel52h7zfwbq7lzz9j8q9amz55h91pwj127
 </code></pre>
 
-<h3 id="line6-12:c0d6977ca17c38caef79e8f3a8636f21">Line6-12</h3>
+<h3 id="line6-12">Line6-12</h3>
 
 <p>ここの部分は変数 <code>bidmap</code> を使って、ロゴの形でコードを出力しています。<code>bidmap</code> を多倍長整数にして 1bitずつ走査して <code>1</code> の場合はコードを1文字出力し、<code>0</code> の場合は空白 <code>32.chr</code> を出力します。※2.</p>
 
-<h2 id="3-quine-rb-の動作確認:c0d6977ca17c38caef79e8f3a8636f21">3. <code>quine.rb</code> の動作確認</h2>
+<h2 id="3-quine-rb-の動作確認">3. <code>quine.rb</code> の動作確認</h2>
 
 <p>ここまで来たら、後は微調整です。とは言ってもここが地味に大変だったりするのですが…。</p>
 
@@ -223,7 +223,7 @@ $ ruby -e ';;;;;;;;;puts(&quot;hello&quot;);;;;;;;'
 
 <p><a href="https://gyazo.com/a52c7be7a37931636e18ee3aa23fd146"><img src="https://i.gyazo.com/a52c7be7a37931636e18ee3aa23fd146.gif" alt="https://gyazo.com/a52c7be7a37931636e18ee3aa23fd146" /></a></p>
 
-<h1 id="最後に:c0d6977ca17c38caef79e8f3a8636f21">最後に</h1>
+<h1 id="最後に">最後に</h1>
 
 <p>いかがだったでしょうか。自分しか読めないようなメンテナンス不能なコードを「あぁこの bitmap だと実行できない」と１文字消したり足したりするのは、業務にはない楽しさがありました。※4.</p>
 

@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ruby on shotarok&#39;s Tech Blog</title>
-    <link>http://blog.shotarok.com/tags/ruby/</link>
+    <link>http://blog.shotarok.com/tags/ruby/index.xml</link>
     <description>Recent content in Ruby on shotarok&#39;s Tech Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Thu, 17 Dec 2015 00:00:00 +0900</lastBuildDate>
+    <copyright>Written by Shotaro Kohama</copyright>
     <atom:link href="http://blog.shotarok.com/tags/ruby/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
@@ -22,13 +22,13 @@ Advent Calendar 2015&lt;/a&gt; の 17 日目の記事です。&lt;/p&gt;
 
 &lt;p&gt;こんにちは。&lt;a href=&#34;https://github.com/shotarok&#34;&gt;@shotarok&lt;/a&gt; (Twitter: &lt;a href=&#34;https://twitter.com/shotarok28&#34;&gt;@shotarok28&lt;/a&gt;) です。３月までは京都で学生をしていて、今年の４月から東京の &lt;a href=&#34;https://www.fout.co.jp/&#34;&gt;FreakOut&lt;/a&gt; という広告の会社でソフトウェアエンジニアをしている CAMPHOR- OBです。&lt;/p&gt;
 
-&lt;h1 id=&#34;quine-って何:c0d6977ca17c38caef79e8f3a8636f21&#34;&gt;Quine って何？&lt;/h1&gt;
+&lt;h1 id=&#34;quine-って何&#34;&gt;Quine って何？&lt;/h1&gt;
 
 &lt;p&gt;みなさん「&lt;strong&gt;Quine&lt;/strong&gt;」という言葉を聞いたことがありますか？ Quine とは、こんなプログラムのことです。 ※1&lt;/p&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;クワイン（英: Quine）は、コンピュータプログラムの一種で、自身のソースコードと完全に同じ文字列を出力するプログラムである。&lt;br /&gt;
-&lt;a href=&#34;https://ja.wikipedia.org/wiki/%E3%82%AF%E3%83%AF%E3%82%A4%E3%83%B3_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0&#34;&gt;出典: wikipedia クワイン_(プログラミング)&lt;/a&gt;&lt;/p&gt;
+[出典: wikipedia クワイン&lt;em&gt;(プログラミング)](&lt;a href=&#34;https://ja.wikipedia.org/wiki/%E3%82%AF%E3%83%AF%E3%82%A4%E3%83%B3&#34;&gt;https://ja.wikipedia.org/wiki/%E3%82%AF%E3%83%AF%E3%82%A4%E3%83%B3&lt;/a&gt;&lt;/em&gt;(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0)&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;定義を読むだけでは、ぱっとはわからないので、実際にプログラムが動いているところを見てみましょう。&lt;/p&gt;
@@ -46,7 +46,7 @@ Advent Calendar 2015&lt;/a&gt; の 17 日目の記事です。&lt;/p&gt;
 
 &lt;p&gt;この本は Quine をはじめとする「超絶技巧プログラミング」と呼ばれる、実用性はないけれど、不思議で楽しいプログラミング技法を紹介しています。そして、この本のおかげで念願叶い Quine を書くことができました。詳細な解説は本を読んで頂くことにして、この記事では、僕が書いた &lt;code&gt;quine.rb&lt;/code&gt; の簡単な説明と、作成した手順を紹介できればと思います。&lt;/p&gt;
 
-&lt;h1 id=&#34;はじめての-quine:c0d6977ca17c38caef79e8f3a8636f21&#34;&gt;はじめての Quine&lt;/h1&gt;
+&lt;h1 id=&#34;はじめての-quine&#34;&gt;はじめての Quine&lt;/h1&gt;
 
 &lt;p&gt;今回、下のような流れで僕は &lt;code&gt;quine.rb&lt;/code&gt; を作成しました。&lt;/p&gt;
 
@@ -58,7 +58,7 @@ Advent Calendar 2015&lt;/a&gt; の 17 日目の記事です。&lt;/p&gt;
 成功したら、Quine 完成！&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h2 id=&#34;1-ロゴ画像からビットマップの作成:c0d6977ca17c38caef79e8f3a8636f21&#34;&gt;1. ロゴ画像からビットマップの作成&lt;/h2&gt;
+&lt;h2 id=&#34;1-ロゴ画像からビットマップの作成&#34;&gt;1. ロゴ画像からビットマップの作成&lt;/h2&gt;
 
 &lt;p&gt;まずは &lt;code&gt;quine.rb&lt;/code&gt; をロゴの形にするための雛形を画像から作成します。これは jpeg 画像から ASCII アートを生成してくれる &lt;code&gt;jp2a&lt;/code&gt; と png から jpeg に変換する &lt;code&gt;convert&lt;/code&gt; を使うと作業が楽になります。(OSX をお使いの方は両方とも Homebrew でインストールできます) これらを使うと、例えば、こんな感じでビットマップを作成できます。&lt;/p&gt;
 
@@ -85,7 +85,7 @@ $ convert navbar_logo.png jpg:- | jp2a - --chars=012 | tr &#39;2&#39; &#39; &#39
 
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;2-ビットマップから-quine-を作る:c0d6977ca17c38caef79e8f3a8636f21&#34;&gt;2. ビットマップから Quine を作る&lt;/h2&gt;
+&lt;h2 id=&#34;2-ビットマップから-quine-を作る&#34;&gt;2. ビットマップから Quine を作る&lt;/h2&gt;
 
 &lt;p&gt;作成したビットマップを使って ロゴの形をした Quine を出力する &lt;a href=&#34;https://gist.github.com/shotarok/8ca2098340a381be0135&#34;&gt;&lt;code&gt;build_quine.rb&lt;/code&gt;&lt;/a&gt; を作ります。天下り的ですが、まずは &lt;a href=&#34;https://gist.github.com/shotarok/8ca2098340a381be0135&#34;&gt;&lt;code&gt;build_quine.rb&lt;/code&gt;&lt;/a&gt; を御覧ください。&lt;/p&gt;
 
@@ -93,7 +93,7 @@ $ convert navbar_logo.png jpg:- | jp2a - --chars=012 | tr &#39;2&#39; &#39; &#39
 
 &lt;p&gt;これを実行すると &lt;a href=&#34;https://gist.github.com/shotarok/4d9fc754e4c00036cbdf&#34;&gt;&lt;code&gt;quine.rb&lt;/code&gt;&lt;/a&gt;  が出てきます。このコードが何をやっているかを上から順に説明していきます！&lt;/p&gt;
 
-&lt;h3 id=&#34;line1-2:c0d6977ca17c38caef79e8f3a8636f21&#34;&gt;Line1-2&lt;/h3&gt;
+&lt;h3 id=&#34;line1-2&#34;&gt;Line1-2&lt;/h3&gt;
 
 &lt;p&gt;ここが Quine の本体と言っても過言ではありません。実はロゴの形にする気がなければ Quine はこんなワンライナーで実現できます。&lt;/p&gt;
 
@@ -117,7 +117,7 @@ s})*&amp;quot;&amp;quot;)
 
 &lt;p&gt;本ではもっと順を追って丁寧に解説されていますので、気になる方は是非ご一読下さい。&lt;/p&gt;
 
-&lt;h3 id=&#34;line4:c0d6977ca17c38caef79e8f3a8636f21&#34;&gt;Line4&lt;/h3&gt;
+&lt;h3 id=&#34;line4&#34;&gt;Line4&lt;/h3&gt;
 
 &lt;p&gt;変数 &lt;code&gt;bidmap&lt;/code&gt; には、ロゴから作成されたビットマップを36変数に変換したものを入れています。
 ruby は 多倍長整数と &lt;code&gt;to_s&lt;/code&gt; で36進数の変換をサポートしているので、下のようにビットマップから36進数に変換できます。&lt;/p&gt;
@@ -139,11 +139,11 @@ puts(LOGO.gsub(/\n/, &amp;quot;&amp;quot;).gsub(/[^1]/, &amp;quot;0&amp;quot;).r
 &amp;gt; 3mf7nxp6d7yn1up5cf7lkyiexikdcs9mo4xw8j2dv93putn0tbabu2ep3qmdxdel52h7zfwbq7lzz9j8q9amz55h91pwj127
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;line6-12:c0d6977ca17c38caef79e8f3a8636f21&#34;&gt;Line6-12&lt;/h3&gt;
+&lt;h3 id=&#34;line6-12&#34;&gt;Line6-12&lt;/h3&gt;
 
 &lt;p&gt;ここの部分は変数 &lt;code&gt;bidmap&lt;/code&gt; を使って、ロゴの形でコードを出力しています。&lt;code&gt;bidmap&lt;/code&gt; を多倍長整数にして 1bitずつ走査して &lt;code&gt;1&lt;/code&gt; の場合はコードを1文字出力し、&lt;code&gt;0&lt;/code&gt; の場合は空白 &lt;code&gt;32.chr&lt;/code&gt; を出力します。※2.&lt;/p&gt;
 
-&lt;h2 id=&#34;3-quine-rb-の動作確認:c0d6977ca17c38caef79e8f3a8636f21&#34;&gt;3. &lt;code&gt;quine.rb&lt;/code&gt; の動作確認&lt;/h2&gt;
+&lt;h2 id=&#34;3-quine-rb-の動作確認&#34;&gt;3. &lt;code&gt;quine.rb&lt;/code&gt; の動作確認&lt;/h2&gt;
 
 &lt;p&gt;ここまで来たら、後は微調整です。とは言ってもここが地味に大変だったりするのですが…。&lt;/p&gt;
 
@@ -166,7 +166,7 @@ $ ruby -e &#39;;;;;;;;;;puts(&amp;quot;hello&amp;quot;);;;;;;;&#39;
 
 &lt;p&gt;&lt;a href=&#34;https://gyazo.com/a52c7be7a37931636e18ee3aa23fd146&#34;&gt;&lt;img src=&#34;https://i.gyazo.com/a52c7be7a37931636e18ee3aa23fd146.gif&#34; alt=&#34;https://gyazo.com/a52c7be7a37931636e18ee3aa23fd146&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;h1 id=&#34;最後に:c0d6977ca17c38caef79e8f3a8636f21&#34;&gt;最後に&lt;/h1&gt;
+&lt;h1 id=&#34;最後に&#34;&gt;最後に&lt;/h1&gt;
 
 &lt;p&gt;いかがだったでしょうか。自分しか読めないようなメンテナンス不能なコードを「あぁこの bitmap だと実行できない」と１文字消したり足したりするのは、業務にはない楽しさがありました。※4.&lt;/p&gt;
 
