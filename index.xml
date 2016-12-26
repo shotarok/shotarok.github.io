@@ -33,7 +33,7 @@
 &lt;li&gt;記事を編集して push すると自動デプロイされることを確認&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;以下，ちょっとハマったところをポイントに紹介します.&lt;/p&gt;
+&lt;p&gt;以下，ハマったところ・注意したところをポイントに手順を紹介します.&lt;/p&gt;
 
 &lt;h1 id=&#34;1-github-pages-にデプロイキーを登録&#34;&gt;1. GitHub Pages にデプロイキーを登録&lt;/h1&gt;
 
@@ -109,7 +109,7 @@ deployment:
       - cd public &amp;amp;&amp;amp; git push origin master
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h1 id=&#34;記事を編集して自動デプロイされることを確認&#34;&gt;記事を編集して自動デプロイされることを確認&lt;/h1&gt;
+&lt;h1 id=&#34;5-記事を編集して自動デプロイされることを確認&#34;&gt;5. 記事を編集して自動デプロイされることを確認&lt;/h1&gt;
 
 &lt;p&gt;最後に記事を追加・編集して BitBucket に master ブランチに push します.
 もしくはプルリクエストを作って master にマージします.&lt;/p&gt;
