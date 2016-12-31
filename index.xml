@@ -7,8 +7,185 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>Written by Shotaro Kohama</copyright>
-    <lastBuildDate>Mon, 26 Dec 2016 22:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 31 Dec 2016 22:00:00 +0900</lastBuildDate>
     <atom:link href="http://blog.shotarok.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>2016年振り返り</title>
+      <link>http://blog.shotarok.com/post/review-in-2016/</link>
+      <pubDate>Sat, 31 Dec 2016 22:00:00 +0900</pubDate>
+      
+      <guid>http://blog.shotarok.com/post/review-in-2016/</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;http://deeeet.com/writing/2015/12/31/2015/&#34;&gt;SOTA | DECEMBER 31, 2015 2015年振り返り&lt;/a&gt; がとても読みやすく,
+何年か経って忘れた頃に見返すと楽しい気がしたので自分も 2016年に出会って好きだったもの, 影響を受けたことを雑多にまとてみる.&lt;/p&gt;
+
+&lt;h1 id=&#34;blog&#34;&gt;Blog&lt;/h1&gt;
+
+&lt;p&gt;運用まわりの技術・知識が気になる今日このごろ，後で読む用に残す習慣がなかったので最近読んだものに偏ってしまっている.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://peteris.rocks/blog/htop/&#34;&gt;htop explained
+Explanation of everything you can see in htop/top on Linux&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://techblog.netflix.com/2016/02/distributed-time-travel-for-feature.html&#34;&gt;Distributed Time Travel for Feature Generation | The Netflix Blog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://steps.dodgson.org/b/2012/12/30/code-review-from-lowland/&#34;&gt;下から目線のコードレビュー | steps to phantasien&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://anemone.dodgson.org/2015/07/13/a-million-hello-worlds/&#34;&gt;A Million Hello Worlds | steps to phantasien&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://hb.matsumoto-r.jp/entry/2015/04/20/151743&#34;&gt;Webオペレーションエンジニアのアウトプットと開発力 | 人間とウェブの未来&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://blog.yuuk.io/entry/linux-server-operations&#34;&gt;Linuxサーバにログインしたらいつもやっているオペレーション| ゆううきブログ&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://blog.yuuk.io/entry/architecture-of-database-connection&#34;&gt;Webシステムにおけるデータベース接続アーキテクチャ概論 | ゆううきブログ&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://blog.yuuk.io/entry/2015-webserver-architecture&#34;&gt;2015年Webサーバアーキテクチャ序論 | ゆううきブログ&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://konifar-zatsu.hatenadiary.jp/entry/2016/06/29/193911&#34;&gt;無駄な議論を減らすために使ってる言葉 | Konifar&amp;rsquo;s ZATSU&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://soonraah.hatenablog.com/entry/2016/11/20/172620&#34;&gt;機械学習を利用するプロダクトのテスト | froglog プログラミングや統計の話など&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://blog.etsukata.com/2016/06/memcached-1419-eviction-slab-oom.html&#34;&gt;Memcached 1.4.19 to 1.4.28: Eviction 不具合による Slab OOM | Etsukata blog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://rkx1209.hatenablog.com/entry/2016/12/25/141543&#34;&gt;低レイヤーの歩き方 | るくすの日記 ~ Out_Of_Range ~&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://sfujiwara.hatenablog.com/entry/20110620/1308531677&#34;&gt;MySQLをmaster:slave=1:1構成にして参照をslaveに向けるのがなぜ良くないか | 酒日記 はてな支店&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Tech系以外だと「&lt;a href=&#34;http://yuchrszk.blogspot.jp/&#34;&gt;パレオな男&lt;/a&gt;」がすごい. タイトルになってるパレオダイエットは実践してないけれど,
+健康に関する多様な論文・本がわかりやすく簡潔にまとまっていて, 気になるリンクを辿って読んでて飽きない.正直ハマった.
+最終的に更新があれば個人の Slack に通知が来るようにまでした.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;パレオな男
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://yuchrszk.blogspot.jp/2014/02/blog-post_2008.html&#34;&gt;いまさら聞けない！科学的に痩せる「プチ断食」超入門&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://yuchrszk.blogspot.jp/2015/04/blog-post.html&#34;&gt;苦しまずに体脂肪を減らすための『脳の再トレーニング』ガイド「食事報酬と肥満 その４」&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;結局、砂糖は本当に太りやすいのか？問題&#34;&gt;結局、砂糖は本当に太りやすいのか？問題&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://yuchrszk.blogspot.jp/2016/11/1_16.html&#34;&gt;パレオさんに聞いてみよう#1：読書法、英語論文の読み方、プロテインと癌、ワクチンは無意味？&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://yuchrszk.blogspot.jp/2014/06/blog-post_9733.html&#34;&gt;象を飼い慣らすための指針&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;misc
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.english.com/blog/conversation-mistakes&#34;&gt;9 English conversation mistakes to avoid  | PEARSON ENGLISH Blog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://prtimes.jp/main/html/rd/p/000000059.000006798.html&#34;&gt;フリークアウト コーポレートロゴ変更のお知らせ&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;来年からは後で参照できるようにまとめておきたい. Pocket or はてブ かな.&lt;/p&gt;
+
+&lt;h1 id=&#34;podcast-episode&#34;&gt;Podcast Episode&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://blog.shotarok.com/post/2016-04-30-my-favorite-podcasts/&#34;&gt;お気に入りのPodcast&lt;/a&gt; でも書いたけど, 去年から Podcast を聞き始めた.
+はじめは Rebuild とバイリンガルニュースくらいだったけれど, 最近は subscribe するチャンネルが20個ぐらいに増えて流石に全部を聞くは無理になってきた.
+Rebuild と donkuri.fm は全部聞きながら, タイトルが気になったものを聞いている感じ.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Rebuild.fm
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://rebuild.fm/127/&#34;&gt;127: Post-mature Optimization (omo)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://rebuild.fm/169/&#34;&gt;169: Your Blog Can Be Generated By Neural Networks (omo)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;バイリンガルニュース
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://bilingualnews.libsyn.com/176-takahashi-082715&#34;&gt;08.27.15: バイリンガル会話 feat. Yuki Takahashi&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;donguri.fm
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://soundcloud.com/dongurifm/0331-01a&#34;&gt;033としまえんフィッシングエリアは超楽しい！ 出張ポッドキャスト&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://soundcloud.com/dongurifm/162a&#34;&gt;162 キュレーションって悪いことなんですか？&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Software Engineering Daily
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://softwareengineeringdaily.com/tag/editorials/&#34;&gt;You Are Not A Commodity&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://softwareengineeringdaily.com/2016/11/19/debugging-stories-with-haseeb-qureshi/&#34;&gt;Debugging Stories with Haseeb Qureshi&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;のぼりーさんのクラウドインフラPodcast
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://soundcloud.com/cloudinfra_podcast_ja/track-3&#34;&gt;Track 3 松本亮介とウェブの未来になめらかなシステム&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://soundcloud.com/cloudinfra_podcast_ja/track010b&#34;&gt;b-track 10 コミュニティの構築と維持のお話&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;youtube&#34;&gt;Youtube&lt;/h1&gt;
+
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/kEsshExn7aE&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;なんといっても，この動画が印象に残った.
+&lt;a href=&#34;http://dirtycow.ninja/&#34;&gt;Dirty Cow&lt;/a&gt; という名前が付いた脆弱性 (CVE-2016-5195) を突いてどのように root を取るかといかを丁寧に説明している.
+説明に &amp;ldquo;file&amp;rdquo; という単語が現れると，急に挟まれる謎の画像もそのテンションも良かった. この作者の Exploit の手法を説明する動画シリーズ &lt;a href=&#34;https://www.youtube.com/watch?v=xCEJfTfhtQc&#34;&gt;LiveOverflow&lt;/a&gt; もとても面白かった.&lt;/p&gt;
+
+&lt;p&gt;その他 Tech 系カンファレンスのトークとか大学とかの授業を Youtube を見るのも勉強になったけど，
+脆弱性とか CTF の解説動画とか GDB のチュートリアルとかだと，普段開発してても見る機会はない &amp;ldquo;人がどうターミナル上で作業しているか&amp;rdquo; が見れるのが新鮮だった.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Exploit Technique
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/playlist?list=PLhixgUqwRTjxglIswKp9mpkfPNfHkzyeN&#34;&gt;LiveOverflow | Binary Hacking&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/playlist?list=PL3AEB91BB184B185B&#34;&gt;ThinkAloudAcademy | C Programming Tutorial&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Linux
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=GsMs3n8CB6g&#34;&gt;Brendan Gregg | Give me 15 minutes and I&amp;rsquo;ll change your view of Linux tracing&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=PorfLSr3DDI&#34;&gt;CppCon | CppCon 2015: Greg Law &amp;ldquo;Give me 15 minutes &amp;amp; I&amp;rsquo;ll change your view of GDB&amp;rdquo;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=EqndHT606Tw&amp;amp;t=96s&#34;&gt;holidaylvr | fd, dup()/dup2() system call tutorial&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=sK5i-N34im8&#34;&gt;DockerCon | Cgroups, namespaces, and beyond: what arecontainers made from?&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Music
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=ss9ygQqqL2Q&#34;&gt;The Tonight Show Starring Jimmy Fallon | Wheel of Musical Impressions with Ariana Grande&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=Uyv5gm6J8K4&#34;&gt;CNN STYLE - Can Korean superstar CL break America?&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;misc
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=oVfHeWTKjag&#34;&gt;Veritasium | Facebook Fraud&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=KRcecxdGxvQ&#34;&gt;Michael Stonebraker | Big Data is (at least) Four Different Problems&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;book&#34;&gt;Book&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Tech系
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://amzn.to/2io7USN&#34;&gt;闘うプログラマー［新装版］　ビル・ゲイツの野望を担った男達&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://amzn.to/2io3yuI&#34;&gt;プログラミング言語Go (ADDISON-WESLEY PROFESSIONAL COMPUTING SERIES)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://amzn.to/2io5TWE&#34;&gt;みんなのGo言語【現場で使える実践テクニック】&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://amzn.to/2hCDTQ6&#34;&gt;Amazon Web Services実践入門 (WEB+DB PRESS plus)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://amzn.to/2iP4OGf&#34;&gt;Patterns of Enterprise Application Architecture (Addison-Wesley Signature Series (Fowler))&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Tech系以外
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://amzn.to/2io2mYq&#34;&gt;弱いつながり　検索ワードを探す旅&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://amzn.to/2is8H7G&#34;&gt;人生がときめく片づけの魔法&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://amzn.to/2iP9v35&#34;&gt;スクリプトドクターの脚本教室・初級篇&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://amzn.to/2iQ5WNQ&#34;&gt;情報参謀&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://amzn.to/2hCHxK0&#34;&gt;断片的なものの社会学&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;scuba-diving-extra-section&#34;&gt;Scuba Diving (Extra Section)&lt;/h1&gt;
+
+&lt;p&gt;5月に &lt;a href=&#34;https://en.wikipedia.org/wiki/Scuba_Schools_International&#34;&gt;SSI&lt;/a&gt; の OpenWater,
+8月に他団体のアドバンス相当の Advanced Adventurer のライセンスを取得した.&lt;/p&gt;
+
+&lt;p&gt;背中のタンクは水中で息を吸うためだけじゃなくて &lt;a href=&#34;https://goo.gl/TynZut&#34;&gt;BCD&lt;/a&gt; に空気を入れて, 重力と浮力を釣り合わせる (&lt;a href=&#34;https://ja.wikipedia.org/wiki/%E3%82%B9%E3%82%AF%E3%83%BC%E3%83%90%E3%83%80%E3%82%A4%E3%83%93%E3%83%B3%E3%82%B0#.E4.B8.AD.E6.80.A7.E6.B5.AE.E5.8A.9B&#34;&gt;中性浮力&lt;/a&gt;をとる) ためにも使うのを潜ってみて初めて知った.
+中性浮力が取れている状態がフワフワしていて心地よく新鮮な感覚で今はそれだけでもたのしい.
+潜れば潜るほど水圧が増えてBCDの空気の体積が減って浮力が減るので, 更に空気を入れる必要が出てくる.
+物理で勉強したことが体感できるのもおもしろかった.&lt;/p&gt;
+
+&lt;iframe src=&#34;https://www.google.com/maps/d/u/0/embed?mid=1iReG716C0SEAy6flmrpJQVDApXw&#34; width=&#34;640&#34; height=&#34;480&#34;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;最終的に潜った回数は21回で場所は伊豆周辺，伊豆大島及び八丈島.
+八丈島でカメと一緒に泳げたり，念願のナイトダイブが出来たのは嬉しかった.
+来年はイルカとかマンタとかと泳いでみたり, 海外で潜ってみたりしたい.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://blog.shotarok.com/images/20161231/turtle.jpg&#34; alt=&#34;a turtle in Hachijo-jima&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Hugo &#43; Bitbucket &#43; CircleCI で GitHub Pages に自動デプロイ</title>
