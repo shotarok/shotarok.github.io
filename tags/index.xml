@@ -1,29 +1,86 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>shotarok&#39;s Tech Blog</title>
-    <link>http://localhost:1313/tags/</link>
-    <description>Recent content on shotarok&#39;s Tech Blog</description>
+    <title>Tags on shotarok&#39;s Tech Blog</title>
+    <link>http://blog.shotarok.com/tags/</link>
+    <description>Recent content in Tags on shotarok&#39;s Tech Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Tue, 15 Dec 2015 08:40:24 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>Written by Shotaro Kohama</copyright>
+    <lastBuildDate>Tue, 03 May 2016 11:37:10 +0900</lastBuildDate>
+    
+	<atom:link href="http://blog.shotarok.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
-      <title>2015 12 15_my first post</title>
-      <link>http://localhost:1313/post/2015-12-15_my-first-post/</link>
-      <pubDate>Tue, 15 Dec 2015 08:40:24 +0900</pubDate>
+      <title>English</title>
+      <link>http://blog.shotarok.com/tags/english/</link>
+      <pubDate>Tue, 03 May 2016 11:37:10 +0900</pubDate>
       
-      <guid>http://localhost:1313/post/2015-12-15_my-first-post/</guid>
+      <guid>http://blog.shotarok.com/tags/english/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>2015 12 15_my first post</title>
-      <link>http://localhost:1313/post/2015-12-15_my-first-post/</link>
-      <pubDate>Tue, 15 Dec 2015 08:40:24 +0900</pubDate>
+      <title>Github</title>
+      <link>http://blog.shotarok.com/tags/github/</link>
+      <pubDate>Tue, 15 Dec 2015 08:16:39 +0900</pubDate>
       
-      <guid>http://localhost:1313/post/2015-12-15_my-first-post/</guid>
+      <guid>http://blog.shotarok.com/tags/github/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hugo</title>
+      <link>http://blog.shotarok.com/tags/hugo/</link>
+      <pubDate>Mon, 26 Dec 2016 22:00:00 +0900</pubDate>
+      
+      <guid>http://blog.shotarok.com/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ml</title>
+      <link>http://blog.shotarok.com/tags/ml/</link>
+      <pubDate>Tue, 03 May 2016 11:37:10 +0900</pubDate>
+      
+      <guid>http://blog.shotarok.com/tags/ml/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Podcast</title>
+      <link>http://blog.shotarok.com/tags/podcast/</link>
+      <pubDate>Sat, 30 Apr 2016 21:19:00 +0900</pubDate>
+      
+      <guid>http://blog.shotarok.com/tags/podcast/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ruby</title>
+      <link>http://blog.shotarok.com/tags/ruby/</link>
+      <pubDate>Thu, 17 Dec 2015 00:00:00 +0900</pubDate>
+      
+      <guid>http://blog.shotarok.com/tags/ruby/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Trick</title>
+      <link>http://blog.shotarok.com/tags/trick/</link>
+      <pubDate>Thu, 17 Dec 2015 00:00:00 +0900</pubDate>
+      
+      <guid>http://blog.shotarok.com/tags/trick/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Udacity</title>
+      <link>http://blog.shotarok.com/tags/udacity/</link>
+      <pubDate>Wed, 07 Jun 2017 09:45:00 +0900</pubDate>
+      
+      <guid>http://blog.shotarok.com/tags/udacity/</guid>
       <description></description>
     </item>
     

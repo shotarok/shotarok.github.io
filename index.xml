@@ -2,13 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>shotarok&#39;s Tech Blog</title>
-    <link>http://blog.shotarok.com/index.xml</link>
+    <link>http://blog.shotarok.com/</link>
     <description>Recent content on shotarok&#39;s Tech Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>Written by Shotaro Kohama</copyright>
-    <lastBuildDate>Sat, 31 Dec 2016 22:00:00 +0900</lastBuildDate>
-    <atom:link href="http://blog.shotarok.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 07 Jun 2017 09:45:00 +0900</lastBuildDate>
+    
+	<atom:link href="http://blog.shotarok.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>A Review of Udacity Deep Learning Nanodegree</title>
+      <link>http://blog.shotarok.com/post/a-review-of-deep-learning-nanodegree/</link>
+      <pubDate>Wed, 07 Jun 2017 09:45:00 +0900</pubDate>
+      
+      <guid>http://blog.shotarok.com/post/a-review-of-deep-learning-nanodegree/</guid>
+      <description>2017/05/28 に Udacity の Deep Learning Nanodegree を卒業した。
+僕が大学院を卒業した2015年ごろ、まだ Deep Learning の波は研究室・自然言語処理(?)には来ていなかったが、 研究室に残っている同期の話を聞いたり、世の中のニュースを見ていても、世界ががらっと変わっていることを感じていた。 そんな中 Deep Learning を学ぶ機会を探していて見つけたのが、この Udacity の Nanodigree だった。
+1月ごろに申し込みしたのだが、最初に $400 かかると聞いたときは躊躇した。でも GPU インスタンスを使うための AWS の $100 クーポンや有料の Slack チームを使った、 オフィスアワーになんでも聞いて良いよチャンネル (#ama) があったり、お金がかかりそうな手厚いサポートもあった。
+データを整形する手間が省け、TensorFlow を使って Seq2Seq や DCGAN を動かし、授業のコードや Slack の他の人のコメントを参考にしながら、 自分が書いたコードが間違っていたら Review してもらえる。 Deep Leraning を俯瞰したいという自分の動機にとてもマッチしていて効率的に学べたと思う。十分な価値はあったしむしろ安かったかも。 実際、2回目の5月からのコースでは $600 か $800 に値上げしてたみたい。
+コンテンツについては、この GitHub のレポジトリ udacity/deep-learning を見るのが、はやそう。 各授業の資料が Jupyter notebook になっていて、 Review とか Video がなくても自習に役立つと思う。
+Siraj Raval という Youtuber と Floyd というサービスを知れたのも良かった。</description>
+    </item>
     
     <item>
       <title>2016年振り返り</title>
@@ -16,175 +32,9 @@
       <pubDate>Sat, 31 Dec 2016 22:00:00 +0900</pubDate>
       
       <guid>http://blog.shotarok.com/post/review-in-2016/</guid>
-      <description>
-
-&lt;p&gt;&lt;a href=&#34;http://deeeet.com/writing/2015/12/31/2015/&#34;&gt;SOTA | DECEMBER 31, 2015 2015年振り返り&lt;/a&gt; がとても読みやすく,
-何年か経って忘れた頃に見返すと楽しい気がしたので自分も 2016年に出会って好きだったもの, 影響を受けたことを雑多にまとてみる.&lt;/p&gt;
-
-&lt;h1 id=&#34;blog&#34;&gt;Blog&lt;/h1&gt;
-
-&lt;p&gt;運用まわりの技術・知識が気になる今日このごろ，後で読む用に残す習慣がなかったので最近読んだものに偏ってしまっている.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://peteris.rocks/blog/htop/&#34;&gt;htop explained
-Explanation of everything you can see in htop/top on Linux&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://techblog.netflix.com/2016/02/distributed-time-travel-for-feature.html&#34;&gt;Distributed Time Travel for Feature Generation | The Netflix Blog&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://steps.dodgson.org/b/2012/12/30/code-review-from-lowland/&#34;&gt;下から目線のコードレビュー | steps to phantasien&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://anemone.dodgson.org/2015/07/13/a-million-hello-worlds/&#34;&gt;A Million Hello Worlds | steps to phantasien&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://hb.matsumoto-r.jp/entry/2015/04/20/151743&#34;&gt;Webオペレーションエンジニアのアウトプットと開発力 | 人間とウェブの未来&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://blog.yuuk.io/entry/linux-server-operations&#34;&gt;Linuxサーバにログインしたらいつもやっているオペレーション| ゆううきブログ&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://blog.yuuk.io/entry/architecture-of-database-connection&#34;&gt;Webシステムにおけるデータベース接続アーキテクチャ概論 | ゆううきブログ&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://blog.yuuk.io/entry/2015-webserver-architecture&#34;&gt;2015年Webサーバアーキテクチャ序論 | ゆううきブログ&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://konifar-zatsu.hatenadiary.jp/entry/2016/06/29/193911&#34;&gt;無駄な議論を減らすために使ってる言葉 | Konifar&amp;rsquo;s ZATSU&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://soonraah.hatenablog.com/entry/2016/11/20/172620&#34;&gt;機械学習を利用するプロダクトのテスト | froglog プログラミングや統計の話など&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://blog.etsukata.com/2016/06/memcached-1419-eviction-slab-oom.html&#34;&gt;Memcached 1.4.19 to 1.4.28: Eviction 不具合による Slab OOM | Etsukata blog&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://rkx1209.hatenablog.com/entry/2016/12/25/141543&#34;&gt;低レイヤーの歩き方 | るくすの日記 ~ Out_Of_Range ~&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://sfujiwara.hatenablog.com/entry/20110620/1308531677&#34;&gt;MySQLをmaster:slave=1:1構成にして参照をslaveに向けるのがなぜ良くないか | 酒日記 はてな支店&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Tech系以外だと「&lt;a href=&#34;http://yuchrszk.blogspot.jp/&#34;&gt;パレオな男&lt;/a&gt;」がすごい. タイトルになってるパレオダイエットは実践してないけれど,
-健康に関する多様な論文・本がわかりやすく簡潔にまとまっていて, 気になるリンクを辿って読んでて飽きない.正直ハマった.
-最終的に更新があれば個人の Slack に通知が来るようにまでした.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;パレオな男
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://yuchrszk.blogspot.jp/2014/02/blog-post_2008.html&#34;&gt;いまさら聞けない！科学的に痩せる「プチ断食」超入門&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://yuchrszk.blogspot.jp/2015/04/blog-post.html&#34;&gt;苦しまずに体脂肪を減らすための『脳の再トレーニング』ガイド「食事報酬と肥満 その４」&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;結局、砂糖は本当に太りやすいのか？問題&#34;&gt;結局、砂糖は本当に太りやすいのか？問題&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://yuchrszk.blogspot.jp/2016/11/1_16.html&#34;&gt;パレオさんに聞いてみよう#1：読書法、英語論文の読み方、プロテインと癌、ワクチンは無意味？&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://yuchrszk.blogspot.jp/2014/06/blog-post_9733.html&#34;&gt;象を飼い慣らすための指針&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;misc
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.english.com/blog/conversation-mistakes&#34;&gt;9 English conversation mistakes to avoid  | PEARSON ENGLISH Blog&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://prtimes.jp/main/html/rd/p/000000059.000006798.html&#34;&gt;フリークアウト コーポレートロゴ変更のお知らせ&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;来年からは後で参照できるようにまとめておきたい. Pocket or はてブ かな.&lt;/p&gt;
-
-&lt;h1 id=&#34;podcast-episode&#34;&gt;Podcast Episode&lt;/h1&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://blog.shotarok.com/post/2016-04-30-my-favorite-podcasts/&#34;&gt;お気に入りのPodcast&lt;/a&gt; でも書いたけど, 去年から Podcast を聞き始めた.
-はじめは Rebuild とバイリンガルニュースくらいだったけれど, 最近は subscribe するチャンネルが20個ぐらいに増えて流石に全部を聞くのは無理になってきた.
-Rebuild と donkuri.fm は全部聞きながら, 他のものはタイトルが気になったものを聞いている感じ.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Rebuild.fm
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://rebuild.fm/127/&#34;&gt;127: Post-mature Optimization (omo)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://rebuild.fm/169/&#34;&gt;169: Your Blog Can Be Generated By Neural Networks (omo)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;バイリンガルニュース
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://bilingualnews.libsyn.com/176-takahashi-082715&#34;&gt;08.27.15: バイリンガル会話 feat. Yuki Takahashi&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;donguri.fm
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://soundcloud.com/dongurifm/0331-01a&#34;&gt;033としまえんフィッシングエリアは超楽しい！ 出張ポッドキャスト&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://soundcloud.com/dongurifm/162a&#34;&gt;162 キュレーションって悪いことなんですか？&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Software Engineering Daily
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://softwareengineeringdaily.com/tag/editorials/&#34;&gt;You Are Not A Commodity&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://softwareengineeringdaily.com/2016/11/19/debugging-stories-with-haseeb-qureshi/&#34;&gt;Debugging Stories with Haseeb Qureshi&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;のぼりーさんのクラウドインフラPodcast
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://soundcloud.com/cloudinfra_podcast_ja/track-3&#34;&gt;Track 3 松本亮介とウェブの未来になめらかなシステム&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://soundcloud.com/cloudinfra_podcast_ja/track010b&#34;&gt;b-track 10 コミュニティの構築と維持のお話&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&#34;youtube&#34;&gt;Youtube&lt;/h1&gt;
-
-&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/kEsshExn7aE&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;なんといっても，この動画が印象に残った.
-&lt;a href=&#34;http://dirtycow.ninja/&#34;&gt;Dirty Cow&lt;/a&gt; という名前が付いた脆弱性 (CVE-2016-5195) を突いてどのように root を取るかといかを丁寧に説明している.
-説明に &amp;ldquo;file&amp;rdquo; という単語が現れると，急に挟まれる謎の画像もそのテンションも良かった. この作者の Exploit の手法を説明する動画シリーズ &lt;a href=&#34;https://www.youtube.com/watch?v=xCEJfTfhtQc&#34;&gt;LiveOverflow&lt;/a&gt; もとても面白かった.&lt;/p&gt;
-
-&lt;p&gt;その他 Tech 系カンファレンスのトークとか大学とかの授業を Youtube を見るのも勉強になったけど，
-脆弱性とか CTF の解説動画とか GDB のチュートリアルとかだと，普段開発してても見る機会はない &amp;ldquo;人がどうターミナル上で作業しているか&amp;rdquo; が見れるのが新鮮だった.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Exploit Technique
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/playlist?list=PLhixgUqwRTjxglIswKp9mpkfPNfHkzyeN&#34;&gt;LiveOverflow | Binary Hacking&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/playlist?list=PL3AEB91BB184B185B&#34;&gt;ThinkAloudAcademy | C Programming Tutorial&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Linux
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=GsMs3n8CB6g&#34;&gt;Brendan Gregg | Give me 15 minutes and I&amp;rsquo;ll change your view of Linux tracing&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=PorfLSr3DDI&#34;&gt;CppCon | CppCon 2015: Greg Law &amp;ldquo;Give me 15 minutes &amp;amp; I&amp;rsquo;ll change your view of GDB&amp;rdquo;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=EqndHT606Tw&amp;amp;t=96s&#34;&gt;holidaylvr | fd, dup()/dup2() system call tutorial&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=sK5i-N34im8&#34;&gt;DockerCon | Cgroups, namespaces, and beyond: what arecontainers made from?&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Music
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=ss9ygQqqL2Q&#34;&gt;The Tonight Show Starring Jimmy Fallon | Wheel of Musical Impressions with Ariana Grande&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=Uyv5gm6J8K4&#34;&gt;CNN STYLE - Can Korean superstar CL break America?&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;misc
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=oVfHeWTKjag&#34;&gt;Veritasium | Facebook Fraud&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=KRcecxdGxvQ&#34;&gt;Michael Stonebraker | Big Data is (at least) Four Different Problems&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&#34;book&#34;&gt;Book&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Tech系
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://amzn.to/2io7USN&#34;&gt;闘うプログラマー［新装版］　ビル・ゲイツの野望を担った男達&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://amzn.to/2io3yuI&#34;&gt;プログラミング言語Go (ADDISON-WESLEY PROFESSIONAL COMPUTING SERIES)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://amzn.to/2io5TWE&#34;&gt;みんなのGo言語【現場で使える実践テクニック】&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://amzn.to/2hCDTQ6&#34;&gt;Amazon Web Services実践入門 (WEB+DB PRESS plus)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://amzn.to/2iP4OGf&#34;&gt;Patterns of Enterprise Application Architecture (Addison-Wesley Signature Series (Fowler))&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Tech系以外
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://amzn.to/2io2mYq&#34;&gt;弱いつながり　検索ワードを探す旅&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://amzn.to/2is8H7G&#34;&gt;人生がときめく片づけの魔法&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://amzn.to/2iP9v35&#34;&gt;スクリプトドクターの脚本教室・初級篇&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://amzn.to/2iQ5WNQ&#34;&gt;情報参謀&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://amzn.to/2hCHxK0&#34;&gt;断片的なものの社会学&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&#34;scuba-diving-extra-section&#34;&gt;Scuba Diving (Extra Section)&lt;/h1&gt;
-
-&lt;p&gt;5月に &lt;a href=&#34;https://en.wikipedia.org/wiki/Scuba_Schools_International&#34;&gt;SSI&lt;/a&gt; の OpenWater,
-8月に Advanced Adventurer のライセンスを取得した.&lt;/p&gt;
-
-&lt;p&gt;背中のタンクは水中で息を吸うためだけじゃなくて &lt;a href=&#34;https://goo.gl/TynZut&#34;&gt;BCD&lt;/a&gt; に空気を入れて, 重力と浮力を釣り合わせる (&lt;a href=&#34;https://ja.wikipedia.org/wiki/%E3%82%B9%E3%82%AF%E3%83%BC%E3%83%90%E3%83%80%E3%82%A4%E3%83%93%E3%83%B3%E3%82%B0#.E4.B8.AD.E6.80.A7.E6.B5.AE.E5.8A.9B&#34;&gt;中性浮力&lt;/a&gt;をとる) ためにも使うのを潜ってみて初めて知った.
-中性浮力が取れている状態がフワフワしていて心地よく新鮮な感覚で今はそれだけでもたのしい.
-潜れば潜るほど水圧が増えてBCDの空気の体積が減って浮力が減るので, 更に空気を入れる必要が出てくる.
-物理で勉強したことが体感できるのもおもしろかった.&lt;/p&gt;
-
-&lt;iframe src=&#34;https://www.google.com/maps/d/u/0/embed?mid=1iReG716C0SEAy6flmrpJQVDApXw&#34; width=&#34;640&#34; height=&#34;480&#34;&gt;&lt;/iframe&gt;
-
-&lt;p&gt;最終的に潜った回数は21回で場所は伊豆周辺，伊豆大島及び八丈島.
-八丈島でカメと一緒に泳げたり，念願のナイトダイブが出来たのは嬉しかった.
-来年はイルカとかマンタとかと泳いでみたり, 海外で潜ってみたりしたい.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://blog.shotarok.com/images/20161231/turtle.jpg&#34; alt=&#34;a turtle in Hachijo-jima&#34; /&gt;&lt;/p&gt;
-</description>
+      <description>SOTA | DECEMBER 31, 2015 2015年振り返り がとても読みやすく, 何年か経って忘れた頃に見返すと楽しい気がしたので自分も 2016年に出会って好きだったもの, 影響を受けたことを雑多にまとてみる.
+Blog 運用まわりの技術・知識が気になる今日このごろ，後で読む用に残す習慣がなかったので最近読んだものに偏ってしまっている.
+ htop explained Explanation of everything you can see in htop/top on Linux Distributed Time Travel for Feature Generation | The Netflix Blog 下から目線のコードレビュー | steps to phantasien A Million Hello Worlds | steps to phantasien Webオペレーションエンジニアのアウトプットと開発力 | 人間とウェブの未来 Linuxサーバにログインしたらいつもやっているオペレーション| ゆううきブログ Webシステムにおけるデータベース接続アーキテクチャ概論 | ゆううきブログ 2015年Webサーバアーキテクチャ序論 | ゆううきブログ 無駄な議論を減らすために使ってる言葉 | Konifar&amp;rsquo;s ZATSU 機械学習を利用するプロダクトのテスト | froglog プログラミングや統計の話など Memcached 1.4.19 to 1.</description>
     </item>
     
     <item>
@@ -193,118 +43,11 @@ Rebuild と donkuri.fm は全部聞きながら, 他のものはタイトルが�
       <pubDate>Mon, 26 Dec 2016 22:00:00 +0900</pubDate>
       
       <guid>http://blog.shotarok.com/post/hugo-with-bitbucket-and-circleci/</guid>
-      <description>
-
-&lt;p&gt;このブログは Hugo で生成した静的ファイルを GitHub Pages でホスティングしていて Hugo に食わせるファイル自体は BitBucket のプライベートレポジトリで管理しています.&lt;/p&gt;
-
-&lt;p&gt;久しぶりにブログを書くと Hugo のコマンドを忘れてしまって, &lt;code&gt;hugo server&lt;/code&gt; でビルドした結果を
-リンクのホストが localhost になっているのに気付かずに push してしまったり, 時間がかかっていたので
-&lt;strong&gt;BitBucket に更新があると CircleCI で Hugo の静的ファイルを生成して GitHub Pages にデプロイする&lt;/strong&gt;
-ように下のような手順でしました.&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;GitHub Pages のレポジトリにデプロイキーを登録&lt;/li&gt;
-&lt;li&gt;BitBucket のプライベートレポジトリを CircleCI に登録&lt;/li&gt;
-&lt;li&gt;CircleCI にデプロイキーを登録&lt;/li&gt;
-&lt;li&gt;BitBucket のプライベートレポジトリに circle.yml を追加&lt;/li&gt;
-&lt;li&gt;記事を編集して push すると自動デプロイされることを確認&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;以下，ハマったところ・注意したところをポイントに手順を紹介します.&lt;/p&gt;
-
-&lt;h1 id=&#34;1-github-pages-にデプロイキーを登録&#34;&gt;1. GitHub Pages にデプロイキーを登録&lt;/h1&gt;
-
-&lt;p&gt;CircleCI からデプロイを行うために公開鍵を ssh-key をデプロイキーとして登録します. デプロイキーは下のような感じでローカルで生成します.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ cd ~/.ssh
-$ ssh-keygen -t rsa -f hugo-blog
-Generating public/private rsa key pair.
-Enter passphrase (empty for no passphrase):
-Enter same passphrase again:
-Your identification has been saved in hugo-blog.
-Your public key has been saved in hugo-blog.pub.
-...
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;パスワードは空にしないと手順3で CircleCI に登録できないので気を付けて下さい.&lt;/strong&gt; あとは生成した公開鍵 &lt;code&gt;hugo-blog.pub&lt;/code&gt; を GitHub のレポジトリの &lt;code&gt;Settings&lt;/code&gt; に &lt;code&gt;Deploy Keys&lt;/code&gt; メニューからデプロイキーに登録して下さい.&lt;/p&gt;
-
-&lt;p&gt;参考: &lt;a href=&#34;http://qiita.com/master-of-sugar/items/a9892879f6e9cb9f3c97&#34;&gt;Qiita | GithubのDeploy Keysを登録してパスワードなしでアクセスする&lt;/a&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;2-bitbucket-のプライベートレポジトリを-circleci-に登録&#34;&gt;2. BitBucket のプライベートレポジトリを CircleCI に登録&lt;/h1&gt;
-
-&lt;p&gt;2016年7月から BitBucket も CircleCI に Integration できるようになりました. 以下の公式ブログを参考に認証を行って，対象のブログレポジトリを Build Project に追加して下さい.&lt;/p&gt;
-
-&lt;p&gt;参考: &lt;a href=&#34;https://circleci.com/blog/announcing-circleci-beta-support-for-atlassian-bitbucket/&#34;&gt;CircleCI Blog | Announcing CircleCI Beta Support for Atlassian Bitbucket&lt;/a&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;3-circleci-にデプロイキーを登録&#34;&gt;3. CircleCI にデプロイキーを登録&lt;/h1&gt;
-
-&lt;p&gt;手順1で生成した秘密鍵を CircleCI に登録します. サイドメニューから  &lt;code&gt;PERMISSIONS&lt;/code&gt; の &lt;code&gt;SSH Permissions&lt;/code&gt; を開きます. &lt;code&gt;Add SSH Key&lt;/code&gt; ボタンを押し秘密鍵を登録します.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://blog.shotarok.com/images/20161226/add-ssh-key.png&#34; alt=&#34;Add SSH Key&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;GitHub Pages にデプロイする場合は &lt;code&gt;github.com&lt;/code&gt; を &lt;code&gt;Hostname&lt;/code&gt; に設定すれば十分です.&lt;/p&gt;
-
-&lt;h1 id=&#34;4-butbucket-のレポジトリに-circle-yml-を追加&#34;&gt;4. ButBucket のレポジトリに circle.yml を追加&lt;/h1&gt;
-
-&lt;p&gt;CircleCI では circle.yml をレポジトリのトップに置くことで CI の設定を行うことができます.
-今回設定したファイルは以下で、注意したポイントはこんなところです.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;デプロイの対象は master のみにしています&lt;/li&gt;
-&lt;li&gt;public 以下の更新がない場合は，テストの &lt;code&gt;git commit&lt;/code&gt; が成功しないのでデプロイは実行されません&lt;/li&gt;
-&lt;li&gt;circle.yml のテストも出来るように &lt;code&gt;master&lt;/code&gt; だけでなく &lt;code&gt;feature/&lt;/code&gt; が付いたブランチも CI の対象とする&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code&gt;machine:
-  timezone: Asia/Tokyo
-
-general:
-  branches:
-    only:
-      - master
-      - /feature\/.*/
-
-dependencies:
-  pre:
-    - go get -v github.com/spf13/hugo
-    - git config --global user.name &amp;quot;Shotaro Kohama&amp;quot;
-    - git config --global user.email &amp;quot;khmshtr28@gmail.com&amp;quot;
-    - git clone git@github.com:shotarok/shotarok.github.io.git public
-
-compile:
-  override:
-    - hugo -t angels-ladder
-
-test:
-  override:
-    - cd public &amp;amp;&amp;amp; git add --all &amp;amp;&amp;amp; git commit -m &amp;quot;Update blog via Circle CI&amp;quot;
-
-deployment:
-  master:
-    branch: master
-    commands:
-      - cd public &amp;amp;&amp;amp; git push origin master
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h1 id=&#34;5-記事を編集して自動デプロイされることを確認&#34;&gt;5. 記事を編集して自動デプロイされることを確認&lt;/h1&gt;
-
-&lt;p&gt;最後に記事を追加・編集して BitBucket に master ブランチに push します.
-もしくはプルリクエストを作って master にマージします.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;CircleCI でビルドが成功していること&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://blog.shotarok.com/images/20161226/build-success.png&#34; alt=&#34;Build Success&#34; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;GitHub で commit されていること&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://blog.shotarok.com/images/20161226/update-via-circleci.png&#34; alt=&#34;Update via CircleCI&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;が確認できれば自動デプロイ成功です.&lt;/p&gt;
-</description>
+      <description>このブログは Hugo で生成した静的ファイルを GitHub Pages でホスティングしていて Hugo に食わせるファイル自体は BitBucket のプライベートレポジトリで管理しています.
+久しぶりにブログを書くと Hugo のコマンドを忘れてしまって, hugo server でビルドした結果を リンクのホストが localhost になっているのに気付かずに push してしまったり, 時間がかかっていたので BitBucket に更新があると CircleCI で Hugo の静的ファイルを生成して GitHub Pages にデプロイする ように下のような手順でしました.
+ GitHub Pages のレポジトリにデプロイキーを登録 BitBucket のプライベートレポジトリを CircleCI に登録 CircleCI にデプロイキーを登録 BitBucket のプライベートレポジトリに circle.yml を追加 記事を編集して push すると自動デプロイされることを確認  以下，ハマったところ・注意したところをポイントに手順を紹介します.
+1. GitHub Pages にデプロイキーを登録 CircleCI からデプロイを行うために公開鍵を ssh-key をデプロイキーとして登録します. デプロイキーは下のような感じでローカルで生成します.
+$ cd ~/.ssh $ ssh-keygen -t rsa -f hugo-blog Generating public/private rsa key pair.</description>
     </item>
     
     <item>
@@ -313,107 +56,13 @@ deployment:
       <pubDate>Fri, 09 Dec 2016 00:00:00 +0900</pubDate>
       
       <guid>http://blog.shotarok.com/post/2016-12-09-auto_creation_of_eikaiwa_events/</guid>
-      <description>
-
-&lt;p&gt;この記事は &lt;a href=&#34;http://advent.camph.net/&#34;&gt;CAMPHOR- Advent Calendar 2016&lt;/a&gt; の &amp;ldquo;9日目&amp;rdquo; の記事です.&lt;/p&gt;
-
-&lt;p&gt;今年の夏にスピーキングの練習をしたいと思って &lt;strong&gt;DMM英会話&lt;/strong&gt; をはじめました.
-他のオンライン英会話サービスもそうでしたが, DMM英会話サービスはレッスンを予約するとメールが送られてきます. &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; 最初は手でカレンダーに登録してたのですが, 毎日プランを始めてしばらくするとめんどくさくてやらなくなり, 案の定予約を忘れたりしました. 予約を忘れず, かつ lazy&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:2&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:2&#34;&gt;2&lt;/a&gt;&lt;/sup&gt; に過ごすために &lt;strong&gt;Google Apps Script でDMM英会話予約メールからカレンダーに自動登録するスクリプト&lt;/strong&gt; を書いたので, 今回はその共有です.&lt;/p&gt;
-
-&lt;h1 id=&#34;how-to-work&#34;&gt;How to work&lt;/h1&gt;
-
-&lt;p&gt;スクリプトの動作概要はこちらです.&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;受信ボックスから &lt;strong&gt;未読&lt;/strong&gt; の予約メールを検索&lt;/li&gt;
-&lt;li&gt;未読の予約メールの件名・本文から正規表現で日付を抽出しカレンダーに登録&lt;/li&gt;
-&lt;li&gt;予約メールを &lt;strong&gt;既読&lt;/strong&gt; にする&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;あとは GAS の機能を使って 1.~3. を定期的に実行します.&lt;/p&gt;
-
-&lt;p&gt;既にカレンダーに登録してあるレッスンかどうかを判断するのに &lt;strong&gt;メールの未読・既読だけを使っている&lt;/strong&gt; のが処理を簡単にしているミソですね. &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:3&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:3&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-
-&lt;p&gt;スクリプトは Google Drive の &lt;a href=&#34;https://drive.google.com/open?id=1NT5ZYd1d-baRRPUG9PByAJ1KnS885M11M8cq_vRML7_aWFgX6CV_7L1b&#34;&gt;CAMPHOR- Advent Calendar 2016 9th day (EnglishSkypeLessons)&lt;/a&gt; に置きました.
-コードを読める方にはスクリプトを読んで頂いて, 記事の残りの部分では GoogleカレンダーとDMM英会話を使っていて僕と同じ悩みを抱えている, そんなあなたに使って頂けるように &lt;strong&gt;使い方&lt;/strong&gt; にフォーカスして説明します.&lt;/p&gt;
-
-&lt;h1 id=&#34;how-to-use&#34;&gt;How to use&lt;/h1&gt;
-
-&lt;h2 id=&#34;1-プロジェクトをコピーする&#34;&gt;1. プロジェクトをコピーする&lt;/h2&gt;
-
-&lt;p&gt;まず &lt;a href=&#34;https://drive.google.com/open?id=1NT5ZYd1d-baRRPUG9PByAJ1KnS885M11M8cq_vRML7_aWFgX6CV_7L1b&#34;&gt;CAMPHOR- Advent Calendar 2016 9th day (EnglishSkypeLessons)&lt;/a&gt; のリンクを開き, 自分の Google Drive に &lt;strong&gt;コピーを作成&lt;/strong&gt; します.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://blog.shotarok.com/images/20161209/phase1.png&#34; alt=&#34;Phase1&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;私の環境では「コピーを作成」を押したら空ページが新しいタブで開かれて成功したかどうか一瞬わかりませんでしたが, 自分の Google Drive を開き直すとちゃんと作成できていました.&lt;/p&gt;
-
-&lt;p&gt;また「ファイルを開けません」と表示された方もあとでアプリを指定して開くと表示できると思うので, メニューから自分の Google Drive に「コピーを作成」してください.&lt;/p&gt;
-
-&lt;h2 id=&#34;2-スクリプトを実行して権限を付与&#34;&gt;2. スクリプトを実行して権限を付与&lt;/h2&gt;
-
-&lt;p&gt;つぎに &lt;strong&gt;1度手動でスクリプトを実行して Gmail と Google Calendar にアクセスする権限を与えます.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;コピーしたプロジェクトを 「Google Apps Script Editor」というアプリを指定して開きます. そして DMMEnglish.gs というファイルを選択して, ナビバーの実行のところから  &lt;code&gt;DMMEnglish&lt;/code&gt; をクリックして下さい.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://blog.shotarok.com/images/20161209/phase2-1.png&#34; alt=&#34;Phase2-1&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;しばらくとすると「承認が必要です」という画面が出てきます.どのような権限が必要なのかを確認するために「許可を確認」をクリックして下さい.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://blog.shotarok.com/images/20161209/phase2-2.png&#34; alt=&#34;Phase2-2&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;「許可を確認」を押すとカレンダーとメールにアクセスする権限を求める画面が表示されます. 権限に納得できたら「許可」をクリックして下さい.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://blog.shotarok.com/images/20161209/phase2-3.png&#34; alt=&#34;Phase2-3&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;「許可」をクリックするとスクリプトが１回実行されます. 未読の予約メールが受信ボックスにある場合はカレンダーに登録されているはずです！&lt;/p&gt;
-
-&lt;h2 id=&#34;3-スクリプトを定期的に実行する&#34;&gt;3. スクリプトを定期的に実行する&lt;/h2&gt;
-
-&lt;p&gt;あとはこの &lt;strong&gt;スクリプトを定期的に実行する&lt;/strong&gt; ようにするだけです.&lt;/p&gt;
-
-&lt;p&gt;ナビバーのリソースのところから「現在のプロジェクトのトリガー」をクリックして下さい.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://blog.shotarok.com/images/20161209/phase3-1.png&#34; alt=&#34;Phase3-1&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;まだこのプロジェクトにはトリガーが設定されていないので、下のような画面が出てきます. トリガーの追加をクリックして下さい.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://blog.shotarok.com/images/20161209/phase3-2.png&#34; alt=&#34;Phase3-2&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;トリガーの設定画面で &lt;code&gt;DMMEnglish&lt;/code&gt; を &lt;code&gt;時間主導型&lt;/code&gt;, &lt;code&gt;分タイマー&lt;/code&gt;, &lt;code&gt;15分ごと&lt;/code&gt; と選択してから保存をクリックしてください.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://blog.shotarok.com/images/20161209/phase3-3.png&#34; alt=&#34;Phase3-3&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;これで 15分ごとにスクリプトが実行されるようになります. あとは未読の予約メールを受信ボックスに入れておけば，勝手に既読にして Google カレンダーに登録されるようになります.&lt;/p&gt;
-
-&lt;h1 id=&#34;さいごに&#34;&gt;さいごに&lt;/h1&gt;
-
-&lt;p&gt;日頃の手間を省くスクリプトを書くのは個人的に好きで，今年は他にもこんなのを書きました.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Redmine のチケットページから情報をマークダウン形式でクリップボードにコピーするブックマークレット&lt;/li&gt;
-&lt;li&gt;Slack のユーザリストから電話番号を取り出して Twilio で障害電話をかけるための bot&lt;/li&gt;
-&lt;li&gt;Trello でやってる TODO, DOING, DONE のタスク管理リストから API を叩いて週報生成するスクリプト&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;また機会があれば紹介したいと思います :-D&lt;/p&gt;
-
-&lt;p&gt;明日は &lt;a href=&#34;https://twitter.com/kasajei&#34;&gt;@kasajei&lt;/a&gt; さんによる 「買って大満足！これがマインドフルネス三種の神器だ！」 です. お楽しみに！&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;div class=&#34;footnotes&#34;&gt;
-
-&lt;hr /&gt;
-
-&lt;ol&gt;
-&lt;li id=&#34;fn:1&#34;&gt;そのときに QQEnglish, レアジョブ, BestTeacher などなどの無料プランを一気に試したので同様にスクリプトを書きました.&lt;br /&gt;
- &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:1&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li id=&#34;fn:2&#34;&gt;&lt;a href=&#34;https://ja.wikipedia.org/wiki/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9E#.E3.83.97.E3.83.AD.E3.82.B0.E3.83.A9.E3.83.9E.E3.81.AE.E4.B8.89.E5.A4.A7.E7.BE.8E.E5.BE.B3&#34;&gt;プログラマ三大美徳&lt;/a&gt; 怠惰, 短気, 傲慢.&lt;br /&gt;
- &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:2&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li id=&#34;fn:3&#34;&gt;この状態管理 は僕が思いついたものではなく、監視メールから Slack に通知する社内スクリプトからアイディアを頂きました :pray:
- &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:3&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-</description>
+      <description>この記事は CAMPHOR- Advent Calendar 2016 の &amp;ldquo;9日目&amp;rdquo; の記事です.
+今年の夏にスピーキングの練習をしたいと思って DMM英会話 をはじめました. 他のオンライン英会話サービスもそうでしたが, DMM英会話サービスはレッスンを予約するとメールが送られてきます. 1 最初は手でカレンダーに登録してたのですが, 毎日プランを始めてしばらくするとめんどくさくてやらなくなり, 案の定予約を忘れたりしました. 予約を忘れず, かつ lazy2 に過ごすために Google Apps Script でDMM英会話予約メールからカレンダーに自動登録するスクリプト を書いたので, 今回はその共有です.
+How to work スクリプトの動作概要はこちらです.
+ 受信ボックスから 未読 の予約メールを検索 未読の予約メールの件名・本文から正規表現で日付を抽出しカレンダーに登録 予約メールを 既読 にする  あとは GAS の機能を使って 1.~3. を定期的に実行します.
+既にカレンダーに登録してあるレッスンかどうかを判断するのに メールの未読・既読だけを使っている のが処理を簡単にしているミソですね. 3
+スクリプトは Google Drive の CAMPHOR- Advent Calendar 2016 9th day (EnglishSkypeLessons) に置きました. コードを読める方にはスクリプトを読んで頂いて, 記事の残りの部分では GoogleカレンダーとDMM英会話を使っていて僕と同じ悩みを抱えている, そんなあなたに使って頂けるように 使い方 にフォーカスして説明します.
+How to use 1.</description>
     </item>
     
     <item>
@@ -422,67 +71,8 @@ deployment:
       <pubDate>Tue, 03 May 2016 11:37:10 +0900</pubDate>
       
       <guid>http://blog.shotarok.com/post/2016-05-03-vwluigi_with_critio_dataset/</guid>
-      <description>
-
-&lt;p&gt;When you tackle some machine learning problems with &lt;a href=&#34;https://github.com/JohnLangford/vowpal_wabbit&#34;&gt;vowpal wabbit&lt;/a&gt;, have you felt annoying to write monotonous evaluation code like cross-validation? &lt;strong&gt;vw-luigi&lt;/strong&gt; (&lt;a href=&#34;https://github.com/shotarok/vw-luigi&#34;&gt;https://github.com/shotarok/vw-luigi&lt;/a&gt;) helps you at such time.&lt;/p&gt;
-
-&lt;p&gt;The &lt;em&gt;vw-luigi&lt;/em&gt; includes &lt;strong&gt;luigi&lt;/strong&gt; workflows to evaluate models trained by &lt;strong&gt;vowpal wabbit&lt;/strong&gt;. All you need to do is prepare for training and test data. If you use &lt;em&gt;vw-luigi&lt;/em&gt;, it would train a model, predict with the model and you can get the evaluation result automatically.&lt;/p&gt;
-
-&lt;p&gt;In this post, I&amp;rsquo;ll explain an example usage of &lt;em&gt;vw-luigi&lt;/em&gt; using &lt;a href=&#34;http://criteolabs.wpengine.com/downloads/2014-kaggle-display-advertising-challenge-dataset/&#34;&gt;&amp;lsquo;Kaggle Display Advertising Challenge&amp;rsquo;&lt;/a&gt; dataset.&lt;/p&gt;
-
-&lt;h1 id=&#34;vw-luigi-with-kaggle-display-advertising-challenge&#34;&gt;vw-luigi with &amp;lsquo;Kaggle Display Advertising Challenge&amp;rsquo;&lt;/h1&gt;
-
-&lt;h2 id=&#34;download-dataset&#34;&gt;Download Dataset&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://www.kaggle.com/c/criteo-display-ad-challenge&#34;&gt;&amp;lsquo;Display Advertising Challenge&amp;rsquo;&lt;/a&gt; is a competition to benchmark the most accurate ML algorithms for estimation of &lt;a href=&#34;https://en.wikipedia.org/wiki/Click-through_rate&#34;&gt;Click-through rate&lt;/a&gt; (CTR). It has been held for 90 days in 2014. Dataset was provided by critio. The data is not available on the page in kaggle.com. Currently you can download the data through the page of critio labs (&lt;a href=&#34;http://criteolabs.wpengine.com/downloads/2014-kaggle-display-advertising-challenge-dataset/&#34;&gt;here&lt;/a&gt;). It is available for non-commercial purposes only.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://gyazo.com/2bb3972c30f641c8868bc77b9886ef35.png&#34; alt=&#34;dac dataset&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;If you download &lt;code&gt;dac.tar.gz&lt;/code&gt; from this page and decompress it, then you can get &lt;code&gt;readme&lt;/code&gt;, &lt;code&gt;train.txt&lt;/code&gt; and &lt;code&gt;test.txt&lt;/code&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;prepare-training-and-test-data-for-vw&#34;&gt;Prepare training and test data for vw&lt;/h2&gt;
-
-&lt;p&gt;According to readme, the tsv data consists of 40 columns. The first column is a binary value that means whether ad is clicked or not. Following 13 columns are integer values meaning mostly count features. Rest 26 columns are 32 bits hashed value meaning categorical features.&lt;/p&gt;
-
-&lt;p&gt;In order to use this data for input of vw, we need to convert tsv into &lt;a href=&#34;https://github.com/JohnLangford/vowpal_wabbit/wiki/Input-format&#34;&gt;vw format&lt;/a&gt;.&lt;/p&gt;
-
-&lt;script src=&#34;https://gist.github.com/shotarok/62f869d277d9755ebdc92708386bb0ad.js&#34;&gt;&lt;/script&gt;
-
-&lt;p&gt;If you save this gist as &lt;code&gt;tsv_to_vw.py&lt;/code&gt;, you can convert training and test data via flowing commands.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ mkdir -p /tmp/work/space
-$ cat train.txt | python train.txt &amp;gt; /tmp/work/space/train.vw
-$ cat test.txt | python test.txt &amp;gt; /tmp/work/space/test.vw
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;evaluate-model-with-vw-luigi&#34;&gt;Evaluate model with vw-luigi&lt;/h2&gt;
-
-&lt;p&gt;Finally, let&amp;rsquo;s clone vw-luigi and run it.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ git clone git@github.com:shotarok/vw-luigi.git ~/
-$ cd ~/vw-luigi
-$ virtualenv venv
-$ source venv/bin/activate
-$ pip install -r requirements.txt
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;In case you use &lt;code&gt;/tmp/work/space/train.vw&lt;/code&gt; as training data, &lt;code&gt;/tmp/work/space/test.vw&lt;/code&gt; as test data and &lt;em&gt;squared loss&lt;/em&gt; as loss function, you can get an evaluation result, which includes AUROC, AUPR and LossLoss calculated by &lt;em&gt;scikit-learn&lt;/em&gt;, following to below commands.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ cd ~/vw-luigi
-$ source venv/bin/activate
-$ ls /tmp/work/space
-&amp;gt; train.vw test.vw
-$ python -m luigi --module vwluigi EvalTask --loss-func squared --work-dir /tmp/work/space --local-scheduler
- ...
-$ ls /tmp/work/space
-&amp;gt; model.vw predict.vw result.txt train.vw
-$ cat /tmp/work/space/result.txt
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;You can get the evaluation result like this gif.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://gyazo.com/a86de7b93a18d990249176a8f6ba54ed.gif&#34; alt=&#34;gif&#34; /&gt;&lt;/p&gt;
-</description>
+      <description>When you tackle some machine learning problems with vowpal wabbit, have you felt annoying to write monotonous evaluation code like cross-validation? vw-luigi (https://github.com/shotarok/vw-luigi) helps you at such time.
+The vw-luigi includes luigi workflows to evaluate models trained by vowpal wabbit. All you need to do is prepare for training and test data. If you use vw-luigi, it would train a model, predict with the model and you can get the evaluation result automatically.</description>
     </item>
     
     <item>
@@ -491,63 +81,12 @@ $ cat /tmp/work/space/result.txt
       <pubDate>Sat, 30 Apr 2016 21:19:00 +0900</pubDate>
       
       <guid>http://blog.shotarok.com/post/2016-04-30-my-favorite-podcasts/</guid>
-      <description>
-
-&lt;p&gt;京都で過ごしていた頃はもっぱら移動は自転車だったが、東京に来てそれが電車に変わった。
-毎日電車に乗るのは高校生以来で、当時は乗車時間が40分程で電車も空いていたので座って単語帳を開いてよく寝ていた。
-今は10分程度なので寝るわけにもいかず、まぁ音楽より技術や英語の勉強になるかと思い Podcast を聴くようになった。
-そんな感じで1年程過ごし番組も選抜されてきたので、この辺でお気に入りの番組とエピソードをまとめようと思う。&lt;/p&gt;
-
-&lt;h1 id=&#34;rebuild-https-rebuild-fm&#34;&gt;&lt;a href=&#34;https://rebuild.fm/&#34;&gt;Rebuild&lt;/a&gt;&lt;/h1&gt;
-
-&lt;p&gt;日本語Tech系 Postcast といえば Rebuild と言っても過言ではないくらい界隈で有名。ホストの&lt;a href=&#34;https://twitter.com/miyagawa&#34;&gt;@miyagawa&lt;/a&gt; さんとゲストの方が話す AlphaGo の戦略・実装とか CPU/GPU アーキテクチャなどDeepな技術ネタからマネジメントとかプロダクティビティなどソフトなネタまで、ソフトウェア開発に関わる様々な話題が聞ける番組。&lt;/p&gt;
-
-&lt;p&gt;お気に入りのエピソードは &lt;a href=&#34;https://rebuild.fm/127/&#34;&gt;&amp;ldquo;127: Post-mature Optimization (omo)&amp;rdquo;&lt;/a&gt; 。業務で触るようになって中身に興味が出てきたデータベースについて、その大家が書いた&lt;a href=&#34;http://www.redbook.io/&#34;&gt;&amp;ldquo;赤い本&amp;rdquo;&lt;/a&gt;が知れたこと。 Borg と YARN というスケジューラーの違いが MapReduce や Spark などの1つ上層の進化にどう影響を与えたかという話が個人的に大ヒットだった。&lt;/p&gt;
-
-&lt;h1 id=&#34;talk-python-to-me-https-talkpython-fm&#34;&gt;&lt;a href=&#34;https://talkpython.fm/&#34;&gt;Talk Python To Me&lt;/a&gt;&lt;/h1&gt;
-
-&lt;iframe width=&#34;100%&#34; height=&#34;166&#34; scrolling=&#34;no&#34; frameborder=&#34;no&#34; src=&#34;https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/14032377&amp;amp;color=ff5500&amp;amp;auto_play=false&amp;amp;hide_related=false&amp;amp;show_comments=true&amp;amp;show_user=true&amp;amp;show_reposts=false&#34;&gt;&lt;/iframe&gt;
-
-&lt;p&gt;およそTech系の Podcast が始まるとは思わない、こんなジングルで始まる番組。SQLAlchemy, Flask といった有名モジュールにまつわる話から どうやったらPythonを使う仕事を見つけられるか、フォントや映画制作でどう使っているかなど Python にまつわる話なら何でも聴ける番組。多くのエピソードで transcription も用意してある。&lt;/p&gt;
-
-&lt;p&gt;お気に入りのエピソードは &lt;a href=&#34;https://talkpython.fm/episodes/show/22/cpython-internals-and-learning-python-with-pythontutor.com&#34;&gt;&amp;ldquo;Episode #22: CPython Internals and Learning Python with pythontutor.com&amp;rdquo;&lt;/a&gt;。&lt;a href=&#34;http://pythontutor.com/&#34;&gt;pythontutor&lt;/a&gt; を含む CPython の実装についての様々な資料を知れたのが good。&lt;/p&gt;
-
-&lt;h1 id=&#34;バイリンガルニュース-https-twitter-com-bilingual-news&#34;&gt;&lt;a href=&#34;https://twitter.com/Bilingual_News&#34;&gt;バイリンガルニュース&lt;/a&gt;&lt;/h1&gt;
-
-&lt;p&gt;日本語と英語でニュースを紹介した後に Michael が英語で Mami が日本語でバイリンガル会話形式でコメントしていく番組。(番組冒頭より抜粋) 個人的には最初に Podcast を聴き始めたきっかけになった番組。2013年の夏にインターンシップで3ヶ月程東京に来ていた頃に同じく通勤時間によく聴いていた。この番組で 「&amp;rdquo;Do you know what I mean?&amp;rdquo; って便利なフレーズやな、覚えとこ」ってなった :-D&lt;/p&gt;
-
-&lt;p&gt;お気に入りのエピソードは &lt;a href=&#34;http://bilingualnews.libsyn.com/176-takahashi-082715&#34;&gt;&amp;ldquo;08.27.15: バイリンガル会話 feat. Yuki Takahashi&amp;rdquo;&lt;/a&gt;。南極で宇宙の研究やイーロン・マスクがや創業者で民間でロケット作ってる SpaceX で働いていらしゃった Takahashi さんのお話がとてもおもしろかった。特別編は研究者とか友達がゲストとして来ていつもとは雰囲気違うけど、いろんな話聞けて好き。&lt;/p&gt;
-
-&lt;h1 id=&#34;donguri-fm-http-blog-donguri-fm&#34;&gt;&lt;a href=&#34;http://blog.donguri.fm/&#34;&gt;donguri.fm&lt;/a&gt;&lt;/h1&gt;
-
-&lt;p&gt;Web界隈で有名なブロガー narumi さんとなつめぐさんの Podcast。なつめぐさんは&lt;a href=&#34;http://natsumeg.blog.jp/archives/34550612.html&#34;&gt;セブ島の記事&lt;/a&gt;で知って、今は&lt;a href=&#34;http://natsumeg.blog.jp/archives/47066799.html&#34;&gt;アフリカいらしゃっいます&lt;/a&gt;が前職の人事をなさっているときに京都でお話する機会があったり、京都からの友人と&lt;a href=&#34;http://f1rst-step.com/&#34;&gt;サービス&lt;/a&gt;を一緒に作ったりしているのを見て勝手に親近感を覚えいて Podcast を聴きはじめました。他に比べて1エピソードが短いからさらっと聴けるのも好きな理由です。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://livedoor.blogimg.jp/narumiii/imgs/a/f/afa8ec65.jpg&#34; width=&#34;420px&#34;&gt;&lt;/p&gt;
-
-&lt;p&gt;お気に入りのエピソードは &lt;a href=&#34;https://soundcloud.com/dongurifm/0331-01a&#34;&gt;&amp;ldquo;033としまえんフィッシングエリアは超楽しい！ 出張ポッドキャスト&amp;rdquo;&lt;/a&gt;。きたきたきた。って言ってるけど、釣れなすぎてびっくりする。夏はプール、オフシーズンは釣り堀になってるとしまえんで釣りしながら収録。釣りに集中し過ぎて一瞬しゃべんなくなったり、烏の声とか聞こえたりしてこんな番組聴いたことなくておもろかった。&lt;/p&gt;
-
-&lt;h1 id=&#34;software-engineering-radio-http-www-se-radio-net&#34;&gt;&lt;a href=&#34;http://www.se-radio.net/&#34;&gt;Software Engineering Radio&lt;/a&gt;&lt;/h1&gt;
-
-&lt;p&gt;同僚のエンジニアの方から教えてもらった Podcast。Borg の話とか Real Time Analysis の話とか &lt;a href=&#34;http://www.amazon.co.jp/Soft-Skills-Software-Developers-Manual/dp/1617292397&#34;&gt;&lt;em&gt;Soft Skills&lt;/em&gt;&lt;/a&gt; の話だったり、毎回違うゲストが自分の専門の話をしてる。初回が2006年で過去に遡ると &lt;a href=&#34;http://www.martinfowler.com/&#34;&gt;Martin Fowler&lt;/a&gt; 先生とかも話しているし、すごい老舗 Podcast ぽい。聞き流しで理解できないので、気になったエピソードだけ聴いている。&lt;/p&gt;
-
-&lt;p&gt;お気に入りのエピソードは &lt;a href=&#34;http://www.se-radio.net/2016/02/se-radio-episode-249-vaughn-vernon-on-reactive-programming-with-the-actor-model/&#34;&gt;&amp;ldquo;SE Radio Episode 249: Vaughn Vernon on Reactive Programming with the Actor Model&amp;rdquo;&lt;/a&gt;。ちょうど YAPC Asia 2015 で頂いた冊子に載っていた LINE のアーキテクチャの話を読んでたので Actor の話がとても印象に残った。&lt;/p&gt;
-
-&lt;h1 id=&#34;ニュース-英語&#34;&gt;ニュース(英語)&lt;/h1&gt;
-
-&lt;p&gt;英語の勉強がてら &lt;a href=&#34;http://edition.cnn.com/studentnews&#34;&gt;CNN Student News&lt;/a&gt; と &lt;a href=&#34;http://www.nhk.or.jp/podcasts/program/nhkworld.html&#34;&gt;English News - NHK WORLD RADIO JAPAN&lt;/a&gt; を聴いている。CNN の方は学生向けとあって平易な言葉でニュースを説明してあり transcription も用意してある。NHK WORLD は Podcast だけじゃなくWebやアプリで動画も無料で見れる。&lt;/p&gt;
-
-&lt;h1 id=&#34;その他-tech系&#34;&gt;その他 (Tech系)&lt;/h1&gt;
-
-&lt;p&gt;その他のTech系 Podcast はオープンソースの話をしている &lt;a href=&#34;https://changelog.com/&#34;&gt;The Changelog&lt;/a&gt; とフロントサイド系の話をしている &lt;a href=&#34;http://mozaic.fm/&#34;&gt;mozaic.fm&lt;/a&gt; (最新の&lt;a href=&#34;http://mozaic.fm/post/133930208998/20-browser&#34;&gt;ブラウザの話&lt;/a&gt;が最高だった) をたまに聴いている。他にも機械学習とかデータサイエンスの話をする &lt;a href=&#34;http://www.thetalkingmachines.com/&#34;&gt;Talking Machines&lt;/a&gt; とか &lt;a href=&#34;http://www.partiallyderivative.com/&#34;&gt;Partially Derivative&lt;/a&gt; を見つけて購読はしているけれど、個人的にはあまりヒット作はなく気分が向いた時だけ聴いてる。&lt;/p&gt;
-
-&lt;h1 id=&#34;聴く番組の参考にしたサイト&#34;&gt;聴く番組の参考にしたサイト&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://steps.dodgson.org/b/2013/09/21/an-overnight-podcast-listener/&#34;&gt;steps to phantasien | SEP 21ST, 2013 にわか Podcast ファン&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://anemone.dodgson.org/2015/05/20/more-like-a-podcast-listener/&#34;&gt;steps to phantasien | 続・にわか Podcast ファン&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://deeeet.com/writing/2014/08/06/podcast-2014/&#34;&gt;SOTA | AUGUST 06, 2014 好きなPodcast&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>京都で過ごしていた頃はもっぱら移動は自転車だったが、東京に来てそれが電車に変わった。 毎日電車に乗るのは高校生以来で、当時は乗車時間が40分程で電車も空いていたので座って単語帳を開いてよく寝ていた。 今は10分程度なので寝るわけにもいかず、まぁ音楽より技術や英語の勉強になるかと思い Podcast を聴くようになった。 そんな感じで1年程過ごし番組も選抜されてきたので、この辺でお気に入りの番組とエピソードをまとめようと思う。
+Rebuild 日本語Tech系 Postcast といえば Rebuild と言っても過言ではないくらい界隈で有名。ホストの@miyagawa さんとゲストの方が話す AlphaGo の戦略・実装とか CPU/GPU アーキテクチャなどDeepな技術ネタからマネジメントとかプロダクティビティなどソフトなネタまで、ソフトウェア開発に関わる様々な話題が聞ける番組。
+お気に入りのエピソードは &amp;ldquo;127: Post-mature Optimization (omo)&amp;rdquo; 。業務で触るようになって中身に興味が出てきたデータベースについて、その大家が書いた&amp;ldquo;赤い本&amp;rdquo;が知れたこと。 Borg と YARN というスケジューラーの違いが MapReduce や Spark などの1つ上層の進化にどう影響を与えたかという話が個人的に大ヒットだった。
+Talk Python To Me  およそTech系の Podcast が始まるとは思わない、こんなジングルで始まる番組。SQLAlchemy, Flask といった有名モジュールにまつわる話から どうやったらPythonを使う仕事を見つけられるか、フォントや映画制作でどう使っているかなど Python にまつわる話なら何でも聴ける番組。多くのエピソードで transcription も用意してある。
+お気に入りのエピソードは &amp;ldquo;Episode #22: CPython Internals and Learning Python with pythontutor.com&amp;rdquo;。pythontutor を含む CPython の実装についての様々な資料を知れたのが good。
+バイリンガルニュース 日本語と英語でニュースを紹介した後に Michael が英語で Mami が日本語でバイリンガル会話形式でコメントしていく番組。(番組冒頭より抜粋) 個人的には最初に Podcast を聴き始めたきっかけになった番組。2013年の夏にインターンシップで3ヶ月程東京に来ていた頃に同じく通勤時間によく聴いていた。この番組で 「&amp;rdquo;Do you know what I mean?</description>
     </item>
     
     <item>
@@ -556,173 +95,19 @@ $ cat /tmp/work/space/result.txt
       <pubDate>Thu, 17 Dec 2015 00:00:00 +0900</pubDate>
       
       <guid>http://blog.shotarok.com/post/2015-12-17_hello-quine-world/</guid>
-      <description>
+      <description>この記事は CAMPHOR- Advent Calendar 2015 の 17 日目の記事です。
+こんにちは。@shotarok (Twitter: @shotarok28) です。３月までは京都で学生をしていて、今年の４月から東京の FreakOut という広告の会社でソフトウェアエンジニアをしている CAMPHOR- OBです。
+Quine って何？ みなさん「Quine」という言葉を聞いたことがありますか？ Quine とは、こんなプログラムのことです。 ※1
+ クワイン（英: Quine）は、コンピュータプログラムの一種で、自身のソースコードと完全に同じ文字列を出力するプログラムである。
+[出典: wikipedia クワイン(プログラミング)](https://ja.wikipedia.org/wiki/%E3%82%AF%E3%83%AF%E3%82%A4%E3%83%B3(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0)
+ 定義を読むだけでは、ぱっとはわからないので、実際にプログラムが動いているところを見てみましょう。
 
-&lt;p&gt;この記事は &lt;a href=&#34;http://advent.camph.net/&#34;&gt;CAMPHOR-
-Advent Calendar 2015&lt;/a&gt; の 17 日目の記事です。&lt;/p&gt;
-
-&lt;p&gt;こんにちは。&lt;a href=&#34;https://github.com/shotarok&#34;&gt;@shotarok&lt;/a&gt; (Twitter: &lt;a href=&#34;https://twitter.com/shotarok28&#34;&gt;@shotarok28&lt;/a&gt;) です。３月までは京都で学生をしていて、今年の４月から東京の &lt;a href=&#34;https://www.fout.co.jp/&#34;&gt;FreakOut&lt;/a&gt; という広告の会社でソフトウェアエンジニアをしている CAMPHOR- OBです。&lt;/p&gt;
-
-&lt;h1 id=&#34;quine-って何&#34;&gt;Quine って何？&lt;/h1&gt;
-
-&lt;p&gt;みなさん「&lt;strong&gt;Quine&lt;/strong&gt;」という言葉を聞いたことがありますか？ Quine とは、こんなプログラムのことです。 ※1&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;クワイン（英: Quine）は、コンピュータプログラムの一種で、自身のソースコードと完全に同じ文字列を出力するプログラムである。&lt;br /&gt;
-[出典: wikipedia クワイン&lt;em&gt;(プログラミング)](&lt;a href=&#34;https://ja.wikipedia.org/wiki/%E3%82%AF%E3%83%AF%E3%82%A4%E3%83%B3&#34;&gt;https://ja.wikipedia.org/wiki/%E3%82%AF%E3%83%AF%E3%82%A4%E3%83%B3&lt;/a&gt;&lt;/em&gt;(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0)&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;定義を読むだけでは、ぱっとはわからないので、実際にプログラムが動いているところを見てみましょう。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://gyazo.com/71c58b0409c2868d29ea40b15a7df6c2&#34;&gt;&lt;img src=&#34;https://i.gyazo.com/71c58b0409c2868d29ea40b15a7df6c2.gif&#34; alt=&#34;https://gyazo.com/71c58b0409c2868d29ea40b15a7df6c2&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;この gif をみると ruby プログラム &lt;a href=&#34;https://gist.github.com/shotarok/4d9fc754e4c00036cbdf&#34;&gt;&lt;code&gt;quine.rb&lt;/code&gt;&lt;/a&gt; は CAMPHOR- のロゴの形をしていること、ruby で実行すると CAMPHOR- のロゴが出力されることが確認出来ると思います。実は &lt;a href=&#34;https://gist.github.com/shotarok/4d9fc754e4c00036cbdf&#34;&gt;&lt;code&gt;quine.rb&lt;/code&gt;&lt;/a&gt; は自分自身を出力していて、その出力を実行してもまた同じロゴの形をしたソースコードが出力されます。wiki に書いてあった
-&lt;i&gt;自身のソースコードと完全に同じ文字列を出力するプログラム.&lt;/i&gt; こんなプログラムが Quine です。ソースコードはこちら(&lt;a href=&#34;https://gist.github.com/shotarok/4d9fc754e4c00036cbdf&#34;&gt;gist&lt;/a&gt;)。&lt;/p&gt;
-
-&lt;p&gt;僕が初めて Quine に出会ったのは、いつかの &lt;a href=&#34;http://icpc.iisf.or.jp/2015-tsukuba/?lang=ja&#34;&gt;ICPC&lt;/a&gt; の地区大会のエクスカーションで Google を訪問して、そこで shinh さんのお話を聞いたときでした。その当時は、自分で書いてみたいと思って、調べてみたものの、結局書くことが出来ず、そのまま放置になっていました。&lt;/p&gt;
-
-&lt;p&gt;それから数年経った2015年夏、この本と出会いました。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.amazon.co.jp/dp/B015R0GNXK/&#34;&gt;「&lt;strong&gt;あなたの知らない超絶技巧プログラミングの世界&lt;/strong&gt;」&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;この本は Quine をはじめとする「超絶技巧プログラミング」と呼ばれる、実用性はないけれど、不思議で楽しいプログラミング技法を紹介しています。そして、この本のおかげで念願叶い Quine を書くことができました。詳細な解説は本を読んで頂くことにして、この記事では、僕が書いた &lt;code&gt;quine.rb&lt;/code&gt; の簡単な説明と、作成した手順を紹介できればと思います。&lt;/p&gt;
-
-&lt;h1 id=&#34;はじめての-quine&#34;&gt;はじめての Quine&lt;/h1&gt;
-
-&lt;p&gt;今回、下のような流れで僕は &lt;code&gt;quine.rb&lt;/code&gt; を作成しました。&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;CAMPHOR- のロゴ画像からコードの整形に使うビットマップの作成。&lt;/li&gt;
-&lt;li&gt;ビットマップから &lt;code&gt;quine.rb&lt;/code&gt; を出力する &lt;code&gt;build_quine.rb&lt;/code&gt; を作成。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;quine.rb&lt;/code&gt; が文法的に正しくなっているかを実行して確認。&lt;br /&gt;
-失敗したら、 2. に戻ってビットマップを調整。&lt;br /&gt;
-成功したら、Quine 完成！&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&#34;1-ロゴ画像からビットマップの作成&#34;&gt;1. ロゴ画像からビットマップの作成&lt;/h2&gt;
-
-&lt;p&gt;まずは &lt;code&gt;quine.rb&lt;/code&gt; をロゴの形にするための雛形を画像から作成します。これは jpeg 画像から ASCII アートを生成してくれる &lt;code&gt;jp2a&lt;/code&gt; と png から jpeg に変換する &lt;code&gt;convert&lt;/code&gt; を使うと作業が楽になります。(OSX をお使いの方は両方とも Homebrew でインストールできます) これらを使うと、例えば、こんな感じでビットマップを作成できます。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ wget https://camph.net/static/images/navbar_logo.png
-$ convert navbar_logo.png jpg:- | jp2a - --chars=012 | tr &#39;2&#39; &#39; &#39;
-1111111                                                        111111                                                                                                                            
-  1111111111                                              1111111111                                                                                                                             
-   1111111111111                                      111111111111                                                                                                                               
-     1111111111111                                 11111111111111                                                                                                                                
-       11111111111111                            1111111111111                                                                                                                                   
-          1111111111111                       11111111111111                                                                                                                                     
-             1111111111111                  111111111111                                                                                                                                         
-                 1111111111               11111111111                                                                                                                                            
-                      111111             111111                                                                                                                                                  
-                             111111111111                                                                                                                                                        
-                               111111111                                                                                                                                                         
-                               1111111                                                                                                                                                           
-                                11111                                                                                                                                                            
-                                 1111                                                                                                                                                            
-                                 111                                                                                                                                                             
-                                  11                                                                                                                                                             
-                                  11                                                                                                                                                             
-
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;2-ビットマップから-quine-を作る&#34;&gt;2. ビットマップから Quine を作る&lt;/h2&gt;
-
-&lt;p&gt;作成したビットマップを使って ロゴの形をした Quine を出力する &lt;a href=&#34;https://gist.github.com/shotarok/8ca2098340a381be0135&#34;&gt;&lt;code&gt;build_quine.rb&lt;/code&gt;&lt;/a&gt; を作ります。天下り的ですが、まずは &lt;a href=&#34;https://gist.github.com/shotarok/8ca2098340a381be0135&#34;&gt;&lt;code&gt;build_quine.rb&lt;/code&gt;&lt;/a&gt; を御覧ください。&lt;/p&gt;
-
-&lt;script src=&#34;https://gist.github.com/shotarok/8ca2098340a381be0135.js&#34;&gt;&lt;/script&gt;
-
-&lt;p&gt;これを実行すると &lt;a href=&#34;https://gist.github.com/shotarok/4d9fc754e4c00036cbdf&#34;&gt;&lt;code&gt;quine.rb&lt;/code&gt;&lt;/a&gt;  が出てきます。このコードが何をやっているかを上から順に説明していきます！&lt;/p&gt;
-
-&lt;h3 id=&#34;line1-2&#34;&gt;Line1-2&lt;/h3&gt;
-
-&lt;p&gt;ここが Quine の本体と言っても過言ではありません。実はロゴの形にする気がなければ Quine はこんなワンライナーで実現できます。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ ruby -e &#39;eval$s=%w(puts(s=%(eval$s=%w(#{$s})*&amp;quot;&amp;quot;));)*&amp;quot;&amp;quot;&#39;
-&amp;gt; eval$s=%w(puts(s=%(eval$s=%w(#{$s})*&amp;quot;&amp;quot;));)*&amp;quot;&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;ざくっと説明すると、変数 &lt;code&gt;$s&lt;/code&gt; にソースコードを文字列として代入しています。
-その代入された文字列内の &lt;code&gt;#{$s}&lt;/code&gt; 部分で、変数 &lt;code&gt;$s&lt;/code&gt; が展開されて、これが自分自身を出力する秘訣になっています。&lt;/p&gt;
-
-&lt;p&gt;また &lt;code&gt;%w(...)*&amp;quot;&amp;quot;&lt;/code&gt; は &lt;code&gt;%w&lt;/code&gt; で作った文字列型が入った配列を空文字列で join しており，このおかげでソースコードをロゴの形に加工できるようになっています。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ ruby -e &#39;eval$s=%w(put
-s(s=%(ev
-al$s=%w(#{$
-s})*&amp;quot;&amp;quot;)
-);)*&amp;quot;&amp;quot;
-&#39;
-&amp;gt; eval$s=%w(puts(s=%(eval$s=%w(#{$s})*&amp;quot;&amp;quot;));)*&amp;quot;&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;本ではもっと順を追って丁寧に解説されていますので、気になる方は是非ご一読下さい。&lt;/p&gt;
-
-&lt;h3 id=&#34;line4&#34;&gt;Line4&lt;/h3&gt;
-
-&lt;p&gt;変数 &lt;code&gt;bidmap&lt;/code&gt; には、ロゴから作成されたビットマップを36変数に変換したものを入れています。
-ruby は 多倍長整数と &lt;code&gt;to_s&lt;/code&gt; で36進数の変換をサポートしているので、下のようにビットマップから36進数に変換できます。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ ruby -e &#39;LOGO=&amp;lt;&amp;lt;END
-11111                                     11111
- 11111111                             11111111
-    1111111111                     1111111111
-     111111111                 111111111
-         11111111             11111111
-            1111111         111111
-                    1111111
-                     11111
-                      111
-                      111
-                       1
-END
-puts(LOGO.gsub(/\n/, &amp;quot;&amp;quot;).gsub(/[^1]/, &amp;quot;0&amp;quot;).reverse.to_i(2).to_s(36));&#39;
-&amp;gt; 3mf7nxp6d7yn1up5cf7lkyiexikdcs9mo4xw8j2dv93putn0tbabu2ep3qmdxdel52h7zfwbq7lzz9j8q9amz55h91pwj127
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;line6-12&#34;&gt;Line6-12&lt;/h3&gt;
-
-&lt;p&gt;ここの部分は変数 &lt;code&gt;bidmap&lt;/code&gt; を使って、ロゴの形でコードを出力しています。&lt;code&gt;bidmap&lt;/code&gt; を多倍長整数にして 1bitずつ走査して &lt;code&gt;1&lt;/code&gt; の場合はコードを1文字出力し、&lt;code&gt;0&lt;/code&gt; の場合は空白 &lt;code&gt;32.chr&lt;/code&gt; を出力します。※2.&lt;/p&gt;
-
-&lt;h2 id=&#34;3-quine-rb-の動作確認&#34;&gt;3. &lt;code&gt;quine.rb&lt;/code&gt; の動作確認&lt;/h2&gt;
-
-&lt;p&gt;ここまで来たら、後は微調整です。とは言ってもここが地味に大変だったりするのですが…。&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;%w()&lt;/code&gt; で囲まれた部分は好きに改行できるのですが、&lt;code&gt;eval$s=%w(...)*&amp;quot;&amp;quot;&lt;/code&gt; の部分は ruby の文法的に正しくないといけません。
-正しい文法になるように、ビットマップを調整しましょう。&lt;/p&gt;
-
-&lt;p&gt;またビットマップが大きくてソースコードが埋め込めるところが少ないと &lt;code&gt;bitmap&lt;/code&gt; が大きくなってコードがはみ出てしまいます。
-ビットマップを反転させたり、ロゴに含まれるフォントを大きくしたり、コードがはみ出ないようにビットマップを調整しましょう。&lt;/p&gt;
-
-&lt;p&gt;逆にビットマップが十分大きくて、ソースコードが足りない場合もあります。そんな時はコメント &lt;code&gt;;&lt;/code&gt; が利用できます。
-&lt;code&gt;;&lt;/code&gt; は適切な位置にあれば、どれだけ追加しても文法的に正しいコードとなります。※3.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ ruby -e &#39;puts(&amp;quot;hello&amp;quot;)&#39;
-&amp;gt; hello
-$ ruby -e &#39;;;;;;;;;;puts(&amp;quot;hello&amp;quot;);;;;;;;&#39;
-&amp;gt; hello
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;今回はロゴを一つだけ埋め込みましたが、本に紹介されている手法を使えば、下の gif のように複数のロゴを埋め込こんで Quine を作ることもできます。ただ数を増やせば増やすほど、この最後の調整が大変になりました。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://gyazo.com/a52c7be7a37931636e18ee3aa23fd146&#34;&gt;&lt;img src=&#34;https://i.gyazo.com/a52c7be7a37931636e18ee3aa23fd146.gif&#34; alt=&#34;https://gyazo.com/a52c7be7a37931636e18ee3aa23fd146&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;最後に&#34;&gt;最後に&lt;/h1&gt;
-
-&lt;p&gt;いかがだったでしょうか。自分しか読めないようなメンテナンス不能なコードを「あぁこの bitmap だと実行できない」と１文字消したり足したりするのは、業務にはない楽しさがありました。※4.&lt;/p&gt;
-
-&lt;p&gt;超絶技巧プログラミング本には Quine 以外にもいろんな言語で実行できるプログラム、使える文字制限したプログラムなど楽しい超絶技巧が紹介されています。
-また、つい先日行われた Ruby Kaigi で開催された &lt;a href=&#34;https://github.com/tric/trick2015/blob/master/README.ja.md&#34;&gt;TRICK 2015&lt;/a&gt; や、先ほどの本の著者である @mametter さんの&lt;a href=&#34;http://www.slideshare.net/mametter/ftd2015&#34;&gt;スライド&lt;/a&gt; 、また shinh さんの &lt;a href=&#34;http://shinh.skr.jp/obf/&#34;&gt;作品ページ&lt;/a&gt; なども覗いてみると楽しいと思います！&lt;/p&gt;
-
-&lt;p&gt;明日は &lt;a href=&#34;http://yu-i9.github.io/&#34;&gt;@yui-9&lt;/a&gt; による 「&lt;strong&gt;型クラスを含んだ型推論を概観する 〜Typing Haskell in Haskell より〜&lt;/strong&gt;」 のお話です。お楽しみに！&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;※1. もともとは、クワインさんという哲学者の名前です。&lt;br /&gt;
-※2. 空白は &lt;code&gt;%w(...)*&amp;quot;&amp;quot;&lt;/code&gt; で潰れてしまうので &lt;code&gt;32.chr&lt;/code&gt; を使用します。&lt;br /&gt;
-※3. &lt;code&gt;;&lt;/code&gt; だと見栄えが悪いので、ランダムな文字列で埋めちゃっても良いと思います。&lt;br /&gt;
-※4. commit もせずにコードを書いたり消したり推敲する。 &lt;a href=&#34;http://www.amazon.co.jp/%E3%83%8F%E3%83%83%E3%82%AB%E3%83%BC%E3%81%A8%E7%94%BB%E5%AE%B6-%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E6%99%82%E4%BB%A3%E3%81%AE%E5%89%B5%E9%80%A0%E8%80%85%E3%81%9F%E3%81%A1-%E3%83%9D%E3%83%BC%E3%83%AB-%E3%82%B0%E3%83%AC%E3%82%A2%E3%83%A0/dp/4274065979&#34;&gt;ハッカーと画家 は似ているという話&lt;/a&gt; を思い出しました。&lt;/p&gt;
-</description>
+この gif をみると ruby プログラム quine.rb は CAMPHOR- のロゴの形をしていること、ruby で実行すると CAMPHOR- のロゴが出力されることが確認出来ると思います。実は quine.rb は自分自身を出力していて、その出力を実行してもまた同じロゴの形をしたソースコードが出力されます。wiki に書いてあった 自身のソースコードと完全に同じ文字列を出力するプログラム. こんなプログラムが Quine です。ソースコードはこちら(gist)。
+僕が初めて Quine に出会ったのは、いつかの ICPC の地区大会のエクスカーションで Google を訪問して、そこで shinh さんのお話を聞いたときでした。その当時は、自分で書いてみたいと思って、調べてみたものの、結局書くことが出来ず、そのまま放置になっていました。
+それから数年経った2015年夏、この本と出会いました。
+「あなたの知らない超絶技巧プログラミングの世界」
+この本は Quine をはじめとする「超絶技巧プログラミング」と呼ばれる、実用性はないけれど、不思議で楽しいプログラミング技法を紹介しています。そして、この本のおかげで念願叶い Quine を書くことができました。詳細な解説は本を読んで頂くことにして、この記事では、僕が書いた quine.rb の簡単な説明と、作成した手順を紹介できればと思います。
+はじめての Quine 今回、下のような流れで僕は quine.</description>
     </item>
     
     <item>
@@ -731,86 +116,10 @@ $ ruby -e &#39;;;;;;;;;;puts(&amp;quot;hello&amp;quot;);;;;;;;&#39;
       <pubDate>Tue, 15 Dec 2015 08:16:39 +0900</pubDate>
       
       <guid>http://blog.shotarok.com/post/2015-12-15_my-first-post/</guid>
-      <description>
-
-&lt;p&gt;以前は はてなブログ を使っていたのですが、今年の４月に就職してデジタルマーケティングの会社に入ったので、
-3rd party javascript やタグマネージャーの勉強することもままあり、
-CAMPHOR- Advent Calendar に参加する前に、タグを好きに追加できるブログをはじめてみようとなりました。&lt;/p&gt;
-
-&lt;p&gt;Markdown で書ける静的ジェネレーターなら、正直なんでも良かったのですが、
-使っている人がそこそこいる(静的ジェネレーターの GitHub の star 数ランキングで割と上位だった)、
-気に入ったテーマがあった、かつ 普段触らない言語 go を触る良い機会になるかもと思ったこと
-等を理由に &lt;strong&gt;Hugo&lt;/strong&gt; を使うことにしました。&lt;/p&gt;
-
-&lt;h1 id=&#34;簡単な使い方&#34;&gt;簡単な使い方&lt;/h1&gt;
-
-&lt;p&gt;Hugo を使うと &lt;code&gt;hugo new site &amp;lt;name&amp;gt;&lt;/code&gt; というコマンドでサイトの雛形を作る事ができます。
-Hugo自体は &lt;code&gt;go get -u -v github.com/spf13/hugo&lt;/code&gt; や &lt;code&gt;brew install hugo&lt;/code&gt; でインストールできます。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ hugo new site test-blog
-$ tree test-blog
-test-blog
-├── archetypes
-├── config.toml
-├── content
-├── data
-├── layouts
-└── static
-
-5 directories, 1 file
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;テーマは &lt;a href=&#34;https://github.com/spf13/hugoThemes/&#34;&gt;&lt;code&gt;hugoThemes&lt;/code&gt;&lt;/a&gt; というレポジトリにたくさんまとめてあります。
-これらを利用するにはまず theme ディレクトリを作成しクローンしてきます。
-そのあと気に入ったテーマを &lt;code&gt;-t&lt;/code&gt; で指定し &lt;code&gt;hugo&lt;/code&gt; を実行すると &lt;code&gt;public&lt;/code&gt; フォルダに静的コンテンツが作成されます。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ cd test-blog
-$ git clone --depth 1 --recursive https://github.com/spf13/hugoThemes.git themes
-$ hugo -t angels-ladder
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;新しい投稿を作成する場合は &lt;code&gt;hugo new post/&amp;lt;file name&amp;gt;.md&lt;/code&gt; でマークダウン引用の雛形を作成することができます。
-また &lt;code&gt;hugo server -t angels-ladder -w&lt;/code&gt; でローカルにサーバを建てることによって、エディターで編集したファイルをブラウザで確認しながら作業する事ができます。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ hugo new post/hello-world.md
-$ hugo server -t angels-ladder -w
-# Edit post/hello-world.md by some editors
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h1 id=&#34;個人的なレポジトリ構成&#34;&gt;個人的なレポジトリ構成&lt;/h1&gt;
-
-&lt;p&gt;Hugo によって作成された静的コンテンツは GitHub Pages を利用して管理し、
-雛形の方は theme も含めて BitBucket のプライベートレポジトリで管理しています。
-これで Github Pages のレポジトリには静的なマークアップのコードだけになり、
-マークダウンのファイルや自分用に少し変更したテーマなどはBidBucketで管理することができます。&lt;/p&gt;
-
-&lt;h2 id=&#34;github-での静的コンテンツのレポジトリ管理&#34;&gt;Github での静的コンテンツのレポジトリ管理&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code&gt;$ cd test-blog/public
-$ git init
-$ git remote add origin git@github.com:&amp;lt;username&amp;gt;/&amp;lt;username&amp;gt;.github.io.git
-$ git add --all &amp;amp; git commit -m &amp;quot;Initial commit&amp;quot;
-$ git push --all
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;bidbucket-での-マークダウン-hugoテーマ-のレポジトリ管理&#34;&gt;BidBucket での マークダウン&amp;amp;Hugoテーマ のレポジトリ管理&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code&gt;$ cd test-blog
-$ git init
-$ echo public &amp;gt;&amp;gt; .gitignore
-$ git remote add origin git@bidbucket.org:&amp;lt;username&amp;gt;/hugo-blog.git
-$ git add --all &amp;amp; git commit -m &amp;quot;Initial commit&amp;quot;
-$ git push origin --all
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h1 id=&#34;special-thanks&#34;&gt;Special Thanks&lt;/h1&gt;
-
-&lt;p&gt;今回参考にさせていただいたサイト&lt;br /&gt;
-・&lt;a href=&#34;https://github.com/spf13/Hugo&#34;&gt;https://github.com/spf13/Hugo&lt;/a&gt;&lt;br /&gt;
-　本家レポジトリ。ドキュメントもしっかりしていて、わかりやすい！&lt;br /&gt;
-・ &lt;a href=&#34;http://tanksuzuki.com/post/hugo-github-pages-1/&#34;&gt;http://tanksuzuki.com/post/hugo-github-pages-1/&lt;/a&gt;&lt;br /&gt;
-　とても丁寧に解説されていたので大変重宝しました。テーマも使わせて頂きました！ありがとうございます！&lt;/p&gt;
-</description>
+      <description>以前は はてなブログ を使っていたのですが、今年の４月に就職してデジタルマーケティングの会社に入ったので、 3rd party javascript やタグマネージャーの勉強することもままあり、 CAMPHOR- Advent Calendar に参加する前に、タグを好きに追加できるブログをはじめてみようとなりました。
+Markdown で書ける静的ジェネレーターなら、正直なんでも良かったのですが、 使っている人がそこそこいる(静的ジェネレーターの GitHub の star 数ランキングで割と上位だった)、 気に入ったテーマがあった、かつ 普段触らない言語 go を触る良い機会になるかもと思ったこと 等を理由に Hugo を使うことにしました。
+簡単な使い方 Hugo を使うと hugo new site &amp;lt;name&amp;gt; というコマンドでサイトの雛形を作る事ができます。 Hugo自体は go get -u -v github.com/spf13/hugo や brew install hugo でインストールできます。
+$ hugo new site test-blog $ tree test-blog test-blog ├── archetypes ├── config.toml ├── content ├── data ├── layouts └── static 5 directories, 1 file  テーマは hugoThemes というレポジトリにたくさんまとめてあります。 これらを利用するにはまず theme ディレクトリを作成しクローンしてきます。 そのあと気に入ったテーマを -t で指定し hugo を実行すると public フォルダに静的コンテンツが作成されます。</description>
     </item>
     
   </channel>

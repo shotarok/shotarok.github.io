@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Udacity on shotarok&#39;s Tech Blog</title>
+    <link>http://blog.shotarok.com/tags/udacity/</link>
+    <description>Recent content in Udacity on shotarok&#39;s Tech Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>Written by Shotaro Kohama</copyright>
+    <lastBuildDate>Wed, 07 Jun 2017 09:45:00 +0900</lastBuildDate>
+    
+	<atom:link href="http://blog.shotarok.com/tags/udacity/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>A Review of Udacity Deep Learning Nanodegree</title>
+      <link>http://blog.shotarok.com/post/a-review-of-deep-learning-nanodegree/</link>
+      <pubDate>Wed, 07 Jun 2017 09:45:00 +0900</pubDate>
+      
+      <guid>http://blog.shotarok.com/post/a-review-of-deep-learning-nanodegree/</guid>
+      <description>2017/05/28 に Udacity の Deep Learning Nanodegree を卒業した。
+僕が大学院を卒業した2015年ごろ、まだ Deep Learning の波は研究室・自然言語処理(?)には来ていなかったが、 研究室に残っている同期の話を聞いたり、世の中のニュースを見ていても、世界ががらっと変わっていることを感じていた。 そんな中 Deep Learning を学ぶ機会を探していて見つけたのが、この Udacity の Nanodigree だった。
+1月ごろに申し込みしたのだが、最初に $400 かかると聞いたときは躊躇した。でも GPU インスタンスを使うための AWS の $100 クーポンや有料の Slack チームを使った、 オフィスアワーになんでも聞いて良いよチャンネル (#ama) があったり、お金がかかりそうな手厚いサポートもあった。
+データを整形する手間が省け、TensorFlow を使って Seq2Seq や DCGAN を動かし、授業のコードや Slack の他の人のコメントを参考にしながら、 自分が書いたコードが間違っていたら Review してもらえる。 Deep Leraning を俯瞰したいという自分の動機にとてもマッチしていて効率的に学べたと思う。十分な価値はあったしむしろ安かったかも。 実際、2回目の5月からのコースでは $600 か $800 に値上げしてたみたい。
+コンテンツについては、この GitHub のレポジトリ udacity/deep-learning を見るのが、はやそう。 各授業の資料が Jupyter notebook になっていて、 Review とか Video がなくても自習に役立つと思う。
+Siraj Raval という Youtuber と Floyd というサービスを知れたのも良かった。</description>
+    </item>
+    
+  </channel>
+</rss>

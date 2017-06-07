@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>http://blog.shotarok.com/post/a-review-of-deep-learning-nanodegree/</loc>
+    <lastmod>2017-06-07T09:45:00+09:00</lastmod>
+  </url>
   
   <url>
     <loc>http://blog.shotarok.com/post/review-in-2016/</loc>
@@ -37,6 +43,11 @@
   </url>
   
   <url>
+    <loc>http://blog.shotarok.com/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://blog.shotarok.com/tags/english/</loc>
     <lastmod>2016-05-03T11:37:10+09:00</lastmod>
     <priority>0</priority>
@@ -68,7 +79,7 @@
   
   <url>
     <loc>http://blog.shotarok.com/post/</loc>
-    <lastmod>2016-12-31T22:00:00+09:00</lastmod>
+    <lastmod>2017-06-07T09:45:00+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -80,6 +91,7 @@
   
   <url>
     <loc>http://blog.shotarok.com/tags/</loc>
+    <lastmod>2016-05-03T11:37:10+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -90,8 +102,14 @@
   </url>
   
   <url>
+    <loc>http://blog.shotarok.com/tags/udacity/</loc>
+    <lastmod>2017-06-07T09:45:00+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://blog.shotarok.com/</loc>
-    <lastmod>2016-12-31T22:00:00+09:00</lastmod>
+    <lastmod>2017-06-07T09:45:00+09:00</lastmod>
     <priority>0</priority>
   </url>
   
