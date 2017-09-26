@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Haskell on shotarok&#39;s Tech Blog</title>
+    <link>http://blog.shotarok.com/tags/haskell/</link>
+    <description>Recent content in Haskell on shotarok&#39;s Tech Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>Written by Shotaro Kohama</copyright>
+    <lastBuildDate>Tue, 26 Sep 2017 21:45:00 +0900</lastBuildDate>
+    
+	<atom:link href="http://blog.shotarok.com/tags/haskell/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>『Haskell入門』の献本を頂きました</title>
+      <link>http://blog.shotarok.com/post/review-of-haskell-nyumon/</link>
+      <pubDate>Tue, 26 Sep 2017 21:45:00 +0900</pubDate>
+      
+      <guid>http://blog.shotarok.com/post/review-of-haskell-nyumon/</guid>
+      <description>著者であり同僚の @hiratara さんに誘って頂いて、『Haskell入門』 のレビューに参加させて頂き、献本も頂きました。
+Haskell は大学時代から好きな人達が近くにいて、その人達が楽しそうに話をしているので、 興味や憧れ1は昔からあったものの、他の言語にないパラダイムに苦しんで、何度も何度も入門している、自分にとってはそんな言語です。
+最近はやっと少し慣れてきて、周りの Haskeller やこの本に助けられ、簡単なコマンドラインツール2を書く事ができました。これを書くにあたって、プロジェクトのディレクトリ構造3や stack を使ったライブラリやテストの管理方法がまとまった第9章がとても参考になりました。友人にその都度 Slack や対面で聞いていたことがきちんとまとまっていて、大変ありがたかったです。
+技術書の作成工程が見れたのも、とても勉強になりました。機会を頂き、ありがとうございました！
+ 2012-12-01 孤独のHaskell| ぼくのぬまち 出張版 とか 関数プログラミング 珠玉のアルゴリズムデザイン とかを読むとこんなに簡潔に書けるのかと憧れが増します [return] https://github.com/shotarok/courrier-jp-atom [return] python だとこういうやつ Structuring Your Project | The Hitchhiker&amp;rsquo;s Guide to Python [return]   </description>
+    </item>
+    
+  </channel>
+</rss>
