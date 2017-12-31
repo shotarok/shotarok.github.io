@@ -179,6 +179,9 @@ article h6 {
 article p {
   margin: 25px 0;
 }
+article li p {
+  margin: 0px 0;
+}
 article code {
   color: #333;
   background-color: #eee;
