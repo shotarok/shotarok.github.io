@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>Written by Shotaro Kohama</copyright>
-    <lastBuildDate>Tue, 26 Sep 2017 21:45:00 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 31 Dec 2017 22:00:00 +0900</lastBuildDate>
     
 	<atom:link href="http://blog.shotarok.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>2017年振り返り</title>
+      <link>http://blog.shotarok.com/post/review-in-2017/</link>
+      <pubDate>Sun, 31 Dec 2017 22:00:00 +0900</pubDate>
+      
+      <guid>http://blog.shotarok.com/post/review-in-2017/</guid>
+      <description>年の瀬なので 2017年に出会って好きだったもの，影響を受けたものを雑多にまとめてみる.
+Blog  作って学ぶBitcoin！ゼロから作るSPVウォレット | @lotz on Qiita The DAO 事件から１年 — 熱狂する ICO バブルと、これからの資金調達手法 | @amachino on Medium Is it unethical for me to not tell my employer I’ve automated my job? | The Workplace Stack Exchange 普通のデーモンを 1) Server::Starterでホットデプロイ+ 2) slow-restart対応にする | @lestrrat on Qiita 時系列データベースという概念をクラウドの技で再構築する | ゆううきブログ 実行環境の変化に素早く適応できる恒常性を持つシステムアーキテクチャと今後の課題 | 人間とウェブの未来 CVAEによるキャラクターの台詞の生成と、口調変換 | @thetenthart on Qiita  Machine Learning for Systems and Systems for Machine Learning | Jeff Dean Google Brain team Meet Michelangelo: Uber’s Machine Learning Platform | Uber Engineering クマムシでも分かる。ノーベル賞候補・ゲノム編集技術「CRISPR/Cas9システム」| クマムシ博士のむしブロ 六本木戦記 | WANDER ALONE LIKE A RHINOCEROS HORN  去年の振り返りでは Pocket とか はてブ を使おうかと書いていたけど全然続けることができなかった.</description>
+    </item>
     
     <item>
       <title>『Haskell入門』の献本を頂きました</title>
